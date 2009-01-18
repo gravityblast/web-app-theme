@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Wep App Theme</title>
+  <link rel="stylesheet" href="stylesheets/base.css" type="text/css" media="screen" title="Default Theme" charset="utf-8">
+  <script type="text/javascript" charset="utf-8" src="javascripts/prototype.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="user-navigation">
+        <ul>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <h1><a href="#">Wep App Theme</a></h1>
+      <div id="main-navigation">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Projects</a></li>
+          <li class="active"><a href="#">Project 1</a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>    
+    <div id="wrapper">
+      <div id="content">
+        <div id="secondary-navigation">
+          <ul>
+            <li class="active first"><a href="#">Users</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>         
+        <h1 class="title">All users</h1>       
+        <div id="main">          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>          
+          <hr />
+          <h2>Users</h2>          
+          <table class="table">
+            <tr>
+              <th class="first"><a href="#" class="toggle" onclick="this.up('table').select('input[type=\'checkbox\']').each(function(e){e.checked = !e.checked}); return false;">Toggle</a></th>
+              <th>ID</th>
+              <th>Login</th>
+              <th>Name</th>
+              <th>Surname</th>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox" name="id" value="1"/></td><td>1</td><td>hulk</td><td>Hulk</td><td>Hogan</td>              
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox" name="id" value="2"/></td><td>2</td><td>ultimate</td><td>Ultimate</td><td>Warrior</td>
+            </tr>
+          </table>
+          <div class="pagination">
+            <span class="current">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">1</a><a href="#">10</a>
+            <div class="clear"></div>
+          </div>
+          
+          <hr />          
+          
+          <h2>Forms</h2>
+          <form action="#" method="get" class="form">
+            <div class="group">
+              <label class="title">Text field</label>
+              <input type="text" class="text" />
+            </div>
+            <div class="group">
+              <label class="title">Text area</label>
+              <textarea class="textarea" rows="10"></textarea>
+            </div>
+            <div class="group">
+              <input type="submit" value="Save &rarr;"> or <a href="#">Cancel</a>
+            </div>
+          </form>
+          
+          <hr />
+          
+          <h2>2 columns forms</h2>
+          <form action="#" method="get" class="form">
+            <div class="column left">
+              <div class="group">
+                <label class="title">Text field</label>
+                <input type="text" class="text" />
+              </div>
+              <div class="group">
+                <label class="title">Text area</label>
+                <textarea class="textarea" rows="10"></textarea>
+              </div>              
+            </div>
+            <div class="column right">
+              <div class="group">
+                <label class="title">Select</label>
+                <select><option value="1">Choose...</option></select>
+              </div>
+              <div class="group">
+                <label class="title">Check box</label>
+                <div>
+                  <input type="checkbox" name="checkbox" id="checkbox_1" class="checkbox" value="1"> <label for="checkbox_1" class="checkbox">Option 1</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="checkbox" id="checkbox_2" class="checkbox" value="2"> <label for="checkbox_2" class="checkbox">Option 2</label>
+                </div>
+              </div>
+              <div class="group">
+                <label class="title">Radio</label>
+                <div>
+                  <input type="radio" name="radio" id="radio_1" class="checkbox" value="1"> <label for="radio_1" class="radio">Option 1</label>
+                </div>
+                <div>
+                  <input type="radio" name="radio" id="radio_2" class="checkbox" value="2"> <label for="radio_2" class="radio">Option 2</label>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <div>
+              <input type="submit" value="Save &rarr;"> or <a href="#">Cancel</a>
+            </div>            
+          </form>
+          
+          <hr />
+          
+          <h2>Activities</h2>
+          <ul class="list">            
+            <li>
+              <div class="date left day">
+                <span class="day">Thursday</span>
+                <span>Jan 15</span>
+              </div>
+              <div class="item">
+                <a href="#"><img class="avatar" src="images/avatar.png" /></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>              
+            </li>
+            <li>
+              <div class="date left hour">
+                <span>08:30 PM</span>
+              </div>
+              <div class="item">
+                <a href="#"><img class="avatar" src="images/avatar.png" /></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </li>
+            <li>
+              <div class="date left hour">
+                <span>08:30 PM</span>
+              </div>
+              <div class="item">
+                <a href="#"><img class="avatar" src="images/avatar.png" /></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </li>            
+          </ul>
+          
+          <h2>Messages</h2>
+          <ul class="list">            
+            <li>
+              <div class="left">
+                <a href="#"><img class="avatar" src="images/avatar.png" /></a>
+              </div>
+              <div class="item">                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>              
+            </li>
+            <li>
+              <div class="left">
+                <a href="#"><img class="avatar" src="images/avatar.png" /></a>
+              </div>
+              <div class="item">                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>              
+            </li>
+            <li>
+              <div class="left">
+                <a href="#"><img class="avatar" src="images/avatar.png" /></a>
+              </div>
+              <div class="item">                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>              
+            </li>            
+          </ul>
+          
+        </div>        
+      </div>
+      <div id="sidebar">
+        <div id="sidebar-navigation">
+          <h3>Sidebar</h3>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>      
+    </div>
+    <div id="footer">
+      Copyright &copy; 2009 Example.com
+    </div>
+  </div>
+</body>
+</html>
