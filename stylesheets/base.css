@@ -1,8 +1,8 @@
 .clear { clear: both; }
 
 h2, h3 { color: #122741; }
-h2 { font-size: 22px; margin: 15px 0;}
-h3 { font-size: 18px; margin: 10px 0;}
+h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
+h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
 hr { background: #f0f0ee; color: #f0f0ee; height: 1px; border: 0; }
 p { margin: 15px 0;}
 a img { border: none; }
@@ -48,11 +48,9 @@ body {
 }
 
 #content h1.title {
-  background: #3C83DA;
-  padding: 10px 15px;  
-  color: #FFF;
+  padding: 15px 15px 0;  
   margin: 0;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: normal;
 }
 
@@ -74,6 +72,7 @@ body {
   margin: 0;
   font-weight: normal;
   font-size: 13px;
+  border-bottom: 10px solid #364B69;
 }
 
 #sidebar ul li a:link, #sidebar ul li a:visited {
@@ -146,10 +145,11 @@ body {
 #secondary-navigation {
   background: #122741;
   font-size: 13px;  
+  border-bottom: 10px solid #364B69;
 }
 
 #secondary-navigation ul li.active {
-  background-color: #3C83DA;
+  background-color: #364B69;
 }
 
 #secondary-navigation ul li a {
