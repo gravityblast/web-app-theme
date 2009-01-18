@@ -195,14 +195,13 @@ body {
 /* tables */
 .table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse;  
 }
 
 .table th {
   padding: 10px;
   font-weight: bold;
   text-align: left;
-  border-bottom: 1px solid #DDD;
   background: #364B69;
   color: #FFF;
 }
