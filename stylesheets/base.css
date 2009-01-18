@@ -1,10 +1,9 @@
 .clear { clear: both; }
 
 h1 { margin: 15px 0; font-size: 22px; font-weight: normal; }
-h2, h3 { color: #122741; }
 h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
 h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
-hr { background: #f0f0ee; color: #f0f0ee; height: 1px; border: 0; }
+hr {height: 1px; border: 0; }
 p { margin: 15px 0;}
 a img { border: none; }
 
@@ -12,9 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  font-family: helvetica,arial,sans-serif;
-  color: #222;
-  background: #f0f0ee;
+  font-family: helvetica,arial,sans-serif;  
 }
 
 #container {
@@ -27,8 +24,7 @@ body {
 
 #header {
   position: relative;
-  padding-top: 1px;
-  background: #122741;
+  padding-top: 1px;  
 }
 
 #header h1 {
@@ -39,13 +35,11 @@ body {
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
   text-decoration: none;
-  color: #FFF;
 }
 
 #content {  
   width: 65%;
-  float: left;  
-  background: #FFF;  
+  float: left;    
 }
 
 #content h1.title {
@@ -58,32 +52,25 @@ body {
 
 #sidebar {
   width: 30%;
-  float: right;  
-  background: #FFF;
+  float: right;    
   padding-bottom: 10px;
 }
 
 #sidebar h3 {  
-  background: #122741;
   padding: 10px 15px;
-  color: #FFF;
   margin: 0;
   font-weight: normal;
   font-size: 13px;
-  border-bottom: 10px solid #364B69;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
 }
 
 #sidebar ul li a:link, #sidebar ul li a:visited {
-  background: #FFF;
   text-decoration: none;
   display: block;
   padding: 10px 15px;
-  border-bottom: 1px solid #F0F0EE;
-}
-
-#sidebar ul li a:hover, #sidebar ul li a:active {
-  background: #364B69;
-  color: #FFF;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 #wrapper {
@@ -116,11 +103,6 @@ body {
 
 #main-navigation ul li {
   margin-right: 5px;
-  background: #364b69;
-}
-
-#main-navigation ul li.active {
-  background: #f0f0ee;
 }
 
 #user-navigation ul li {
@@ -131,11 +113,6 @@ body {
 #secondary-navigation ul li a:link, #secondary-navigation ul li a:visited, #secondary-navigation ul li a:hover, #secondary-navigation ul li a:active,
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
-  color: #FFF;
-}
-
-#main-navigation ul li.active a:link, #main-navigation ul li.active a:visited, #main-navigation ul li.active a:hover, #main-navigation ul li.active a:active {
-  color: #364b69;
 }
 
 #main-navigation ul li a {
@@ -145,13 +122,9 @@ body {
 }
 
 #secondary-navigation {
-  background: #122741;
   font-size: 13px;  
-  border-bottom: 10px solid #364B69;
-}
-
-#secondary-navigation ul li.active {
-  background-color: #364B69;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
 }
 
 #secondary-navigation ul li a {
@@ -164,9 +137,6 @@ body {
 }
 
 /* pagination */
-.pagination {
-  background: transparent;
-}
 
 .pagination a, .pagination span {
   padding: 2px 5px;
@@ -176,20 +146,15 @@ body {
 }
 
 .pagination span.current {
-  font-weight: bold;
-  background: #364B69;
-  color: #FFF;
-  border: 1px solid #364B69;
-}
-.pagination a {
-  text-decoration: none;
-  color: #364B69;
-  border: 1px solid #364B69;
+  font-weight: bold;  
+  border-width: 1px;
+  border-style: solid;
 }
 
-.pagination a:hover {
-    color: #FFF;
-    background: #364B69;
+.pagination a {
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
 }
 
 /* tables */
@@ -202,16 +167,12 @@ body {
   padding: 10px;
   font-weight: bold;
   text-align: left;
-  background: #364B69;
-  color: #FFF;
 }
 
 .table th a.toggle {
   display: block;
   width: 12px;
   height: 12px;
-  background: transparent url('images/tick.png') center no-repeat;
-  text-indent: -9999px;
   -moz-outline: none;
 }
 
@@ -221,7 +182,8 @@ body {
 }
 
 .table td {
-  border-bottom: 1px solid #F0F0EE;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   padding: 10px;
 }
 
@@ -231,7 +193,6 @@ input.checkbox {
   margin: 0;
   padding: 0;
 }
-
 
 .form .group {
   margin-bottom: 15px;
@@ -274,7 +235,8 @@ input.checkbox {
 
 .form input[type="text"], .form textarea {
   width: 100%;
-  border: 1px solid #364B69;
+  border-width: 1px;
+  border-style: solid;
 }
 
 /* lists */
@@ -287,7 +249,8 @@ ul.list {
 
 ul.list li {
   clear: left;
-  border-bottom: 1px solid #F0F0EE;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   padding-bottom: 5px;
 }
 
@@ -296,7 +259,6 @@ ul.list li .left {
 }
 
 ul.list li .left.date {  
-  color: #BBB;  
   padding: 0 10px;
 }
 
@@ -310,8 +272,6 @@ ul.list li .item {
 }
 
 ul.list li .date.day {
-  background: #364B69;
-  color: #FFF;
   padding: 10px;
 }
 
@@ -323,7 +283,8 @@ ul.list li .item .avatar {
   float: left;
   margin: 0 5px 5px 0;
   padding: 2px; 
-  border: 1px solid #F0F0EE;
+  border-width: 1px;
+  border-style: solid;
   width: 30px;
   height: 30px;
 }
