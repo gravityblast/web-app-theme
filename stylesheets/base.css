@@ -1,5 +1,6 @@
 .clear { clear: both; }
 
+h1 { margin: 15px 0; font-size: 22px; font-weight: normal; }
 h2, h3 { color: #122741; }
 h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
 h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
@@ -48,10 +49,7 @@ body {
 }
 
 #content h1.title {
-  padding: 15px 15px 0;  
-  margin: 0;
-  font-size: 22px;
-  font-weight: normal;
+  padding: 0 15px;    
 }
 
 #content .pagination {
@@ -94,6 +92,10 @@ body {
 
 #main {
   padding: 1px 15px;  
+}
+
+#main p.first {
+  margin-top: 0;
 }
 
 #user-navigation {
@@ -201,6 +203,8 @@ body {
   font-weight: bold;
   text-align: left;
   border-bottom: 1px solid #DDD;
+  background: #364B69;
+  color: #FFF;
 }
 
 .table th a.toggle {
