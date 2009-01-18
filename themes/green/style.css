@@ -1,4 +1,4 @@
-a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #122741; }
+a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #008B00; }
 
 body {
   color: #222;
@@ -11,7 +11,7 @@ hr {
 }
 
 #header {
-  background: #122741;
+  background: #008B00;
 }
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
@@ -27,9 +27,9 @@ hr {
 }
 
 #sidebar h3 {  
-  background: #122741;
+  background: #008B00;
   color: #FFF;
-  border-bottom-color: #364B69;
+  border-bottom-color: #006000;
 }
 
 #sidebar ul li a:link, #sidebar ul li a:visited {
@@ -38,12 +38,12 @@ hr {
 }
 
 #sidebar ul li a:hover, #sidebar ul li a:active {
-  background: #364B69;
+  background: #006000;
   color: #FFF;
 }
 
 #main-navigation ul li {
-  background: #364b69;
+  background: #006000;
 }
 
 #main-navigation ul li.active {
@@ -58,40 +58,40 @@ hr {
 }
 
 #main-navigation ul li.active a:link, #main-navigation ul li.active a:visited, #main-navigation ul li.active a:hover, #main-navigation ul li.active a:active {
-  color: #364b69;
+  color: #006000;
 }
 
 #secondary-navigation {
-  background: #122741;
-  border-bottom-color: #364B69;
+  background: #008B00;
+  border-bottom-color: #006000;
 }
 
 #secondary-navigation ul li.active {
-  background-color: #364B69;
+  background-color: #006000;
 }
 
 /* pagination */
 
 .pagination span.current {
-  background: #364B69;
+  background: #006000;
   color: #FFF;
-  border-color: #364B69;
+  border-color: #006000;
 }
 
 .pagination a {
-  color: #364B69;
-  border-color: #364B69;
+  color: #006000;
+  border-color: #006000;
 }
 
 .pagination a:hover {
     color: #FFF;
-    background: #364B69;
+    background: #006000;
 }
 
 /* tables */
 
 .table th {
-  background: #364B69;
+  background: #006000;
   color: #FFF;
 }
 
@@ -117,7 +117,7 @@ hr {
 
 .form input[type="text"], .form textarea {
   width: 100%;
-  border: 1px solid #364B69;
+  border: 1px solid #006000;
 }
 
 
@@ -132,7 +132,7 @@ ul.list li .left.date {
 }
 
 ul.list li .date.day {
-  background: #364B69;
+  background: #006000;
   color: #FFF;
 }
 

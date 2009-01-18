@@ -237,7 +237,7 @@ input.checkbox {
   font-weight: bold;
 }
 
-.form input[type="text"], .form textarea {
+.form input.text, .form textarea.textarea {
   width: 100%;
   border-width: 1px;
   border-style: solid;

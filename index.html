@@ -8,9 +8,11 @@
   <link rel="stylesheet" id="current-theme" href="themes/default/style.css" type="text/css" media="screen">    
   <script type="text/javascript" charset="utf-8" src="javascripts/prototype.js"></script> 
   <script type="text/javascript" charset="utf-8">
-    function switchLayout(name) {
-      $('current-theme').setAttribute('href', 'themes/' + name + '/style.css')
-    }
+    var Theme = {
+      activate: function(name) {
+        $('current-theme').setAttribute('href', 'themes/' + name + '/style.css');
+      }
+    }    
   </script> 
 </head>
 <body>
@@ -199,17 +201,17 @@
         <div class="block">
           <h3>Switch Theme</h3>
           <ul class="navigation">
-            <li><a href="#" onclick="switchLayout('default'); return false;">Default</a></li>
-            <li><a href="#" onclick="switchLayout('green'); return false;">Green</a></li>
+            <li><a href="#" onclick="Theme.activate('default'); return false;">Default</a></li>
+            <li><a href="#" onclick="Theme.activate('green'); return false;">Green</a></li>
           </ul>          
         </div>
         <div class="block">
           <h3>Sidebar</h3>
           <ul class="navigation">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Example link 1</a></li>
+            <li><a href="#">Example link 2</a></li>
+            <li><a href="#">Example link 3</a></li>
+            <li><a href="#">Example link 4</a></li>
           </ul>
         </div>
       </div>
