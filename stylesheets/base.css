@@ -65,7 +65,11 @@ body {
   border-bottom-style: solid;
 }
 
-#sidebar ul li a:link, #sidebar ul li a:visited {
+#sidebar .block {
+  margin-bottom: 20px;
+}
+
+#sidebar ul.navigation li a:link, #sidebar ul.navigation li a:visited {
   text-decoration: none;
   display: block;
   padding: 10px 15px;
@@ -91,7 +95,7 @@ body {
   right: 20px;  
 }
 
-#user-navigation ul, #main-navigation ul, #secondary-navigation ul, #sidebar-navigation ul {
+#user-navigation ul, #main-navigation ul, #secondary-navigation ul, #sidebar ul.navigation {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -313,7 +317,7 @@ ul.list li .item .avatar {
   -webkit-border-top-left-radius: 4px;
 }
 
-#content h1.title, #sidebar, #sidebar-navigation, #sidebar-navigation ul, ul.list li .date.day {
+#content h1.title, #sidebar, #sidebar .block, #sidebar ul.navigation, ul.list li .date.day {
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-bottomright: 4px;
