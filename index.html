@@ -9,9 +9,19 @@
   <script type="text/javascript" charset="utf-8">
     var Theme = {
       activate: function(name) {
-        $('#current-theme').attr('href', 'themes/' + name + '/style.css');
+        window.location.hash = 'themes/' + name
+        Theme.loadCurrent();
+      },
+      
+      loadCurrent: function() {
+        matches = window.location.hash.match(/#(.+)/);
+        if (matches && matches.length > 1) {
+          $('#current-theme').attr('href', matches[1] + '/style.css');
+        }
       }
-    }    
+    }        
+    
+    $(document).ready(Theme.loadCurrent);
   </script> 
 </head>
 <body>
@@ -25,7 +35,7 @@
         </ul>
         <div class="clear"></div>
       </div>
-      <h1><a href="#">Wep App Theme</a></h1>
+      <h1><a href="index.html">Wep App Theme</a></h1>
       <div id="main-navigation">
         <ul>
           <li><a href="#">Dashboard</a></li>
