@@ -1,17 +1,18 @@
+
+* {margin:0;padding:0}
 .clear { clear: both; }
 
 h1 { margin: 15px 0; font-size: 22px; font-weight: normal; }
 h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
 h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
+h4 { font-size: 16px; margin: 10px 0; font-weight: normal;}
 hr {height: 1px; border: 0; }
 p { margin: 15px 0;}
 a img { border: none; }
 
 body {
-  margin: 0;
-  padding: 0;
   font-size: 12px;
-  font-family: helvetica,arial,sans-serif;  
+  font-family: sans-serif;  
 }
 
 #container {
@@ -28,8 +29,7 @@ body {
 }
 
 #header h1 {
-  margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 30px;    
 }
 
@@ -40,10 +40,6 @@ body {
 #content {  
   width: 65%;
   float: left;    
-}
-
-#content h1.title {
-  padding: 0 15px;    
 }
 
 #content .pagination {
@@ -58,10 +54,7 @@ body {
 #sidebar h3 {  
   padding: 10px 15px;
   margin: 0;
-  font-weight: normal;
   font-size: 13px;
-  border-bottom-width: 10px;
-  border-bottom-style: solid;
 }
 
 #sidebar .block {
@@ -70,22 +63,23 @@ body {
 }
 
 #sidebar ul.navigation li a:link, #sidebar ul.navigation li a:visited {
-  text-decoration: none;
   display: block;
   padding: 10px 15px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+}
+
+#sidebar .block .sidebar-block, #sidebar .notice {
+  padding:10px;
 }
 
 #wrapper {
   padding-top: 20px;
 }
 
-#main {
+.main-block {
   padding: 1px 15px;  
 }
 
-#main p.first {
+.main-block p.first {
   margin-top: 0;
 }
 
@@ -177,7 +171,6 @@ body {
   display: block;
   width: 12px;
   height: 12px;
-  -moz-outline: none;
 }
 
 .table th.first {
@@ -186,8 +179,6 @@ body {
 }
 
 .table td {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
   padding: 10px;
 }
 
@@ -221,14 +212,11 @@ input.checkbox {
 }
 
 .form input.checkbox, .form input.radio {
-  clear: left;
-  float: left;
   margin-right: 5px;
 }
 
 .form label.checkbox, .form label.radio {
   line-height: 1.5em;
-  display: block;
 }
 
 .form label.title {
@@ -253,8 +241,6 @@ ul.list {
 
 ul.list li {
   clear: left;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
   padding-bottom: 5px;
 }
 
@@ -286,40 +272,7 @@ ul.list li .date .day {
 ul.list li .item .avatar {
   float: left;
   margin: 0 5px 5px 0;
-  padding: 2px; 
-  border-width: 1px;
-  border-style: solid;
   width: 30px;
   height: 30px;
 }
 
-/* rounded borders */
-#content, #main-navigation li, #secondary-navigation, #sidebar .block, #sidebar h3, ul.list li .left.date.day {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-}
-
-#secondary-navigation ul li.first, .table th.first, .table th.first {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-}
-
-.table th.last {
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-}
-
-
-#secondary-navigation ul li.first {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-}
-
-#content h1.title, #sidebar, #sidebar .block, #sidebar ul.navigation, ul.list li .date.day {
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-}
