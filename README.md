@@ -15,3 +15,8 @@ Contributing
 * Send a pull request.
 
 ![Web App Theme screenshot](http://gravityblast.com/wp-content/uploads/2009/01/web-app-theme-current.jpg)
+
+Contributors
+---
+
+Nelson Fernandez ('Bec' theme and refactoring)
