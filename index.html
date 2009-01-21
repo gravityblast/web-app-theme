@@ -16,9 +16,11 @@
       },
       
       loadCurrent: function() {
-        matches = window.location.hash.match(/#(.+)/);
+        matches = window.location.hash.match(/^#themes\/([a-z0-9\-_]+)$/);
         if (matches && matches.length > 1) {
-          $('#current-theme').attr('href', matches[1] + '/style.css');
+          $('#current-theme').attr('href', 'themes/' + matches[1] + '/style.css');
+        } else {
+          alert('theme not valid');
         }
       }
     }            
