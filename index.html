@@ -16,11 +16,14 @@
       },
       
       loadCurrent: function() {
-        matches = window.location.hash.match(/^#themes\/([a-z0-9\-_]+)$/);
-        if (matches && matches.length > 1) {
-          $('#current-theme').attr('href', 'themes/' + matches[1] + '/style.css');
-        } else {
-          alert('theme not valid');
+        var hash = window.location.hash;
+        if (hash.length > 0) {
+          matches = hash.match(/^#themes\/([a-z0-9\-_]+)$/);
+          if (matches && matches.length > 1) {
+            $('#current-theme').attr('href', 'themes/' + matches[1] + '/style.css');
+          } else {
+            alert('theme not valid');
+          }
         }
       }
     }            
