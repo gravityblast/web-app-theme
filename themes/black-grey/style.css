@@ -25,11 +25,20 @@ hr {
   color: #FFF;
 }
 
-#content {
+#main {
   float: right;
-  width: 80%;
-  background: #FFF;
+  width: 80%;  
 }
+
+#main .block {
+  background: #FFF;
+  padding-bottom: 20px;
+}
+
+#main .block h2.title {
+  margin-left: 15px;
+}
+
 
 #sidebar {
   float: left;
@@ -75,7 +84,7 @@ hr {
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-#secondary-navigation ul li a:link, #secondary-navigation ul li a:visited, #secondary-navigation ul li a:hover, #secondary-navigation ul li a:active,
+.secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
   color: #FFF;
@@ -85,12 +94,12 @@ hr {
   color: #444;
 }
 
-#secondary-navigation {
+.secondary-navigation {
   background: #000;
   border-bottom-color: #444;
 }
 
-#secondary-navigation ul li.active {
+.secondary-navigation ul li.active {
   background-color: #444;
 }
 

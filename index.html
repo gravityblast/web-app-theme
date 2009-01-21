@@ -45,28 +45,50 @@
       </div>
     </div>    
     <div id="wrapper">
-      <div id="content">
-        <div id="secondary-navigation">
-          <ul>
-            <li class="active first"><a href="#">Text</a></li>
-            <li><a href="#">Tables</a></li>
-            <li><a href="#">Forms</a></li>
-            <li><a href="#">2 Columns Forms</a></li>
-            <li><a href="#">Lists</a></li>
-            <li><a href="#">Other Lists</a></li>
-          </ul>
-          <div class="clear"></div>
-        </div>         
-
-        <div class="main-block">          
-          <h2 class="title">All users</h2>
-          <div class="main_container">
-            <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div id="main">
+        
+        <div class="block">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="active first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Text</h2>
+          <div class="content">            
+            <p class="first">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             <p> <span class="small">small text</span></p>
             <p> <span class="gray">gray text</span></p>
-            <hr />
-            <h1>Tables</h1>
+            <hr />              
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        
+        <div class="block">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li class="active"><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Tables</h2>
+          <div class="content">          
             <table class="table">
               <tr>
                 <th class="first"><a href="#" title="Toggle" class="toggle" onclick="this.up('table').select('input[type=\'checkbox\']').each(function(e){e.checked = !e.checked}); return false;">Toggle</a></th>
@@ -89,18 +111,21 @@
           </div>
         </div>
           
-        <div class="main-block">
+        <div class="block">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li class="active"><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
           <h2 class="title">Forms</h2>
-          <div class="form-container">
-            <div class="flash-messages error">
-              <p>Error message</p>
-            </div>
-            <div class="flash-messages warning">
-              <p>Warning message</p>
-            </div>
-            <div class="flash-messages notice">
-              <p>Notice message</p>
-            </div>
+          <div class="content">            
             <form action="#" method="get" class="form">
               <div class="group">
                 <label class="title">Text field</label>
@@ -116,11 +141,49 @@
             </form>
           </div>
         </div>
-          
-          
-        <div class="main-block">
+        
+        <div class="block">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li class="active"><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Messages</h2>
+          <div class="content">            
+            <div class="flash-messages error">
+              <p>Error message</p>
+            </div>
+            <div class="flash-messages warning">
+              <p>Warning message</p>
+            </div>
+            <div class="flash-messages notice">
+              <p>Notice message</p>
+            </div>
+          </div>
+        </div>
+                   
+        <div class="block">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li class="active"><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
           <h2 class="title">2 columns forms</h2>
-          <div class="form-container">
+          <div class="content">
             <form action="#" method="get" class="form">
               <div class="column left">
                 <div class="group">
@@ -164,9 +227,21 @@
           </div>
         </div>
           
-        <div class="main-block">
+        <div class="block">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li class="active"><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
           <h2 class="title">Activities</h2>
-          <div class="block-container">
+          <div class="content">
             <ul class="list">            
               <li>
                 <div class="date left day">
@@ -200,9 +275,21 @@
           </div>
         </div>
           
-        <div class="main-block">
-          <h2 class="title">Messages</h2>
-          <div class="block-container">
+        <div class="block">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li class="active"><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Other Lists</h2>
+          <div class="content">
             <ul class="list">            
               <li>
                 <div class="left">
@@ -238,10 +325,8 @@
           <h3>Switch Theme</h3>
           <ul class="navigation">
             <li><a href="#" onclick="Theme.activate('default'); return false;">Default</a></li>
-            <li><a href="#" onclick="Theme.activate('green'); return false;">Green</a></li>
-            <li><a href="#" onclick="Theme.activate('purple'); return false;">Purple</a></li>
-            <li><a href="#" onclick="Theme.activate('black-grey'); return false;">Black &amp; Grey</a></li>
             <li class="last"><a href="#" onclick="Theme.activate('bec'); return false;">Bec</a></li>
+            <li><a href="#" onclick="Theme.activate('black-grey'); return false;">Black &amp; Grey</a></li>            
           </ul>          
         </div>
         <div class="block">

@@ -43,23 +43,24 @@ input.checkbox {
   color: #FFF;
 }
 
-#content {
+#main {
   background: #e5e5e5;
   width: 69%;
 }
 
-.main-block {
+#main .block {
   -moz-border-radius-topleft: 4px;
   -moz-border-radius-topright: 4px;
   padding: 0;
   margin-bottom:20px;
+  padding-bottom: 20px;
   background: #fff;
 }
 
-.main-block h2.title {
-  margin:0;
+#main .block h2.title {
+  margin: 0 0 20px 0;
   background-color: #E6FAFA;
-  padding: 5px 5px 5px 10px;
+  padding: 5px 5px 5px 15px;
   font-size:18px;
 }
 
@@ -131,7 +132,7 @@ input.checkbox {
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-#secondary-navigation ul li a:link, #secondary-navigation ul li a:visited, #secondary-navigation ul li a:hover, #secondary-navigation ul li a:active,
+.secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
   color: #FFF;
@@ -148,17 +149,17 @@ input.checkbox {
 #user-navigation ul li a:hover {
   text-decoration: underline;
 }
-#secondary-navigation {
+.secondary-navigation {
   background: #006666;
   border-bottom-color: #008c8c;
   border-bottom: 5px solid #008c8c;
 }
 
-#secondary-navigation ul li.active {
+.secondary-navigation ul li.active {
   background-color: #008c8c;
 }
 
-#secondary-navigation ul li:hover {
+.secondary-navigation ul li:hover {
   background-color: #00b2b2;
 }
 
@@ -210,10 +211,6 @@ input.checkbox {
 }
 
 /* forms */
-
-.form-container, .block-container {
-  padding:10px;
-}
 
 .form input.text, .form textarea.textarea {
   border: 1px solid #ddd;
