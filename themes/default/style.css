@@ -19,8 +19,13 @@ hr {
   color: #FFF;
 }
 
-#content {
+#main .block {
   background: #FFF;
+  padding-bottom: 20px;
+}
+
+#main .block h2.title {
+  margin-left: 15px;
 }
 
 #sidebar .block {
@@ -53,7 +58,7 @@ hr {
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-#secondary-navigation ul li a:link, #secondary-navigation ul li a:visited, #secondary-navigation ul li a:hover, #secondary-navigation ul li a:active,
+.secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
   color: #FFF;
@@ -63,12 +68,12 @@ hr {
   color: #364b69;
 }
 
-#secondary-navigation {
+.secondary-navigation {
   background: #122741;
   border-bottom-color: #364B69;
 }
 
-#secondary-navigation ul li.active {
+.secondary-navigation ul li.active {
   background-color: #364B69;
 }
 
@@ -149,14 +154,14 @@ ul.list li .item .avatar {
 
 /* rounded borders */
 
-#content, #main-navigation li, #secondary-navigation, #sidebar .block, #sidebar h3, ul.list li .left.date.day {
+#main, #main-navigation li, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li .left.date.day {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
 }
 
-#secondary-navigation ul li.first, .table th.first, .table th.first {
+.secondary-navigation ul li.first, .table th.first, .table th.first {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
 }
@@ -167,12 +172,12 @@ ul.list li .item .avatar {
 }
 
 
-#secondary-navigation ul li.first {
+.secondary-navigation ul li.first {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
 }
 
-#sidebar, #sidebar .block, #sidebar ul.navigation, ul.list li .date.day {
+#sidebar, #sidebar .block, #main .block, #sidebar ul.navigation, ul.list li .date.day {
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-bottomright: 4px;

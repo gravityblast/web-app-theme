@@ -37,12 +37,12 @@ body {
   text-decoration: none;
 }
 
-#content {  
+#main {  
   width: 65%;
   float: left;    
 }
 
-#content .pagination {
+#main .pagination {
   padding: 15px 0;  
 }
 
@@ -75,11 +75,15 @@ body {
   padding-top: 20px;
 }
 
-.main-block {
-  padding: 1px 15px;  
+#main .block {
+  margin-bottom: 40px;
 }
 
-.main-block p.first {
+#main .block .content {
+  padding: 0 15px;  
+}
+
+#main .main p.first {
   margin-top: 0;
 }
 
@@ -89,13 +93,13 @@ body {
   right: 20px;  
 }
 
-#user-navigation ul, #main-navigation ul, #secondary-navigation ul, #sidebar ul.navigation {
+#user-navigation ul, #main-navigation ul, .secondary-navigation ul, #sidebar ul.navigation {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-#user-navigation ul li, #main-navigation ul li, #secondary-navigation ul li {
+#user-navigation ul li, #main-navigation ul li, .secondary-navigation ul li {
   float: left;  
 }
 
@@ -108,7 +112,7 @@ body {
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-#secondary-navigation ul li a:link, #secondary-navigation ul li a:visited, #secondary-navigation ul li a:hover, #secondary-navigation ul li a:active,
+.secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
 }
@@ -119,13 +123,13 @@ body {
   padding: 8px 15px;
 }
 
-#secondary-navigation {
+.secondary-navigation {
   font-size: 13px;  
   border-bottom-width: 10px;
   border-bottom-style: solid;
 }
 
-#secondary-navigation ul li a {
+.secondary-navigation ul li a {
   display: block;
   padding: 10px 15px;  
 }

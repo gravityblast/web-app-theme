@@ -14,32 +14,65 @@ hr {
   background: #000;
 }
 
+#header h1 {
+  position: absolute;
+  bottom: 30px;
+  padding: 0;
+  margin: 0;
+}
+
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
   color: #FFF;
 }
 
-#content {
-  background: #FFF;
+#main {
+  float: right;
+  width: 80%;  
 }
 
-#sidebar .block {
+#main .block {
   background: #FFF;
+  padding-bottom: 20px;
+}
+
+#main .block h2.title {
+  margin-left: 15px;
+}
+
+
+#sidebar {
+  float: left;
+  width: 15%;
 }
 
 #sidebar h3 {  
-  background: #000;
-  color: #FFF;
-  border-bottom-color: #444;
+  background: #f0f0ee;
+  padding: 0 0 10px 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#sidebar ul.navigation li a:link, #sidebar ul.navigation li a:visited {
+  padding: 5px;
 }
 
 #sidebar ul li a:link, #sidebar ul li a:visited {
-  background: #FFF;
   border-bottom-color: #F0F0EE;
 }
 
 #sidebar ul li a:hover, #sidebar ul li a:active {
   background: #444;
   color: #FFF;
+}
+
+#sidebar .block .sidebar-block, #sidebar .notice {
+  padding: 0;
+}
+
+#main-navigation {
+  width: 80%;
+  margin-left: 20%;
+  margin-top: 50px;
 }
 
 #main-navigation ul li {
@@ -51,7 +84,7 @@ hr {
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-#secondary-navigation ul li a:link, #secondary-navigation ul li a:visited, #secondary-navigation ul li a:hover, #secondary-navigation ul li a:active,
+.secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
   color: #FFF;
@@ -61,13 +94,17 @@ hr {
   color: #444;
 }
 
-#secondary-navigation {
+.secondary-navigation {
   background: #000;
   border-bottom-color: #444;
 }
 
-#secondary-navigation ul li.active {
+.secondary-navigation ul li.active {
   background-color: #444;
+}
+
+#footer {
+  text-align: right;
 }
 
 /* pagination */

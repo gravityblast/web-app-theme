@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="stylesheets/base.css" type="text/css" media="screen" />
   <link rel="stylesheet" id="current-theme" href="themes/bec/style.css" type="text/css" media="screen" />
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery-1.3.min.js"></script> 
+  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.scrollTo.js"></script>   
+  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.localscroll.js"></script>
   <script type="text/javascript" charset="utf-8">
     var Theme = {
       activate: function(name) {
@@ -14,14 +16,22 @@
       },
       
       loadCurrent: function() {
-        matches = window.location.hash.match(/#(.+)/);
-        if (matches && matches.length > 1) {
-          $('#current-theme').attr('href', matches[1] + '/style.css');
+        var hash = window.location.hash;
+        if (hash.length > 0) {
+          matches = hash.match(/^#themes\/([a-z0-9\-_]+)$/);
+          if (matches && matches.length > 1) {
+            $('#current-theme').attr('href', 'themes/' + matches[1] + '/style.css');
+          } else {
+            alert('theme not valid');
+          }
         }
       }
-    }        
+    }            
     
-    $(document).ready(Theme.loadCurrent);
+    $(document).ready(function() {
+      Theme.loadCurrent();
+      $.localScroll();
+    });
   </script> 
 </head>
 <body>
@@ -38,34 +48,57 @@
       <h1><a href="index.html">Wep App Theme</a></h1>
       <div id="main-navigation">
         <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Projects</a></li>
-          <li class="active"><a href="#">Project 1</a></li>
+          <li><a href="#">Main Page</a></li>
+          <li class="active"><a href="#">Selected</a></li>
         </ul>
         <div class="clear"></div>
       </div>
     </div>    
     <div id="wrapper">
-      <div id="content">
-        <div id="secondary-navigation">
-          <ul>
-            <li class="active first"><a href="#">Users</a></li>
-            <li><a href="#">Tickets</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Other</a></li>
-          </ul>
-          <div class="clear"></div>
-        </div>         
-
-        <div class="main-block">          
-          <h2 class="title">All users</h2>
-          <div class="main_container">
-            <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div id="main">
+        
+        <div class="block" id="block-text">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="active first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Text</h2>
+          <div class="content">            
+            <p class="first">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             <p> <span class="small">small text</span></p>
             <p> <span class="gray">gray text</span></p>
-            <hr />
-            <h1>Tables</h1>
+            <hr />              
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        
+        <div class="block" id="block-tables">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li class="active"><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Tables</h2>
+          <div class="content">          
             <table class="table">
               <tr>
                 <th class="first"><a href="#" title="Toggle" class="toggle" onclick="this.up('table').select('input[type=\'checkbox\']').each(function(e){e.checked = !e.checked}); return false;">Toggle</a></th>
@@ -80,6 +113,12 @@
               <tr>
                 <td><input type="checkbox" class="checkbox" name="id" value="2" /></td><td>2</td><td>ultimate</td><td>Ultimate</td><td>Warrior</td>
               </tr>
+              <tr>
+                <td><input type="checkbox" class="checkbox" name="id" value="3" /></td><td>3</td><td>andre</td><td>Andre</td><td>The Giant</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="checkbox" name="id" value="4" /></td><td>4</td><td>machoman</td><td>Macho Man</td><td>Randy Savage</td>
+              </tr>
             </table>
             <div class="pagination">
               <span class="current">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">1</a><a href="#">10</a>
@@ -88,18 +127,21 @@
           </div>
         </div>
           
-        <div class="main-block">
+        <div class="block" id="block-forms">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li class="active"><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
           <h2 class="title">Forms</h2>
-          <div class="form-container">
-            <div class="flash-messages error">
-              <p>Error message</p>
-            </div>
-            <div class="flash-messages warning">
-              <p>Warning message</p>
-            </div>
-            <div class="flash-messages notice">
-              <p>Notice message</p>
-            </div>
+          <div class="content">            
             <form action="#" method="get" class="form">
               <div class="group">
                 <label class="title">Text field</label>
@@ -115,11 +157,49 @@
             </form>
           </div>
         </div>
-          
-          
-        <div class="main-block">
+        
+        <div class="block" id="block-messages">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li class="active"><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Messages</h2>
+          <div class="content">            
+            <div class="flash-messages error">
+              <p>Error message</p>
+            </div>
+            <div class="flash-messages warning">
+              <p>Warning message</p>
+            </div>
+            <div class="flash-messages notice">
+              <p>Notice message</p>
+            </div>
+          </div>
+        </div>
+                   
+        <div class="block" id="block-forms-2">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li class="active"><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
           <h2 class="title">2 columns forms</h2>
-          <div class="form-container">
+          <div class="content">
             <form action="#" method="get" class="form">
               <div class="column left">
                 <div class="group">
@@ -163,9 +243,21 @@
           </div>
         </div>
           
-        <div class="main-block">
+        <div class="block" id="block-lists">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li class="active"><a href="#block-lists">Lists</a></li>
+              <li><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
           <h2 class="title">Activities</h2>
-          <div class="block-container">
+          <div class="content">
             <ul class="list">            
               <li>
                 <div class="date left day">
@@ -199,9 +291,21 @@
           </div>
         </div>
           
-        <div class="main-block">
-          <h2 class="title">Messages</h2>
-          <div class="block-container">
+        <div class="block" id="block-lists-2">
+          <div class="secondary-navigation">
+            <ul>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Columns Forms</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+              <li class="active"><a href="#block-lists-2">Other Lists</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <h2 class="title">Other Lists</h2>
+          <div class="content">
             <ul class="list">            
               <li>
                 <div class="left">
@@ -237,19 +341,20 @@
           <h3>Switch Theme</h3>
           <ul class="navigation">
             <li><a href="#" onclick="Theme.activate('default'); return false;">Default</a></li>
-            <li><a href="#" onclick="Theme.activate('green'); return false;">Green</a></li>
-            <li><a href="#" onclick="Theme.activate('purple'); return false;">Purple</a></li>
-            <li><a href="#" onclick="Theme.activate('black-grey'); return false;">Black &amp; Grey</a></li>
             <li class="last"><a href="#" onclick="Theme.activate('bec'); return false;">Bec</a></li>
+            <li><a href="#" onclick="Theme.activate('black-grey'); return false;">Black &amp; Grey</a></li>            
           </ul>          
         </div>
         <div class="block">
           <h3>Sidebar</h3>
           <ul class="navigation">
-            <li><a href="#">Example link 1</a></li>
-            <li><a href="#">Example link 2</a></li>
-            <li><a href="#">Example link 3</a></li>
-            <li class="last"><a href="#">Example link 4</a></li>
+            <li><a href="#block-text">Text</a></li>
+            <li><a href="#block-tables">Tables</a></li>
+            <li><a href="#block-forms">Forms</a></li>
+            <li><a href="#block-messages">Messages</a></li>
+            <li><a href="#block-forms-2">2 Columns Forms</a></li>
+            <li><a href="#block-lists">Lists</a></li>
+            <li><a href="#block-lists-2">Other Lists</a></li>
           </ul>
         </div>
         <div class="block">
