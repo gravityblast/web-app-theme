@@ -3,6 +3,7 @@ a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #000; }
 body {
   color: #222;
   background: #f0f0ee;
+  text-align: center;
 }
 
 hr {
@@ -10,24 +11,39 @@ hr {
   color: #f0f0ee;
 }
 
+#container {
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 #header {
   background: #000;
+  padding: 20px 0 0 0;
 }
 
 #header h1 {
-  position: absolute;
-  bottom: 30px;
+  font-size: 20px;
+  margin: 0 0 0 10px;
   padding: 0;
-  margin: 0;
+  float: left;
 }
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
   color: #FFF;
 }
 
+#wrapper {
+  padding: 20px 0 0 0;
+}
+
 #main {
   float: right;
-  width: 80%;  
+  width: 755px;
+}
+
+#main-navigation {
+  margin: 0 0 0 205px;
 }
 
 #main .block {
@@ -42,7 +58,8 @@ hr {
 
 #sidebar {
   float: left;
-  width: 15%;
+  width: 180px;
+  padding: 0 10px
 }
 
 #sidebar h3 {  
@@ -67,12 +84,6 @@ hr {
 
 #sidebar .block .sidebar-block, #sidebar .notice {
   padding: 0;
-}
-
-#main-navigation {
-  width: 80%;
-  margin-left: 20%;
-  margin-top: 50px;
 }
 
 #main-navigation ul li {
@@ -104,7 +115,7 @@ hr {
 }
 
 #footer {
-  text-align: right;
+  padding: 0 0 10px 205px;
 }
 
 /* pagination */
