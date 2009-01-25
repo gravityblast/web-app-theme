@@ -89,7 +89,7 @@ body {
 
 #user-navigation {
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 20px;  
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 #user-navigation ul li {
-  margin-left: 10px;
+  padding: 5px 10px;
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
