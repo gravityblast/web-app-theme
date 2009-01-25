@@ -208,7 +208,7 @@ ul.list li .item .avatar {
   -webkit-border-top-right-radius: 4px;
 }
 
-#main-navigation li.first, .secondary-navigation ul li.first, .table th.first, .table th.first {
+#main-navigation li.first, .secondary-navigation li.first a, .secondary-navigation ul li.first, .table th.first, .table th.first {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
 }

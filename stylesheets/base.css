@@ -38,7 +38,7 @@ body {
 }
 
 #main {  
-  width: 65%;
+  width: 70%;
   float: left;    
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 #sidebar {
-  width: 30%;
+  width: 25%;
   float: right;      
 }
 
