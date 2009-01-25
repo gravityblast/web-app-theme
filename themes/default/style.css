@@ -85,6 +85,17 @@ hr {
   background-color: #262626;
 }
 
+#footer .block {  
+  color: #FFF;
+  background: #262626;
+  width: 65%;  
+}
+
+#footer .block p {      
+  margin: 0;  
+  padding: 10px;
+}
+
 /* pagination */
 
 .pagination span.current {
@@ -182,7 +193,7 @@ ul.list li .item .avatar {
 
 /* rounded borders */
 
-#main, #main-navigation, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li .left.date.day {
+#main, #main-navigation, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li, #footer .block {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
@@ -205,7 +216,7 @@ ul.list li .item .avatar {
   -webkit-border-top-left-radius: 4px;
 }
 
-#sidebar, #sidebar .block, #main .block, #sidebar ul.navigation, ul.list li .date.day {
+#sidebar, #sidebar .block, #main .block, #sidebar ul.navigation, ul.list li, #footer .block {
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-bottomright: 4px;

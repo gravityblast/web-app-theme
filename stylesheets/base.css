@@ -76,7 +76,7 @@ body {
 }
 
 #main .block {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 #main .block .content {
@@ -135,7 +135,7 @@ body {
 }
 
 #footer {
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 /* pagination */
