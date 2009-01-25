@@ -27,6 +27,12 @@ hr {
   color: #FFF;
 }
 
+#user-navigation {
+  top: auto;
+  bottom: 5px;
+  right: 25px;
+}
+
 #main .block {
   background: #FFF;
   padding-bottom: 20px;
