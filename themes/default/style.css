@@ -141,6 +141,30 @@ hr {
   font-size: .9em;
 }
 
+/* flash-messages */
+.flash-messages {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-align:center;
+  margin:0 auto 5px;
+
+}
+.flash-messages p {
+  margin:8px;
+}
+.flash-messages.error {
+  border: 1px solid #fbb;
+  background-color: #fdd;
+}
+.flash-messages.warning {
+  border: 1px solid #fffaaa;
+  background-color: #ffffcc;
+}
+.flash-messages.notice {
+  border: 1px solid #1FDF00;
+  background-color: #BBFFB6;
+}
+
 /* lists */
 
 ul.list li {
