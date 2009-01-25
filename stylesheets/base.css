@@ -252,10 +252,6 @@ ul.list li .left {
   float: left;  
 }
 
-ul.list li .left.date {  
-  padding: 0 10px;
-}
-
 ul.list li .left .avatar {
   width: 50px;
   height: 50px;
@@ -263,14 +259,6 @@ ul.list li .left .avatar {
 
 ul.list li .item {
   margin-left: 80px;
-}
-
-ul.list li .date.day {
-  padding: 10px;
-}
-
-ul.list li .date .day {
-  display: block;
 }
 
 ul.list li .item .avatar {

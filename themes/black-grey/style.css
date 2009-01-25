@@ -175,15 +175,6 @@ ul.list li {
   border-bottom-color: #F0F0EE;
 }
 
-ul.list li .left.date {  
-  color: #BBB;  
-}
-
-ul.list li .date.day {
-  background: #444;
-  color: #FFF;
-}
-
 ul.list li .item .avatar {
   border-color: #F0F0EE;
 }
