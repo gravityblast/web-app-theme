@@ -48,8 +48,8 @@
       <h1><a href="index.html">Wep App Theme</a></h1>
       <div id="main-navigation">
         <ul>
-          <li><a href="#">Main Page</a></li>
-          <li class="active"><a href="#">Selected</a></li>
+          <li class="first"><a href="#block-text">Main Page</a></li>
+          <li class="active"><a href="#block-text">Active</a></li>          
         </ul>
         <div class="clear"></div>
       </div>
@@ -101,7 +101,7 @@
           <div class="content">          
             <table class="table">
               <tr>
-                <th class="first"><a href="#" title="Toggle" class="toggle" onclick="this.up('table').select('input[type=\'checkbox\']').each(function(e){e.checked = !e.checked}); return false;">Toggle</a></th>
+                <th class="first"><a href="#" title="Toggle" class="toggle">Toggle</a></th>
                 <th>ID</th>
                 <th>Login</th>
                 <th>Name</th>
@@ -154,7 +154,7 @@
                 <span class="description">Write here a long text</span>
               </div>
               <div class="group navform">
-                <input type="submit" value="Save &rarr;" /> or <a href="#">Cancel</a>
+                <input type="submit" value="Save &rarr;" /> or <a href="#header">Cancel</a>
               </div>
             </form>
           </div>
