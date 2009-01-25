@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Web App Theme</title>
   <link rel="stylesheet" href="stylesheets/base.css" type="text/css" media="screen" />
-  <link rel="stylesheet" id="current-theme" href="themes/default/style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" id="current-theme" href="stylesheets/themes/default/style.css" type="text/css" media="screen" />
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery-1.3.min.js"></script> 
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.scrollTo.js"></script>   
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.localscroll.js"></script>
@@ -20,7 +20,7 @@
         if (hash.length > 0) {
           matches = hash.match(/^#themes\/([a-z0-9\-_]+)$/);
           if (matches && matches.length > 1) {
-            $('#current-theme').attr('href', 'themes/' + matches[1] + '/style.css');
+            $('#current-theme').attr('href', 'stylesheets/themes/' + matches[1] + '/style.css');
           } else {
             alert('theme not valid');
           }
