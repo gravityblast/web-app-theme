@@ -143,15 +143,6 @@ hr {
   color: #FFF;
 }
 
-.table th a.toggle {
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: transparent url('images/tick.png') center no-repeat;
-  text-indent: -9999px;
-  -moz-outline: none;
-}
-
 .table th.first {
   width: 30px;
   text-align: center;

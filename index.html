@@ -30,7 +30,14 @@
     
     $(document).ready(function() {
       Theme.loadCurrent();
-      $.localScroll();
+      $.localScroll();      
+      $('.table :checkbox.toggle').each(function(i, toggle) {
+        $(toggle).change(function(e) {
+          $(toggle).parents('table:first').find(':checkbox:not(.toggle)').each(function(j, checkbox) {
+            checkbox.checked = !checkbox.checked;            
+          })          
+        });
+      });
     });
   </script> 
 </head>
@@ -99,7 +106,7 @@
           <div class="content">          
             <table class="table">
               <tr>
-                <th class="first"><a href="#" title="Toggle" class="toggle">Toggle</a></th>
+                <th class="first"><input type="checkbox" class="toggle" /></th>
                 <th>ID</th>
                 <th>Login</th>
                 <th>Name</th>
