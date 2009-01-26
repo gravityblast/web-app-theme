@@ -43,7 +43,8 @@ body {
 }
 
 #main .pagination {
-  padding: 15px 0;  
+  padding: 15px 20px 15px 0;    
+  float: right;
 }
 
 #sidebar {
@@ -146,8 +147,6 @@ body {
 
 .pagination a, .pagination span {
   padding: 2px 5px;
-  display: block;
-  float: left;
   margin-right: 5px; 
 }
 
@@ -167,6 +166,7 @@ body {
 .table {
   width: 100%;
   border-collapse: collapse;  
+  margin-bottom: 15px;
 }
 
 .table th {
