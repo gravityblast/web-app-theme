@@ -2,7 +2,7 @@ a:link, a:visited, a:hover, a:active { color: #33f; }
 h1, h2, h3 {color:#444}
 
 body {
-  color: #222;
+  color: #333;
   background: #e5e5e5;
   font-family: "Bitstream Vera Sans", verdana, sans-serif;  
 }
@@ -45,7 +45,7 @@ input.checkbox {
 
 #main {
   background: #e5e5e5;
-  width: 69%;
+  width: 73%;
 }
 
 #main .block {
@@ -66,6 +66,11 @@ input.checkbox {
 
 .main_container {
   padding:10px;
+}
+
+#footer .block p {
+  color:#aaa;
+  font-size:11px;
 }
 
 /* #sidebar .block { background: #FFF; padding-bottom:0px; } */
@@ -99,7 +104,7 @@ input.checkbox {
 }
 
 #sidebar ul li a:hover, #sidebar ul li a:active {
-  background: #E6FAFA;
+  background: #e1efef;
   color: #444;
   font-size:14px;
   text-decoration:underline;
@@ -215,7 +220,7 @@ input.checkbox {
 .form input.text, .form textarea.textarea {
   border: 1px solid #ddd;
   padding: 5px;
-  width: 95%;
+  width:99%;
 }
 
 .form .navform {
@@ -229,6 +234,11 @@ input.checkbox {
 }
 .form .navform input {
   font-size:14px;
+}
+
+.description {
+  color:#aaa;
+  font-family:serif;
 }
 
 /* flash-messages */
