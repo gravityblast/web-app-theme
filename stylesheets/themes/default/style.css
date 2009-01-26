@@ -136,10 +136,6 @@ hr {
   color: #FFF;
 }
 
-.table th.first {
-  width: 30px;
-}
-
 .table td {
   border-bottom:1px solid #F0F0EE;
 }

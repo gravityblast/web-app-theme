@@ -186,12 +186,12 @@ body {
   text-align: left;
 }
 
-.table th.last {
+.table th.first {
   width: 30px;
 }
 
-.table th.checkbox {
-  padding: 10px;
+.table .checkbox {
+  margin-left: 10px;
 }
 
 .table td {
