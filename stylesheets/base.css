@@ -175,12 +175,12 @@ body {
   text-align: left;
 }
 
-.table th.first {
+.table th.last {
   width: 30px;
 }
 
-.table input[type="checkbox"] {
-  margin-left: 10px;
+.table th.checkbox {
+  padding: 10px;
 }
 
 .table td {
