@@ -38,7 +38,7 @@ body {
 }
 
 #main {  
-  width: 65%;
+  width: 70%;
   float: left;    
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 #sidebar {
-  width: 30%;
+  width: 25%;
   float: right;      
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 #main .block {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 #main .block .content {
@@ -89,7 +89,7 @@ body {
 
 #user-navigation {
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 20px;  
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 #user-navigation ul li {
-  margin-left: 10px;
+  padding: 5px 10px;
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
@@ -135,7 +135,7 @@ body {
 }
 
 #footer {
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 /* pagination */
@@ -171,15 +171,12 @@ body {
   text-align: left;
 }
 
-.table th a.toggle {
-  display: block;
-  width: 12px;
-  height: 12px;
-}
-
 .table th.first {
   width: 30px;
-  text-align: center;
+}
+
+.table input[type="checkbox"] {
+  margin-left: 10px;
 }
 
 .table td {
@@ -252,10 +249,6 @@ ul.list li .left {
   float: left;  
 }
 
-ul.list li .left.date {  
-  padding: 0 10px;
-}
-
 ul.list li .left .avatar {
   width: 50px;
   height: 50px;
@@ -263,14 +256,6 @@ ul.list li .left .avatar {
 
 ul.list li .item {
   margin-left: 80px;
-}
-
-ul.list li .date.day {
-  padding: 10px;
-}
-
-ul.list li .date .day {
-  display: block;
 }
 
 ul.list li .item .avatar {

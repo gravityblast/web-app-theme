@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Web App Theme</title>
   <link rel="stylesheet" href="stylesheets/base.css" type="text/css" media="screen" />
-  <link rel="stylesheet" id="current-theme" href="themes/bec/style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" id="current-theme" href="stylesheets/themes/default/style.css" type="text/css" media="screen" />
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery-1.3.min.js"></script> 
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.scrollTo.js"></script>   
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.localscroll.js"></script>
@@ -20,7 +20,7 @@
         if (hash.length > 0) {
           matches = hash.match(/^#themes\/([a-z0-9\-_]+)$/);
           if (matches && matches.length > 1) {
-            $('#current-theme').attr('href', 'themes/' + matches[1] + '/style.css');
+            $('#current-theme').attr('href', 'stylesheets/themes/' + matches[1] + '/style.css');
           } else {
             alert('theme not valid');
           }
@@ -30,13 +30,21 @@
     
     $(document).ready(function() {
       Theme.loadCurrent();
-      $.localScroll();
+      $.localScroll();      
+      $('.table :checkbox.toggle').each(function(i, toggle) {
+        $(toggle).change(function(e) {
+          $(toggle).parents('table:first').find(':checkbox:not(.toggle)').each(function(j, checkbox) {
+            checkbox.checked = !checkbox.checked;            
+          })          
+        });
+      });
     });
   </script> 
 </head>
 <body>
   <div id="container">
     <div id="header">
+      <h1><a href="index.html">Wep App Theme</a></h1>
       <div id="user-navigation">
         <ul>
           <li><a href="#">Profile</a></li>
@@ -44,12 +52,11 @@
           <li><a href="#">Logout</a></li>
         </ul>
         <div class="clear"></div>
-      </div>
-      <h1><a href="index.html">Wep App Theme</a></h1>
+      </div>      
       <div id="main-navigation">
         <ul>
-          <li><a href="#">Main Page</a></li>
-          <li class="active"><a href="#">Selected</a></li>
+          <li class="first"><a href="#block-text">Main Page</a></li>
+          <li class="active"><a href="#block-text">Active</a></li>          
         </ul>
         <div class="clear"></div>
       </div>
@@ -66,7 +73,6 @@
               <li><a href="#block-messages">Messages</a></li>
               <li><a href="#block-forms-2">2 Columns Forms</a></li>
               <li><a href="#block-lists">Lists</a></li>
-              <li><a href="#block-lists-2">Other Lists</a></li>
             </ul>
             <div class="clear"></div>
           </div>
@@ -93,7 +99,6 @@
               <li><a href="#block-messages">Messages</a></li>
               <li><a href="#block-forms-2">2 Columns Forms</a></li>
               <li><a href="#block-lists">Lists</a></li>
-              <li><a href="#block-lists-2">Other Lists</a></li>
             </ul>
             <div class="clear"></div>
           </div>
@@ -101,7 +106,7 @@
           <div class="content">          
             <table class="table">
               <tr>
-                <th class="first"><a href="#" title="Toggle" class="toggle" onclick="this.up('table').select('input[type=\'checkbox\']').each(function(e){e.checked = !e.checked}); return false;">Toggle</a></th>
+                <th class="first"><input type="checkbox" class="toggle" /></th>
                 <th>ID</th>
                 <th>Login</th>
                 <th>Name</th>
@@ -136,7 +141,6 @@
               <li><a href="#block-messages">Messages</a></li>
               <li><a href="#block-forms-2">2 Columns Forms</a></li>
               <li><a href="#block-lists">Lists</a></li>
-              <li><a href="#block-lists-2">Other Lists</a></li>
             </ul>
             <div class="clear"></div>
           </div>
@@ -146,13 +150,15 @@
               <div class="group">
                 <label class="title">Text field</label>
                 <input type="text" class="text" />
+                <span class="description">Ex: a simple text</span>
               </div>
               <div class="group">
                 <label class="title">Text area</label>
                 <textarea class="textarea" rows="10" cols="80"></textarea>
+                <span class="description">Write here a long text</span>
               </div>
               <div class="group navform">
-                <input type="submit" value="Save &rarr;" /> or <a href="#">Cancel</a>
+                <input type="submit" value="Save &rarr;" /> or <a href="#header">Cancel</a>
               </div>
             </form>
           </div>
@@ -167,7 +173,6 @@
               <li class="active"><a href="#block-messages">Messages</a></li>
               <li><a href="#block-forms-2">2 Columns Forms</a></li>
               <li><a href="#block-lists">Lists</a></li>
-              <li><a href="#block-lists-2">Other Lists</a></li>
             </ul>
             <div class="clear"></div>
           </div>
@@ -194,7 +199,6 @@
               <li><a href="#block-messages">Messages</a></li>
               <li class="active"><a href="#block-forms-2">2 Columns Forms</a></li>
               <li><a href="#block-lists">Lists</a></li>
-              <li><a href="#block-lists-2">Other Lists</a></li>
             </ul>
             <div class="clear"></div>
           </div>
@@ -252,59 +256,10 @@
               <li><a href="#block-messages">Messages</a></li>
               <li><a href="#block-forms-2">2 Columns Forms</a></li>
               <li class="active"><a href="#block-lists">Lists</a></li>
-              <li><a href="#block-lists-2">Other Lists</a></li>
             </ul>
             <div class="clear"></div>
           </div>
-          <h2 class="title">Activities</h2>
-          <div class="content">
-            <ul class="list">            
-              <li>
-                <div class="date left day">
-                  <span class="day">Thursday</span>
-                  <span>Jan 15</span>
-                </div>
-                <div class="item">
-                  <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>              
-              </li>
-              <li>
-                <div class="date left hour">
-                  <span>08:30 PM</span>
-                </div>
-                <div class="item">
-                  <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-              </li>
-              <li>
-                <div class="date left hour">
-                  <span>08:30 PM</span>
-                </div>
-                <div class="item">
-                  <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-              </li>            
-            </ul>
-          </div>
-        </div>
-          
-        <div class="block" id="block-lists-2">
-          <div class="secondary-navigation">
-            <ul>
-              <li class="first"><a href="#block-text">Text</a></li>
-              <li><a href="#block-tables">Tables</a></li>
-              <li><a href="#block-forms">Forms</a></li>
-              <li><a href="#block-messages">Messages</a></li>
-              <li><a href="#block-forms-2">2 Columns Forms</a></li>
-              <li><a href="#block-lists">Lists</a></li>
-              <li class="active"><a href="#block-lists-2">Other Lists</a></li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-          <h2 class="title">Other Lists</h2>
+          <h2 class="title">Lists</h2>
           <div class="content">
             <ul class="list">            
               <li>
@@ -333,7 +288,7 @@
               </li>            
             </ul>
           </div>
-        </div>        
+        </div>                          
 
       </div>
       <div id="sidebar">
@@ -354,7 +309,6 @@
             <li><a href="#block-messages">Messages</a></li>
             <li><a href="#block-forms-2">2 Columns Forms</a></li>
             <li><a href="#block-lists">Lists</a></li>
-            <li><a href="#block-lists-2">Other Lists</a></li>
           </ul>
         </div>
         <div class="block">
@@ -373,7 +327,9 @@
       <div class="clear"></div>      
     </div>
     <div id="footer">
-      Copyright &copy; 2009 Your Site.
+      <div class="block">
+        <p>Copyright &copy; 2009 Your Site.</p>
+      </div>      
     </div>
   </div>
 </body>
