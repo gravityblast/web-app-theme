@@ -42,9 +42,18 @@ body {
   float: left;    
 }
 
-#main .pagination {
-  padding: 15px 20px 15px 0;    
+.actions-bar {
+  padding: 10px 1px;
+}
+
+.actions-bar .actions {
+  float: left;
+}
+
+
+.actions-bar .pagination {
   float: right;
+  padding: 1px 0;
 }
 
 #sidebar {
@@ -148,6 +157,8 @@ body {
 .pagination a, .pagination span {
   padding: 2px 5px;
   margin-right: 5px; 
+  display: block;
+  float: left;
 }
 
 .pagination span.current {
