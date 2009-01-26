@@ -72,7 +72,7 @@ input.checkbox {
 
 #sidebar .notice {
   background-color: #ffc;
-  padding:10px;
+  padding: 0 10px;
   border-bottom:1px solid #ddd;
   border-right:1px solid #ddd;
   border-top:1px solid #fff;
@@ -85,8 +85,16 @@ input.checkbox {
 }
 #sidebar .notice p {
   font-size:12px;
-
 }
+
+#sidebar .block {
+  padding-bottom: 0;
+}
+
+#sidebar .block .content {
+  padding: 0 10px;
+}
+
 
 #sidebar h3 {  
   background: #c7d8d8;

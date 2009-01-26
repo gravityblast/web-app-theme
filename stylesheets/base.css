@@ -16,7 +16,7 @@ body {
 }
 
 #container {
-  min-width: 800px;
+  min-width: 960px;
 }
 
 #header, #wrapper, #footer {
@@ -60,6 +60,10 @@ body {
 #sidebar .block {
   margin-bottom: 20px;
   padding-bottom: 10px;
+}
+
+#sidebar .block .content {
+  padding: 0 15px;
 }
 
 #sidebar ul.navigation li a:link, #sidebar ul.navigation li a:visited {
