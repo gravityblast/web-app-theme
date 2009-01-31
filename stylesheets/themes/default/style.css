@@ -3,6 +3,7 @@
 .hightlight { background-color:#FFFFCC; }
 
 a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #7A1818; }
+a { -moz-outline: none; }
 
 body {
   color: #222;
