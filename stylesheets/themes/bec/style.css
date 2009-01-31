@@ -277,3 +277,14 @@ ul.list li .item .avatar {
 ul.list li .left  {
   padding: 5px 5px;
 }
+
+/* box */
+
+#box .block {
+  background: #FFF;  
+}
+
+#box .block h2 {
+  background: #006666;  
+  color: #FFF;
+}

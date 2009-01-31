@@ -209,6 +209,16 @@ input.checkbox {
   margin-bottom: 15px;
 }
 
+.form div.left {
+  width: 20%;
+  float: left;
+}
+
+.form div.right {
+  width: 75%;
+  float: right;
+}
+
 .form .column {
   width: 48%;
 }
@@ -221,10 +231,14 @@ input.checkbox {
   float: right;
 }
 
-.form label.title, .form input.text, .form textarea {
+.form label.label, .form input.text, .form textarea {
   font-size: 1.2em;
   padding: 1px 0;
   margin: 0;
+}
+
+.form label.right {
+  text-align: right;
 }
 
 .form input.checkbox, .form input.radio {
@@ -235,7 +249,7 @@ input.checkbox {
   line-height: 1.5em;
 }
 
-.form label.title {
+.form label.label {
   display: block;
   padding-bottom: 2px;  
   font-weight: bold;
@@ -279,4 +293,25 @@ ul.list li .item .avatar {
   width: 30px;
   height: 30px;
 }
+
+/* box */
+
+#box {
+  width: 500px;
+  margin: 50px auto;  
+}
+
+#box .block {
+  margin-bottom: 20px;
+}
+
+#box .block h2 {
+  padding: 10px 15px;
+  margin: 0;  
+}
+
+#box .block .content {
+  padding: 15px 20px;
+}
+
 

@@ -56,7 +56,9 @@
       <div id="main-navigation">
         <ul>
           <li class="first"><a href="#block-text">Main Page</a></li>
-          <li class="active"><a href="#block-text">Active</a></li>          
+          <li class="active"><a href="#block-text">Active</a></li>
+          <li><a href="#block-login">Login</a></li>
+          <li><a href="#block-signup">Signup</a></li>
         </ul>
         <div class="clear"></div>
       </div>
@@ -155,12 +157,12 @@
           <div class="content">            
             <form action="#" method="get" class="form">
               <div class="group">
-                <label class="title">Text field</label>
+                <label class="label">Text field</label>
                 <input type="text" class="text" />
                 <span class="description">Ex: a simple text</span>
               </div>
               <div class="group">
-                <label class="title">Text area</label>
+                <label class="label">Text area</label>
                 <textarea class="textarea" rows="10" cols="80"></textarea>
                 <span class="description">Write here a long text</span>
               </div>
@@ -214,21 +216,21 @@
             <form action="#" method="get" class="form">
               <div class="column left">
                 <div class="group">
-                  <label class="title">Text field</label>
+                  <label class="label">Text field</label>
                   <input type="text" class="text" />
                 </div>
                 <div class="group">
-                  <label class="title">Text area</label>
+                  <label class="label">Text area</label>
                   <textarea class="textarea" rows="10" cols="80"></textarea>
                 </div>              
               </div>
               <div class="column right">
                 <div class="group">
-                  <label class="title">Select</label>
+                  <label class="label">Select</label>
                   <select><option value="1">Choose...</option></select>
                 </div>
                 <div class="group">
-                  <label class="title">Check box</label>
+                  <label class="label">Check box</label>
                   <div>
                     <input type="checkbox" name="checkbox" id="checkbox_1" class="checkbox" value="1" /> <label for="checkbox_1" class="checkbox">Option 1</label>
                   </div>
@@ -237,7 +239,7 @@
                   </div>
                 </div>
                 <div class="group">
-                  <label class="title">Radio</label>
+                  <label class="label">Radio</label>
                   <div>
                     <input type="radio" name="radio" id="radio_1" class="checkbox" value="1" /> <label for="radio_1" class="radio">Option 1</label>
                   </div>
@@ -341,6 +343,92 @@
       <div class="block">
         <p>Copyright &copy; 2009 Your Site.</p>
       </div>      
+    </div>
+    <div id="box">
+      <h1>Wen App Theme</h1>
+      <div class="block" id="block-login">
+        <h2>Login Box</h2>        
+        <div class="content login">
+          <form class="form login">
+            <div class="group">
+              <div class="left">
+                <label class="label right">Login</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text" />
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group">
+              <div class="left">
+                <label class="label right">Password</label>
+              </div>
+              <div class="right">
+                <input type="password" class="text" />
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group navform">
+              <div class="right">
+                <input type="submit" class="button" value="Login" />
+              </div>
+              <div class="clear"></div>
+            </div>            
+          </form>
+        </div>
+      </div>
+      
+      <div class="block" id="block-signup">
+        <h2>Sign up</h2>        
+        <div class="content">
+          <form class="form">
+            <div class="group">
+              <div class="left">
+                <label class="label">Login</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text" />
+                <span class="description">Ex: web-app-theme</span>
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group">
+              <div class="left">
+                <label class="label">Email</label>                
+              </div>
+              <div class="right">
+                <input type="text" class="text" />
+                <span class="description">Ex: test@example.com</span>
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group">
+              <div class="left">
+                <label class="label">Password</label>
+              </div>
+              <div class="right">
+                <input type="password" class="text" />
+                <span class="description">Must contains the word 'yeah'</span>
+              </div>              
+              <div class="clear"></div>
+            </div>
+            
+            <div class="group">
+              <label class="label">Text field</label>
+              <input type="text" class="text" />
+              <span class="description">Ex: a simple text</span>
+            </div>
+            <div class="group">
+              <label class="label">Text field</label>
+              <input type="text" class="text" />
+              <span class="description">Ex: a simple text</span>
+            </div>
+            <div class="group navform">
+              <input type="submit" class="button" value="Sign up" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </body>

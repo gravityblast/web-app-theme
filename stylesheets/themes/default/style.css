@@ -52,6 +52,27 @@ hr {
   border-bottom: 10px solid #262626;
 }
 
+#main-navigation ul li {
+  padding-left: 15px;
+}
+
+#main-navigation ul li a {
+  padding: 8px 0;
+}
+
+#main-navigation ul li.active {
+  padding: 0;
+  margin-left: 15px;
+}
+
+#main-navigation ul li.active {
+  margin-left: 15px;
+}
+
+#main-navigation ul li.active a {
+  padding: 8px 15px;
+}
+
 #sidebar ul li a:link, #sidebar ul li a:visited {
   background: #FFF;
   border-bottom: 1px solid #F0F0EE;
@@ -142,7 +163,7 @@ hr {
 
 /* forms */
 
-.form input[type="text"], .form textarea {
+.form input.text, .form textarea {
   width: 100%;
   border: 1px solid #262626;
 }
@@ -199,6 +220,18 @@ ul.list li .item .avatar {
   border-style: solid;
   padding: 2px; 
 }
+
+/* box */
+
+#box .block {
+  background: #FFF;  
+}
+
+#box .block h2 {
+  background: #7A1818;  
+  color: #FFF;
+}
+
 
 /* rounded borders */
 
