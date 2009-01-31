@@ -9,6 +9,7 @@
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.scrollTo.js"></script>   
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.localscroll.js"></script>
   <script type="text/javascript" charset="utf-8">
+    // <![CDATA[
     var Theme = {
       activate: function(name) {
         window.location.hash = 'themes/' + name
@@ -39,6 +40,7 @@
         });
       });
     });
+    // ]]>    
   </script> 
 </head>
 <body>
@@ -130,7 +132,7 @@
               </table>
               <div class="actions-bar">
                 <div class="actions">
-                  <input type="submit" class="button" value="Delete" class="button">
+                  <input type="submit" class="button" value="Delete" />
                 </div>
                 <div class="pagination">
                   <span class="current">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a><a href="#">Next »</a>              
@@ -349,7 +351,7 @@
       <div class="block" id="block-login">
         <h2>Login Box</h2>        
         <div class="content login">
-          <form class="form login">
+          <form action="#" class="form login">
             <div class="group">
               <div class="left">
                 <label class="label right">Login</label>
@@ -381,7 +383,7 @@
       <div class="block" id="block-signup">
         <h2>Sign up</h2>        
         <div class="content">
-          <form class="form">
+          <form action="#" class="form">
             <div class="group">
               <div class="left">
                 <label class="label">Login</label>
