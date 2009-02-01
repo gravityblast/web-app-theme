@@ -1,6 +1,5 @@
-
 * {margin:0;padding:0}
-.clear { clear: both; }
+.clear { clear: both; height: 0; }
 
 h1 { margin: 15px 0; font-size: 22px; font-weight: normal; }
 h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
@@ -29,8 +28,9 @@ body {
 }
 
 #header h1 {
-  padding: 10px 0;
-  font-size: 30px;    
+  margin: 0;
+  padding: 10px 0;  
+  font-size: 30px;
 }
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
@@ -91,10 +91,11 @@ body {
 
 #main .block {
   margin-bottom: 20px;
+  padding-top: 1px;
 }
 
 #main .block .content {
-  padding: 0 15px;  
+  padding: 0 15px 15px;  
 }
 
 #main .main p.first {

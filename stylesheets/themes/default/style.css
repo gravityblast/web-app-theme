@@ -20,10 +20,6 @@ hr {
   background: #7A1818;
 }
 
-#header h1 {
-  padding: 0;
-}
-
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
   color: #FFF;
 }
@@ -34,13 +30,9 @@ hr {
   right: 25px;
 }
 
-#main .block {
+#main .block .content {  
   background: #FFF;
-  padding-bottom: 20px;
-}
-
-#main .block h2.title {
-  margin-left: 15px;
+  padding-top: 1px;
 }
 
 #sidebar .block {
