@@ -20,6 +20,10 @@ hr {
   background: #7A1818;
 }
 
+#header h1 {
+  padding: 20px 0;
+}
+
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
   color: #FFF;
 }
