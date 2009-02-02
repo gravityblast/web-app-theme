@@ -30,9 +30,13 @@ hr {
   right: 25px;
 }
 
-#main .block .content {  
+#main .block .content {
   background: #FFF;
   padding-top: 1px;
+}
+
+#main .block .content h2 {
+  margin-left: 15px;
 }
 
 #sidebar .block {
