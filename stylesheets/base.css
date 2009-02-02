@@ -220,15 +220,15 @@ input.checkbox {
   float: right;
 }
 
-.form .column {
+.form .columns .column {
   width: 48%;
 }
 
-.form .column.left {
+.form .columns .left {
   float: left;
 }
 
-.form .column.right {
+.form .columns .right {
   float: right;
 }
 
