@@ -1,6 +1,5 @@
-
 * {margin:0;padding:0}
-.clear { clear: both; }
+.clear { clear: both; height: 0; }
 
 h1 { margin: 15px 0; font-size: 22px; font-weight: normal; }
 h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
@@ -16,7 +15,7 @@ body {
 }
 
 #container {
-  min-width: 800px;
+  min-width: 960px;
 }
 
 #header, #wrapper, #footer {
@@ -29,8 +28,9 @@ body {
 }
 
 #header h1 {
-  padding: 10px 0;
-  font-size: 30px;    
+  margin: 0;
+  padding: 10px 0;  
+  font-size: 30px;
 }
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
@@ -42,8 +42,18 @@ body {
   float: left;    
 }
 
-#main .pagination {
-  padding: 15px 0;  
+.actions-bar {
+  padding: 10px 1px;
+}
+
+.actions-bar .actions {
+  float: left;
+}
+
+
+.actions-bar .pagination {
+  float: right;
+  padding: 1px 0;
 }
 
 #sidebar {
@@ -62,6 +72,10 @@ body {
   padding-bottom: 10px;
 }
 
+#sidebar .block .content {
+  padding: 0 15px;
+}
+
 #sidebar ul.navigation li a:link, #sidebar ul.navigation li a:visited {
   display: block;
   padding: 10px 15px;
@@ -77,10 +91,11 @@ body {
 
 #main .block {
   margin-bottom: 20px;
+  padding-top: 1px;
 }
 
-#main .block .content {
-  padding: 0 15px;  
+#main .block .content .inner {
+  padding: 0 15px 15px;  
 }
 
 #main .main p.first {
@@ -142,9 +157,9 @@ body {
 
 .pagination a, .pagination span {
   padding: 2px 5px;
+  margin-right: 5px; 
   display: block;
   float: left;
-  margin-right: 5px; 
 }
 
 .pagination span.current {
@@ -163,6 +178,7 @@ body {
 .table {
   width: 100%;
   border-collapse: collapse;  
+  margin-bottom: 15px;
 }
 
 .table th {
@@ -175,7 +191,7 @@ body {
   width: 30px;
 }
 
-.table input[type="checkbox"] {
+.table .checkbox {
   margin-left: 10px;
 }
 
@@ -194,22 +210,36 @@ input.checkbox {
   margin-bottom: 15px;
 }
 
-.form .column {
-  width: 48%;
-}
-
-.form .column.left {
+.form div.left {
+  width: 20%;
   float: left;
 }
 
-.form .column.right {
+.form div.right {
+  width: 75%;
   float: right;
 }
 
-.form label.title, .form input.text, .form textarea {
+.form .columns .column {
+  width: 48%;
+}
+
+.form .columns .left {
+  float: left;
+}
+
+.form .columns .right {
+  float: right;
+}
+
+.form label.label, .form input.text, .form textarea {
   font-size: 1.2em;
   padding: 1px 0;
   margin: 0;
+}
+
+.form label.right {
+  text-align: right;
 }
 
 .form input.checkbox, .form input.radio {
@@ -220,7 +250,7 @@ input.checkbox {
   line-height: 1.5em;
 }
 
-.form label.title {
+.form label.label {
   display: block;
   padding-bottom: 2px;  
   font-weight: bold;
@@ -264,4 +294,25 @@ ul.list li .item .avatar {
   width: 30px;
   height: 30px;
 }
+
+/* box */
+
+#box {
+  width: 500px;
+  margin: 50px auto;  
+}
+
+#box .block {
+  margin-bottom: 20px;
+}
+
+#box .block h2 {
+  padding: 10px 15px;
+  margin: 0;  
+}
+
+#box .block .content {
+  padding: 15px 20px;
+}
+
 

@@ -9,6 +9,7 @@
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.scrollTo.js"></script>   
   <script type="text/javascript" charset="utf-8" src="javascripts/jquery.localscroll.js"></script>
   <script type="text/javascript" charset="utf-8">
+    // <![CDATA[
     var Theme = {
       activate: function(name) {
         window.location.hash = 'themes/' + name
@@ -39,6 +40,7 @@
         });
       });
     });
+    // ]]>    
   </script> 
 </head>
 <body>
@@ -56,7 +58,9 @@
       <div id="main-navigation">
         <ul>
           <li class="first"><a href="#block-text">Main Page</a></li>
-          <li class="active"><a href="#block-text">Active</a></li>          
+          <li class="active"><a href="#block-text">Active</a></li>
+          <li><a href="#block-login">Login</a></li>
+          <li><a href="#block-signup">Signup</a></li>
         </ul>
         <div class="clear"></div>
       </div>
@@ -75,18 +79,20 @@
               <li><a href="#block-lists">Lists</a></li>
             </ul>
             <div class="clear"></div>
-          </div>
-          <h2 class="title">Text</h2>
+          </div>          
           <div class="content">            
-            <p class="first">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p> <span class="small">small text</span></p>
-            <p> <span class="gray">gray text</span></p>
-            <hr />              
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <h2 class="title">Text</h2>
+            <div class="inner">
+              <p class="first">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p> <span class="small">small text</span></p>
+              <p> <span class="gray">gray text</span></p>
+              <hr />              
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
           </div>
         </div>
         
@@ -101,33 +107,42 @@
               <li><a href="#block-lists">Lists</a></li>
             </ul>
             <div class="clear"></div>
-          </div>
-          <h2 class="title">Tables</h2>
+          </div>          
           <div class="content">          
-            <table class="table">
-              <tr>
-                <th class="first"><input type="checkbox" class="toggle" /></th>
-                <th>ID</th>
-                <th>Login</th>
-                <th>Name</th>
-                <th class="last">Surname</th>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>1</td><td>hulk</td><td>Hulk</td><td>Hogan</td>              
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" name="id" value="2" /></td><td>2</td><td>ultimate</td><td>Ultimate</td><td>Warrior</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" name="id" value="3" /></td><td>3</td><td>andre</td><td>Andre</td><td>The Giant</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" name="id" value="4" /></td><td>4</td><td>machoman</td><td>Macho Man</td><td>Randy Savage</td>
-              </tr>
-            </table>
-            <div class="pagination">
-              <span class="current">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">1</a><a href="#">10</a>
-              <div class="clear"></div>
+            <h2 class="title">Tables</h2>
+            <div class="inner">
+              <form action="#" class="form">
+                <table class="table">
+                  <tr>             
+                    <th class="first"><input type="checkbox" class="checkbox toggle" /></th>   
+                    <th>ID</th>
+                    <th>Login</th>
+                    <th>Name</th>
+                    <th class="last">Surname</th>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>1</td><td>hulk</td><td>Hulk</td><td>Hogan</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>2</td><td>ultimate</td><td>Ultimate</td><td>Warrior</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>3</td><td>andre</td><td>Andre</td><td>The Giant</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>4</td><td>machoman</td><td>Macho Man</td><td>Randy Savage</td>
+                  </tr>
+                </table>
+                <div class="actions-bar">
+                  <div class="actions">
+                    <input type="submit" class="button" value="Delete" />
+                  </div>
+                  <div class="pagination">
+                    <span class="current">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a><a href="#">Next »</a>              
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -143,24 +158,26 @@
               <li><a href="#block-lists">Lists</a></li>
             </ul>
             <div class="clear"></div>
-          </div>
-          <h2 class="title">Forms</h2>
+          </div>          
           <div class="content">            
-            <form action="#" method="get" class="form">
-              <div class="group">
-                <label class="title">Text field</label>
-                <input type="text" class="text" />
-                <span class="description">Ex: a simple text</span>
-              </div>
-              <div class="group">
-                <label class="title">Text area</label>
-                <textarea class="textarea" rows="10" cols="80"></textarea>
-                <span class="description">Write here a long text</span>
-              </div>
-              <div class="group navform">
-                <input type="submit" value="Save &rarr;" /> or <a href="#header">Cancel</a>
-              </div>
-            </form>
+            <h2 class="title">Forms</h2>
+            <div class="inner">
+              <form action="#" method="get" class="form">
+                <div class="group">
+                  <label class="label">Text field</label>
+                  <input type="text" class="text" />
+                  <span class="description">Ex: a simple text</span>
+                </div>
+                <div class="group">
+                  <label class="label">Text area</label>
+                  <textarea class="textarea" rows="10" cols="80"></textarea>
+                  <span class="description">Write here a long text</span>
+                </div>
+                <div class="group navform">
+                  <input type="submit" class="button" value="Save &rarr;" /> or <a href="#header">Cancel</a>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         
@@ -175,17 +192,19 @@
               <li><a href="#block-lists">Lists</a></li>
             </ul>
             <div class="clear"></div>
-          </div>
-          <h2 class="title">Messages</h2>
+          </div>          
           <div class="content">            
-            <div class="flash-messages error">
-              <p>Error message</p>
-            </div>
-            <div class="flash-messages warning">
-              <p>Warning message</p>
-            </div>
-            <div class="flash-messages notice">
-              <p>Notice message</p>
+            <h2 class="title">Messages</h2>
+            <div class="inner">
+              <div class="flash-messages error">
+                <p>Error message</p>
+              </div>
+              <div class="flash-messages warning">
+                <p>Warning message</p>
+              </div>
+              <div class="flash-messages notice">
+                <p>Notice message</p>
+              </div>
             </div>
           </div>
         </div>
@@ -201,49 +220,53 @@
               <li><a href="#block-lists">Lists</a></li>
             </ul>
             <div class="clear"></div>
-          </div>
-          <h2 class="title">2 columns forms</h2>
+          </div>          
           <div class="content">
-            <form action="#" method="get" class="form">
-              <div class="column left">
-                <div class="group">
-                  <label class="title">Text field</label>
-                  <input type="text" class="text" />
-                </div>
-                <div class="group">
-                  <label class="title">Text area</label>
-                  <textarea class="textarea" rows="10" cols="80"></textarea>
-                </div>              
-              </div>
-              <div class="column right">
-                <div class="group">
-                  <label class="title">Select</label>
-                  <select><option value="1">Choose...</option></select>
-                </div>
-                <div class="group">
-                  <label class="title">Check box</label>
-                  <div>
-                    <input type="checkbox" name="checkbox" id="checkbox_1" class="checkbox" value="1" /> <label for="checkbox_1" class="checkbox">Option 1</label>
+            <h2 class="title">2 columns forms</h2>
+            <div class="inner">
+              <form action="#" method="get" class="form">
+                <div class="columns">
+                  <div class="column left">
+                    <div class="group">
+                      <label class="label">Text field</label>
+                      <input type="text" class="text" />
+                    </div>
+                    <div class="group">
+                      <label class="label">Text area</label>
+                      <textarea class="textarea" rows="10" cols="80"></textarea>
+                    </div>              
                   </div>
-                  <div>
-                    <input type="checkbox" name="checkbox" id="checkbox_2" class="checkbox" value="2" /> <label for="checkbox_2" class="checkbox">Option 2</label>
+                  <div class="column right">
+                    <div class="group">
+                      <label class="label">Select</label>
+                      <select><option value="1">Choose...</option></select>
+                    </div>
+                    <div class="group">
+                      <label class="label">Check box</label>
+                      <div>
+                        <input type="checkbox" name="checkbox" id="checkbox_1" class="checkbox" value="1" /> <label for="checkbox_1" class="checkbox">Option 1</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="checkbox" id="checkbox_2" class="checkbox" value="2" /> <label for="checkbox_2" class="checkbox">Option 2</label>
+                      </div>
+                    </div>
+                    <div class="group">
+                      <label class="label">Radio</label>
+                      <div>
+                        <input type="radio" name="radio" id="radio_1" class="checkbox" value="1" /> <label for="radio_1" class="radio">Option 1</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="radio" id="radio_2" class="checkbox" value="2" /> <label for="radio_2" class="radio">Option 2</label>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="group">
-                  <label class="title">Radio</label>
-                  <div>
-                    <input type="radio" name="radio" id="radio_1" class="checkbox" value="1" /> <label for="radio_1" class="radio">Option 1</label>
-                  </div>
-                  <div>
-                    <input type="radio" name="radio" id="radio_2" class="checkbox" value="2" /> <label for="radio_2" class="radio">Option 2</label>
-                  </div>
-                </div>
-              </div>
-              <div class="clear"></div>
-              <div class="group navform">
-                <input type="submit" value="Save &rarr;" /> or <a href="#">Cancel</a>
-              </div>            
-            </form>
+                <div class="clear"></div>
+                <div class="group navform">
+                  <input type="submit" class="button" value="Save &rarr;" /> or <a href="#">Cancel</a>
+                </div>            
+              </form>
+            </div>
           </div>
         </div>
           
@@ -258,40 +281,48 @@
               <li class="active"><a href="#block-lists">Lists</a></li>
             </ul>
             <div class="clear"></div>
-          </div>
-          <h2 class="title">Lists</h2>
+          </div>          
           <div class="content">
-            <ul class="list">            
-              <li>
-                <div class="left">
-                  <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
-                </div>
-                <div class="item">                
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>              
-              </li>
-              <li>
-                <div class="left">
-                  <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
-                </div>
-                <div class="item">                
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>              
-              </li>
-              <li>
-                <div class="left">
-                  <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
-                </div>
-                <div class="item">                
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>              
-              </li>            
-            </ul>
+            <h2 class="title">Lists</h2>
+            <div class="inner">
+              <ul class="list">            
+                <li>
+                  <div class="left">
+                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                  </div>
+                  <div class="item">                
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>              
+                </li>
+                <li>
+                  <div class="left">
+                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                  </div>
+                  <div class="item">                
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>              
+                </li>
+                <li>
+                  <div class="left">
+                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                  </div>
+                  <div class="item">                
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>              
+                </li>            
+              </ul>
+            </div>
           </div>
         </div>                          
 
       </div>
       <div id="sidebar">
+        <div class="block">
+          <h3>Simple Block</h3>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
         <div class="block">
           <h3>Switch Theme</h3>
           <ul class="navigation">
@@ -311,11 +342,9 @@
             <li><a href="#block-lists">Lists</a></li>
           </ul>
         </div>
-        <div class="block">
-          <div class="notice">
-            <h4>Notice Title</h4>
-            <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
-          </div>
+        <div class="block notice">
+          <h4>Notice Title</h4>
+          <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
         </div>
         <div class="block">
           <div class="sidebar-block">
@@ -330,6 +359,92 @@
       <div class="block">
         <p>Copyright &copy; 2009 Your Site.</p>
       </div>      
+    </div>
+    <div id="box">
+      <h1>Wen App Theme</h1>
+      <div class="block" id="block-login">
+        <h2>Login Box</h2>        
+        <div class="content login">
+          <form action="#" class="form login">
+            <div class="group">
+              <div class="left">
+                <label class="label right">Login</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text" />
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group">
+              <div class="left">
+                <label class="label right">Password</label>
+              </div>
+              <div class="right">
+                <input type="password" class="text" />
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group navform">
+              <div class="right">
+                <input type="submit" class="button" value="Login" />
+              </div>
+              <div class="clear"></div>
+            </div>            
+          </form>
+        </div>
+      </div>
+      
+      <div class="block" id="block-signup">
+        <h2>Sign up</h2>        
+        <div class="content">
+          <form action="#" class="form">
+            <div class="group">
+              <div class="left">
+                <label class="label">Login</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text" />
+                <span class="description">Ex: web-app-theme</span>
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group">
+              <div class="left">
+                <label class="label">Email</label>                
+              </div>
+              <div class="right">
+                <input type="text" class="text" />
+                <span class="description">Ex: test@example.com</span>
+              </div>              
+              <div class="clear"></div>
+            </div>
+            <div class="group">
+              <div class="left">
+                <label class="label">Password</label>
+              </div>
+              <div class="right">
+                <input type="password" class="text" />
+                <span class="description">Must contains the word 'yeah'</span>
+              </div>              
+              <div class="clear"></div>
+            </div>
+            
+            <div class="group">
+              <label class="label">Text field</label>
+              <input type="text" class="text" />
+              <span class="description">Ex: a simple text</span>
+            </div>
+            <div class="group">
+              <label class="label">Text field</label>
+              <input type="text" class="text" />
+              <span class="description">Ex: a simple text</span>
+            </div>
+            <div class="group navform">
+              <input type="submit" class="button" value="Sign up" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </body>

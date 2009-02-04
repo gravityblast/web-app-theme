@@ -3,6 +3,7 @@
 .hightlight { background-color:#FFFFCC; }
 
 a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #7A1818; }
+a { -moz-outline: none; }
 
 body {
   color: #222;
@@ -19,10 +20,6 @@ hr {
   background: #7A1818;
 }
 
-#header h1 {
-  padding: 0;
-}
-
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
   color: #FFF;
 }
@@ -33,12 +30,12 @@ hr {
   right: 25px;
 }
 
-#main .block {
+#main .block .content {
   background: #FFF;
-  padding-bottom: 20px;
+  padding-top: 1px;
 }
 
-#main .block h2.title {
+#main .block .content h2 {
   margin-left: 15px;
 }
 
@@ -50,6 +47,27 @@ hr {
   background: #7A1818;
   color: #FFF;
   border-bottom: 10px solid #262626;
+}
+
+#main-navigation ul li {
+  padding-left: 15px;
+}
+
+#main-navigation ul li a {
+  padding: 8px 0;
+}
+
+#main-navigation ul li.active {
+  padding: 0;
+  margin-left: 15px;
+}
+
+#main-navigation ul li.active {
+  margin-left: 15px;
+}
+
+#main-navigation ul li.active a {
+  padding: 8px 15px;
 }
 
 #sidebar ul li a:link, #sidebar ul li a:visited {
@@ -136,19 +154,23 @@ hr {
   color: #FFF;
 }
 
-.table th.first {
-  width: 30px;
-}
-
 .table td {
   border-bottom:1px solid #F0F0EE;
 }
 
 /* forms */
 
-.form input[type="text"], .form textarea {
+.form input.text, .form textarea {
   width: 100%;
   border: 1px solid #262626;
+}
+
+.form input.button {
+  background: #EEE;
+  color: #262626;
+  padding: 2px 5px;
+  border: 1px solid #262626;
+  cursor: pointer;
 }
 
 .form .description {
@@ -196,9 +218,22 @@ ul.list li .item .avatar {
   padding: 2px; 
 }
 
+/* box */
+
+#box .block {
+  background: #FFF;  
+}
+
+#box .block h2 {
+  background: #7A1818;  
+  color: #FFF;
+}
+
+
 /* rounded borders */
 
-#main, #main-navigation, #main-navigation li, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li, #footer .block {
+#main, #main-navigation, #main-navigation li, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li, 
+#footer .block, .form input.button, #box .block, #box .block h2 {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
@@ -215,13 +250,12 @@ ul.list li .item .avatar {
   -webkit-border-top-right-radius: 4px;
 }
 
-
 .secondary-navigation ul li.first {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
 }
 
-#sidebar, #sidebar .block, #main .block, #sidebar ul.navigation, ul.list li, #footer .block {
+#sidebar, #sidebar .block, #main .block, #sidebar ul.navigation, ul.list li, #footer .block, .form input.button, #box .block {
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-bottomright: 4px;
