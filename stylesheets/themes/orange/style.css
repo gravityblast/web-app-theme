@@ -2,7 +2,7 @@
 .gray { color:#999999; }
 .hightlight { background-color:#FFFFCC; }
 
-a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #7A1818; }
+a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #ff7900; }
 a { -moz-outline: none; }
 
 body {
@@ -17,11 +17,7 @@ hr {
 }
 
 #header {
-  background: #7A1818;
-}
-
-#header h1 {
-  padding: 20px 0;
+  background: #ff7900;
 }
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
@@ -48,7 +44,7 @@ hr {
 }
 
 #sidebar h3 {  
-  background: #7A1818;
+  background: #ff7900;
   color: #FFF;
   border-bottom: 10px solid #262626;
 }
@@ -81,7 +77,7 @@ hr {
 }
 
 #sidebar ul li a:hover, #sidebar ul li a:active {
-  background: #470E0E;
+  background: #863800;
   color: #FFF;
 }
 
@@ -106,7 +102,7 @@ hr {
 }
 
 .secondary-navigation li a:hover {
-  background: #470E0E;
+  background: #863800;
 }
 
 #main-navigation ul li.active a:link, #main-navigation ul li.active a:visited, #main-navigation ul li.active a:hover, #main-navigation ul li.active a:active {
@@ -114,7 +110,7 @@ hr {
 }
 
 .secondary-navigation {
-  background: #7A1818;
+  background: #ff7900;
   border-bottom-color: #262626;
 }
 
@@ -229,7 +225,7 @@ ul.list li .item .avatar {
 }
 
 #box .block h2 {
-  background: #7A1818;  
+  background: #ff7900;  
   color: #FFF;
 }
 
