@@ -4,7 +4,7 @@ h1, h2, h3 {color:#444}
 body {
   color: #333;
   background: #e5e5e5;
-  font-family: "Bitstream Vera Sans", verdana, sans-serif;  
+  font-family: Verdana, Arial, "Bitstream Vera Sans", sans-serif;  
 }
 
 hr {
@@ -12,7 +12,7 @@ hr {
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
 }
 
@@ -108,13 +108,13 @@ input.checkbox {
 }
 
 #sidebar ul li a:link, #sidebar ul li a:visited {
-  font-size:14px;
+  font-size:12px;
 }
 
 #sidebar ul li a:hover, #sidebar ul li a:active {
   background: #e1efef;
   color: #444;
-  font-size:14px;
+  font-size:12px;
   text-decoration:underline;
 }
 #sidebar ul.navigation li.last a {
@@ -152,7 +152,7 @@ input.checkbox {
 }
 
 #main-navigation ul li a {
-  font-size: 14px;
+  font-size: 12px;
   padding: 4px 10px;
 }
 
@@ -189,6 +189,7 @@ input.checkbox {
   color: #364B69;
   border: 1px solid #ddd;
   -moz-border-radius:5px;
+  font-size:11px;
 }
 
 .pagination a:hover {
@@ -246,7 +247,7 @@ input.checkbox {
 
 .description {
   color:#aaa;
-  font-family:serif;
+  font-family:Georgia, serif;
 }
 
 /* flash-messages */
