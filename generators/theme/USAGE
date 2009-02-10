@@ -1,0 +1,2 @@
+./script/generate theme admin/posts
+./script/generate theme admin/posts article
