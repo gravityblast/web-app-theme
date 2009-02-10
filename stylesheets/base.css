@@ -160,18 +160,16 @@ body {
   margin-right: 5px; 
   display: block;
   float: left;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .pagination span.current {
   font-weight: bold;  
-  border-width: 1px;
-  border-style: solid;
 }
 
 .pagination a {
-  text-decoration: none;
-  border-width: 1px;
-  border-style: solid;
+  text-decoration: none;  
 }
 
 /* tables */
@@ -189,6 +187,10 @@ body {
 
 .table th.first {
   width: 30px;
+}
+
+.table th.last {
+  width: 200px;
 }
 
 .table .checkbox {
