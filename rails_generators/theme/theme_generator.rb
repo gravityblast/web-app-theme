@@ -34,20 +34,15 @@ class ThemeGenerator < Rails::Generator::NamedBase
     @columns = get_columns
           
     record do |m|      
-      m.directory('app/views/layouts')
-      m.directory('public/stylesheets/themes/default')
       m.directory(File.join('app/views', @controller_file_path))                        
-      m.template('view_layout.html.erb', File.join("app/views/layouts", "web_app_theme.html.erb"))
       m.template('view_tables.html.erb',  File.join("app/views", @controller_file_path, "index.html.erb"))
       m.template('view_new.html.erb',  File.join("app/views", @controller_file_path, "new.html.erb"))
       m.template('view_sidebar.html.erb',  File.join("app/views", @controller_file_path, "_sidebar.html.erb"))
-      m.template('css_base.css',  File.join("public/stylesheets", "web_app_theme.css"))
-      m.template('css_default.css',  File.join("public/stylesheets/themes/default", "style.css"))
       # If layout exists and it's not overridden, it adds just the menu link.
-      m.gsub_file(File.join("app/views/layouts", "web_app_theme.html.erb"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
-        match.gsub!(/\<\/ul\>/, "")
-        %|#{match} <li><a href="<%= #{plural_resource_name}_path %>">#{plural_model_name}</a></li></ul>|
-      end
+      # m.gsub_file(File.join("app/views/layouts", "web_app_theme.html.erb"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
+      #   match.gsub!(/\<\/ul\>/, "")
+      #   %|#{match} <li><a href="<%= #{plural_resource_name}_path %>">#{plural_model_name}</a></li></ul>|
+      # end
     end
   end
   
