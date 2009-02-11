@@ -26,7 +26,7 @@
               <%%= <%= resource_name %>.id %>
             </td>
             <td>
-              <%%= <%= resource_name %>.<%= columns.first.name %> %>
+              <%%= link_to <%= resource_name %>.<%= columns.first.name %>, edit_<%= resource_name %>_path(<%= resource_name %>) %>
             </td>
             <td>
               <%%= <%= resource_name %>.created_at %>

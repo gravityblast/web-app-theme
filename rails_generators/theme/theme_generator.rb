@@ -1,6 +1,6 @@
 class ThemeGenerator < Rails::Generator::NamedBase
   
-  default_options :menu => false
+  default_options :layout => false
   
   attr_reader :controller_routing_path, 
               :singular_controller_routing_path,
@@ -31,18 +31,21 @@ class ThemeGenerator < Rails::Generator::NamedBase
     # posts
     @plural_resource_name = @resource_name.pluralize 
             
-    @columns = get_columns
+    @columns = get_columns    
           
     record do |m|      
       m.directory(File.join('app/views', @controller_file_path))                        
       m.template('view_tables.html.erb',  File.join("app/views", @controller_file_path, "index.html.erb"))
       m.template('view_new.html.erb',  File.join("app/views", @controller_file_path, "new.html.erb"))
+      m.template('view_edit.html.erb',  File.join("app/views", @controller_file_path, "edit.html.erb"))
       m.template('view_sidebar.html.erb',  File.join("app/views", @controller_file_path, "_sidebar.html.erb"))
-      # If layout exists and it's not overridden, it adds just the menu link.
-      # m.gsub_file(File.join("app/views/layouts", "web_app_theme.html.erb"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
-      #   match.gsub!(/\<\/ul\>/, "")
-      #   %|#{match} <li><a href="<%= #{plural_resource_name}_path %>">#{plural_model_name}</a></li></ul>|
-      # end
+      
+      if options[:layout]
+        m.gsub_file(File.join("app/views/layouts", "#{options[:layout]}.html.erb"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
+          match.gsub!(/\<\/ul\>/, "")
+          %|#{match} <li><a href="<%= #{plural_resource_name}_path %>">#{plural_model_name}</a></li></ul>|
+        end
+      end
     end
   end
   
@@ -54,13 +57,13 @@ protected
   end
   
   def banner
-    "Usage: #{$0} theme ControllerPath [ModelName]"
+    "Usage: #{$0} theme ControllerPath [ModelName] [options]"
   end
   
-  # def add_options!(opt)
-  #   opt.separator ''
-  #   opt.separator 'Options:'
-  #   opt.on("--menu", "Add menu link") { |v| options[:menu] = true }
-  # end
+  def add_options!(opt)
+    opt.separator ''
+    opt.separator 'Options:'
+    opt.on("-l", "--layout=layout", String, "Add menu link") { |v| options[:layout] = v }
+  end
   
 end
