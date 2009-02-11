@@ -1,6 +1,7 @@
 class ThemeGenerator < Rails::Generator::NamedBase
   
-  default_options :layout => false
+  default_options :layout => false,
+                  :will_paginate => false
   
   attr_reader :controller_routing_path, 
               :singular_controller_routing_path,
@@ -63,7 +64,8 @@ protected
   def add_options!(opt)
     opt.separator ''
     opt.separator 'Options:'
-    opt.on("-l", "--layout=layout", String, "Add menu link") { |v| options[:layout] = v }
+    opt.on("-l", "--layout=layout", String, "Add menu link") { |v| options[:layout] = v }    
+    opt.on("-w", "--with_will_paginate", "Add pagination using will_paginate") { |v| options[:will_paginate] = true }
   end
   
 end

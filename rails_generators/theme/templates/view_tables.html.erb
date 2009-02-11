@@ -38,7 +38,9 @@
           <div class="actions">
             <input type="submit" class="button" value="Delete" />
           </div>
+          <% if options[:will_paginate] %>
           <%%= will_paginate @<%= resource_name %>  %>
+          <% end %>
           <div class="clear"></div>
         </div>
       <%% end -%>
