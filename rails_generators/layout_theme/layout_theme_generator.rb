@@ -1,4 +1,6 @@
 class LayoutThemeGenerator < Rails::Generator::Base
+  
+  default_options :theme => :default
     
   def initialize(runtime_args, runtime_options = {})
     super
@@ -7,16 +9,24 @@ class LayoutThemeGenerator < Rails::Generator::Base
   
   def manifest
     record do |m|      
-      m.directory('app/views/layouts')      
-      m.directory('public/stylesheets/themes/default')
-      m.template('view_layout.html.erb', File.join("app/views/layouts", "#{@name}.html.erb"))
-      m.template('css_base.css',  File.join("public/stylesheets", "web_app_theme.css"))
-      m.template('css_default.css',  File.join("public/stylesheets/themes/default", "style.css"))      
+      m.directory("app/views/layouts")
+      m.directory("public/stylesheets/themes/#{options[:theme]}/")
+      m.template("view_layout.html.erb", File.join("app/views/layouts", "#{@name}.html.erb"))
+      m.template("../../../stylesheets/base.css",  File.join("public/stylesheets", "web_app_theme.css"))
+      m.template("../../../stylesheets/themes/#{options[:theme]}/style.css",  File.join("public/stylesheets/themes/#{options[:theme]}", "style.css"))      
     end
   end
   
   def banner
-    "Usage: #{$0} layout_theme [layout_name]"
+    "Usage: #{$0} layout_theme [layout_name] [options]"
+  end
+
+protected
+
+  def add_options!(opt)
+    opt.separator ''
+    opt.separator 'Options:'
+    opt.on("-m", "--theme=theme", String, "Specify the theme") { |v| options[:theme] = v }
   end
   
 end
