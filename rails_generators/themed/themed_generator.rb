@@ -44,7 +44,7 @@ class ThemedGenerator < Rails::Generator::NamedBase
       if options[:layout]
         m.gsub_file(File.join("app/views/layouts", "#{options[:layout]}.html.erb"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
           match.gsub!(/\<\/ul\>/, "")
-          %|#{match} <li><a href="<%= #{plural_resource_name}_path %>">#{plural_model_name}</a></li></ul>|
+          %|#{match} <li class="<%= controller.controller_path == '#{plural_resource_name}' ? 'active' : '' %>"><a href="<%= #{plural_resource_name}_path %>">#{plural_model_name}</a></li></ul>|
         end
       end
     end
