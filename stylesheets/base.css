@@ -190,7 +190,7 @@ body {
 }
 
 .table th.last {
-  width: 200px;
+  width: 200px;  
 }
 
 .table .checkbox {
@@ -199,6 +199,10 @@ body {
 
 .table td {
   padding: 10px;
+}
+
+.table td.last {
+  text-align: right;
 }
 
 /* forms */

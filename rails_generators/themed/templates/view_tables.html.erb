@@ -15,7 +15,8 @@
             <th class="first"><input type="checkbox" class="checkbox toggle" /></th>   
             <th>ID</th>
             <th><%= columns.first.name.capitalize %></th>
-            <th class="last">Created at</th>
+            <th>Created at</th>
+            <th class="last">&nbsp;</th>
           </tr>
           <%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
           <tr>
@@ -26,10 +27,15 @@
               <%%= <%= resource_name %>.id %>
             </td>
             <td>
-              <%%= link_to <%= resource_name %>.<%= columns.first.name %>, edit_<%= resource_name %>_path(<%= resource_name %>) %>
+              <%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= resource_name %>_path(<%= resource_name %>) %>
             </td>
             <td>
               <%%= <%= resource_name %>.created_at %>
+            </td>
+            <td class="last">
+              <%%= link_to 'show', <%= resource_name %>_path(<%= resource_name %>) %> |
+              <%%= link_to 'edit', edit_<%= resource_name %>_path(<%= resource_name %>) %> |
+              <%%= link_to 'destroy', <%= resource_name %>_path(<%= resource_name %>, :method => :delete, :confirm => 'Are you sure?') %>
             </td>
           </tr>          
           <%% end -%>
