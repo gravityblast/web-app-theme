@@ -12,17 +12,13 @@
       <%% form_tag "", :class => :form do -%>
         <table class="table">
           <tr>             
-            <th class="first"><input type="checkbox" class="checkbox toggle" /></th>   
-            <th>ID</th>
+            <th class="first">ID</th>
             <th><%= columns.first.name.capitalize %></th>
             <th>Created at</th>
             <th class="last">&nbsp;</th>
           </tr>
           <%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
           <tr>
-            <td>
-              <%%= check_box_tag :id, 1, false, :class => "checkbox" %>
-            </td>
             <td>
               <%%= <%= resource_name %>.id %>
             </td>
