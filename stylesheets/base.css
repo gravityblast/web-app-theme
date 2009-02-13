@@ -238,7 +238,7 @@ input.checkbox {
   float: right;
 }
 
-.form label.label, .form input.text, .form textarea {
+.form label.label, .form input.text_field, .form textarea.text_area {
   font-size: 1.2em;
   padding: 1px 0;
   margin: 0;
@@ -262,7 +262,7 @@ input.checkbox {
   font-weight: bold;
 }
 
-.form input.text, .form textarea.textarea {
+.form input.text_field, .form textarea.text_area {
   width: 100%;
   border-width: 1px;
   border-style: solid;
