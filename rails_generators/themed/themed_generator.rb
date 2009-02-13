@@ -31,7 +31,7 @@ class ThemedGenerator < Rails::Generator::NamedBase
     @resource_name        = @model_name.downcase 
     # posts
     @plural_resource_name = @resource_name.pluralize 
-            
+           
     @columns = get_columns    
           
     record do |m|      
@@ -45,7 +45,7 @@ class ThemedGenerator < Rails::Generator::NamedBase
       if options[:layout]
         m.gsub_file(File.join("app/views/layouts", "#{options[:layout]}.html.erb"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
           match.gsub!(/\<\/ul\>/, "")
-          %|#{match} <li class="<%= controller.controller_path == '#{plural_resource_name}' ? 'active' : '' %>"><a href="<%= #{plural_resource_name}_path %>">#{plural_model_name}</a></li></ul>|
+          %|#{match} <li class="<%= controller.controller_path == '#{@controller_file_path}' ? 'active' : '' %>"><a href="<%= #{controller_routing_path}_path %>">#{plural_model_name}</a></li></ul>|
         end
       end
     end

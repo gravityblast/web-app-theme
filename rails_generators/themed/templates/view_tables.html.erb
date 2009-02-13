@@ -23,15 +23,15 @@
               <%%= <%= resource_name %>.id %>
             </td>
             <td>
-              <%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= resource_name %>_path(<%= resource_name %>) %>
+              <%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= singular_controller_routing_path %>_path(<%= resource_name %>) %>
             </td>
             <td>
               <%%= <%= resource_name %>.created_at %>
             </td>
             <td class="last">
-              <%%= link_to 'show', <%= resource_name %>_path(<%= resource_name %>) %> |
-              <%%= link_to 'edit', edit_<%= resource_name %>_path(<%= resource_name %>) %> |
-              <%%= link_to 'destroy', <%= resource_name %>_path(<%= resource_name %>), :method => :delete, :confirm => 'Are you sure?' %>
+              <%%= link_to 'show', <%= singular_controller_routing_path %>_path(<%= resource_name %>) %> |
+              <%%= link_to 'edit', edit_<%= singular_controller_routing_path %>_path(<%= resource_name %>) %> |
+              <%%= link_to 'destroy', <%= singular_controller_routing_path %>_path(<%= resource_name %>), :method => :delete, :confirm => 'Are you sure?' %>
             </td>
           </tr>          
           <%% end -%>
