@@ -251,25 +251,25 @@ input.checkbox {
 }
 
 /* flash-messages */
-.flash-messages {
+.flash .message {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   text-align:center;
   margin:0 auto 5px;
   width:80%;
 }
-.flash-messages p {
+.flash .message p {
   margin:8px;
 }
-.flash-messages.error {
+.flash .error {
   border: 1px solid #fbb;
   background-color: #fdd;
 }
-.flash-messages.warning {
+.flash .warning {
   border: 1px solid #fffaaa;
   background-color: #ffffcc;
 }
-.flash-messages.notice {
+.flash .notice {
   border: 1px solid #ddf;
   background-color: #eef;
 }
