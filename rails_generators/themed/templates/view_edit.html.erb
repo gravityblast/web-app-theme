@@ -1,9 +1,9 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul>
-      <li class="first"><%%= link_to 'All <%= plural_model_name %>', <%= controller_routing_path %>_path  %></li>
-      <li><%%= link_to 'New <%= model_name %>', new_<%= singular_controller_routing_path %>_path %></li>
-      <li class="active"><%%= link_to 'Edit <%= model_name %>', edit_<%= singular_controller_routing_path %>_path %></li>
+      <li class="first"><%%= link_to 'List', <%= controller_routing_path %>_path  %></li>
+      <li><%%= link_to 'New', new_<%= singular_controller_routing_path %>_path %></li>
+      <li class="active"><%%= link_to 'Edit', edit_<%= singular_controller_routing_path %>_path %></li>
     </ul>
     <div class="clear"></div>
   </div>          
@@ -14,7 +14,7 @@
         <% columns.each do |column| %>
           <div class="group">
             <%%= f.label :<%= column.name %>, "<%= column.name %>", :class => :label %>
-            <%%= f.<%= column.field_type %> :<%= column.name %>, :class => 'text' %>
+            <%%= f.<%= column.field_type %> :<%= column.name %>, :class => '<%= column.field_type %>' %>
             <span class="description">Ex: a simple text</span>
           </div>
         <%- end -%>        

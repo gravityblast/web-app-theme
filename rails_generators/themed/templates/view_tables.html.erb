@@ -1,13 +1,13 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul>
-      <li class="first active"><%%= link_to 'All <%= plural_model_name %>', <%= controller_routing_path %>_path %></li>
-      <li><%%= link_to 'New <%= model_name %>', new_<%= singular_controller_routing_path %>_path %></li>
+      <li class="first active"><%%= link_to 'List', <%= controller_routing_path %>_path %></li>
+      <li><%%= link_to 'New', new_<%= singular_controller_routing_path %>_path %></li>
     </ul>
     <div class="clear"></div>
   </div>          
   <div class="content">          
-    <h2 class="title"><%= plural_model_name %></h2>
+    <h2 class="title">All <%= plural_model_name %></h2>
     <div class="inner">
       <%% form_tag "", :class => :form do -%>
         <table class="table">
