@@ -1,6 +1,14 @@
+<h1>Web App Theme</h1>
 <div class="block" id="block-signup">
   <h2>Sign up</h2>        
   <div class="content">
+    <div class="flash">
+      <%% flash.each do |type, message| -%>
+      <div class="message <%%= type %>">
+        <p><%%=  message %></p>
+      </div>
+      <%% end -%>
+    </div>
     <%% form_for :<%= resource_name %>, :url => <%= controller_routing_path %>_path, :html => { :class => 'form' } do |f| -%>
       <div class="group">
         <div class="left">

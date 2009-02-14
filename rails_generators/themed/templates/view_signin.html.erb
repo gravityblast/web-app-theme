@@ -2,6 +2,13 @@
 <div class="block" id="block-login">
   <h2>Login Box</h2>        
   <div class="content login">
+    <div class="flash">
+      <%% flash.each do |type, message| -%>
+      <div class="message notice">
+        <p><%%=  message %></p>
+      </div>
+      <%% end -%>
+    </div>
     <%% form_tag({:action => :create}, :class => 'form login') do -%>
       <div class="group">
         <div class="left">
