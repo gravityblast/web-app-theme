@@ -1,6 +1,7 @@
 class ThemeGenerator < Rails::Generator::Base
   
-  default_options :layout_type => :administration,
+  default_options :app_name => 'Web App',
+                  :layout_type => :administration,
                   :theme => :default,
                   :no_layout => false
     
@@ -28,6 +29,7 @@ protected
   def add_options!(opt)
     opt.separator ''
     opt.separator 'Options:'
+    opt.on("--app_name=app_name", String, "") { |v| options[:app_name] = v }
     opt.on("--type=layout_type", String, "Specify the layout type") { |v| options[:layout_type] = v }
     opt.on("--theme=theme", String, "Specify the theme") { |v| options[:theme] = v }
     opt.on("--no-layout", "Don't create layout") { |v| options[:no_layout] = true }

@@ -1,6 +1,7 @@
 class ThemedGenerator < Rails::Generator::NamedBase
   
-  default_options :themed_type => :crud,
+  default_options :app_name => 'Web App',
+                  :themed_type => :crud,
                   :layout => false,
                   :will_paginate => false
   
@@ -32,7 +33,7 @@ class ThemedGenerator < Rails::Generator::NamedBase
     @resource_name        = @model_name.downcase 
     # posts
     @plural_resource_name = @resource_name.pluralize                
-    
+
     manifest_method = "manifest_for_#{options[:themed_type]}"    
     record do |m|
       send(manifest_method, m) if respond_to?(manifest_method)
@@ -78,6 +79,7 @@ protected
   def add_options!(opt)
     opt.separator ''
     opt.separator 'Options:'
+    opt.on("--app_name=app_name", String, "") { |v| options[:app_name] = v }
     opt.on("--type=themed_type", String, "") { |v| options[:themed_type] = v }    
     opt.on("--layout=layout", String, "Add menu link") { |v| options[:layout] = v }    
     opt.on("--with_will_paginate", "Add pagination using will_paginate") { |v| options[:will_paginate] = true }

@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Web App Theme</title>
+	<title><%= options[:app_name] %></title>
 	<%%= stylesheet_link_tag 'web_app_theme', "themes/<%= options[:theme] %>/style" %>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="#">Web App Theme</a></h1>
+      <h1><a href="/"><%= options[:app_name] %></a></h1>
       <div id="user-navigation">
         <ul>
           <li><a href="#">Profile</a></li>
