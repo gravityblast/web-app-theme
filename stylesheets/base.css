@@ -18,7 +18,7 @@ body {
   min-width: 960px;
 }
 
-#header, #wrapper, #footer {
+#header, #wrapper {
   padding: 0 20px;
 }
 
