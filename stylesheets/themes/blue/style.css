@@ -47,6 +47,11 @@ hr {
   background: #FFF;
 }
 
+#sidebar .notice {
+/*  background: #FCF096;*/
+  background: #ffffcc;
+}
+
 #sidebar h3 {  
   background: #2F427A;
   color: #FFF;
