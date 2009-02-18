@@ -48,8 +48,7 @@ hr {
 }
 
 #sidebar .notice {
-/*  background: #FCF096;*/
-  background: #ffffcc;
+  background: #FFFFCC;
 }
 
 #sidebar h3 {  
@@ -111,7 +110,7 @@ hr {
 }
 
 .secondary-navigation li a:hover {
-  background: #5C637A; /*#2D7387;*/ /*323191;*/ /*470E0E;*/
+  background: #5C637A;
 }
 
 #main-navigation ul li.active a:link, #main-navigation ul li.active a:visited, #main-navigation ul li.active a:hover, #main-navigation ul li.active a:active {
