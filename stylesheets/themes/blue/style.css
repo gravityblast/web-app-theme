@@ -1,4 +1,4 @@
-.small { font-size:11px; }
+.small { font-size:12px; }
 .gray { color:#999999; }
 .hightlight { background-color:#FFFFCC; }
 
@@ -9,6 +9,7 @@ body {
   color: #222;
   background: #f0f0ee;
   font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
 }
 
 hr {
@@ -55,6 +56,7 @@ hr {
   background: #2F427A;
   color: #FFF;
   border-bottom: 10px solid #262626;
+  font-size: 15px;
 }
 
 #main-navigation ul li {
@@ -120,6 +122,7 @@ hr {
 .secondary-navigation {
   background: #2F427A;
   border-bottom-color: #262626;
+  font-size: 15px;
 }
 
 .secondary-navigation ul li.active, .secondary-navigation ul li.active a:hover {
@@ -141,6 +144,7 @@ hr {
 .pagination span, .pagination a {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  padding-top: 4px;
 }
 
 .pagination span.current {
