@@ -138,6 +138,11 @@ hr {
 
 /* pagination */
 
+.pagination span, .pagination a {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
 .pagination span.current {
   background: #262626;
   color: #FFF;
