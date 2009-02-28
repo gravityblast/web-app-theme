@@ -1,13 +1,14 @@
 .small { font-size:11px; }
-.gray { color:#999999; }
-.hightlight { background-color:#FFFFCC; }
+.gray { color:#a2b0b6; }
+.hightlight { background-color:#d6e7c7; }
 
-a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #7A1818; }
+a:link, a:visited, a:hover, a:active { color: #81B953; } 
+h1, h2, h3 { color: #3B5526; }
 a { -moz-outline: none; }
 
 body {
   color: #222;
-  background: #f0f0ee;
+  background: #e4ebe4;
   font-family: helvetica, arial, sans-serif;
 }
 
@@ -17,21 +18,19 @@ hr {
 }
 
 #header {
-  background: #7A1818;
+  background: #c9deb7;
+
 }
 
-#header h1 {
+#header h1{
   padding: 20px 0;
+  font-weight: bold;
+
 }
 
-#header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
-  color: #FFF;
-}
-
-#user-navigation {
-  top: auto;
-  bottom: 5px;
-  right: 25px;
+#header h1 a:link, #header h1 a:active, 
+#header h1 a:hover, #header h1 a:visited {
+  color: #3B5526;
 }
 
 #main .block .content {
@@ -43,93 +42,109 @@ hr {
   margin-left: 15px;
 }
 
+#main .content { border: 1px solid #81B953;}
+
 #sidebar .block {
   background: #FFF;
+  border: none;
 }
 
 #sidebar h3 {  
-  background: #7A1818;
+  padding: 8px 12px;
+  background: #3B5526;
   color: #FFF;
-  border-bottom: 10px solid #262626;
+  font-weight: bold;
+  border-bottom: 5px solid #81B953;
 }
 
-#main-navigation ul li {
-  padding-left: 15px;
-}
 
-#main-navigation ul li a {
-  padding: 8px 0;
-}
-
-#main-navigation ul li.active {
-  padding: 0;
-  margin-left: 15px;
-}
-
-#main-navigation ul li.active {
-  margin-left: 15px;
-}
-
-#main-navigation ul li.active a {
-  padding: 8px 15px;
-}
-
-#sidebar ul li a:link, #sidebar ul li a:visited {
+#sidebar ul li a:link, 
+#sidebar ul li a:visited {
   background: #FFF;
   border-bottom: 1px solid #F0F0EE;
   text-decoration: none;
 }
 
-#sidebar ul li a:hover, #sidebar ul li a:active {
-  background: #470E0E;
+#sidebar ul li a:hover, 
+#sidebar ul li a:active {
+  background: #D3E8C1;
   color: #FFF;
 }
 
 #main-navigation {
-  background: #262626;
+  background: #44721e;
+  margin-right: 20px;
+  padding: 7px 7px 0 7px; 
 }
 
 #main-navigation ul li {
-  background: #262626;
-  margin-right: 0;
+  background: #91B96F;
+  margin-right: 7px;
+}
+
+#main-navigation ul li a {
+  padding: 10px 10px 5px 10px;
 }
 
 #main-navigation ul li.active {
-  background: #f0f0ee;
+  background: #e4ebe4;
+  border: 1px solid #91B96F;
+  border-bottom: none;
+  font-weight: bold;
 }
 
-#main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
-.secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, .secondary-navigation ul li a:hover, .secondary-navigation ul li a:active,
-#user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
+#main-navigation ul li a:hover,
+#main-navigation ul li a:link, 
+#main-navigation ul li a:visited, 
+#main-navigation ul li a:active,
+.secondary-navigation ul li a:link, .secondary-navigation ul li a:visited, 
+.secondary-navigation ul li a:hover, .secondary-navigation ul li a:active {
   text-decoration: none;
   color: #FFF;
 }
 
-.secondary-navigation li a:hover {
-  background: #470E0E;
+#user-navigation ul li a:link, 
+#user-navigation ul li a:visited,  
+#user-navigation ul li a:active {
+	color: #3B5526;
 }
 
-#main-navigation ul li.active a:link, #main-navigation ul li.active a:visited, #main-navigation ul li.active a:hover, #main-navigation ul li.active a:active {
+#user-navigation ul li a:hover { color: #fff; }
+
+#main-navigation ul li.active a:link, 
+#main-navigation ul li.active a:visited, 
+#main-navigation ul li.active a:hover, 
+#main-navigation ul li.active a:active {
   color: #262626;
 }
 
 .secondary-navigation {
-  background: #7A1818;
-  border-bottom-color: #262626;
+  background: #3B5526;
+  border-bottom: 5px solid #81b953;
 }
 
-.secondary-navigation ul li.active, .secondary-navigation ul li.active a:hover {
-  background-color: #262626;
+.secondary-navigation ul li a {
+display:block;
+padding: 8px 12px;
+}
+
+.secondary-navigation ul li.active {background: #81b953;  font-weight: bold;}
+.secondary-navigation ul li.active a:hover {
+  background-color: #81B953;
+}
+
+.secondary-navigation li a:hover {
+  background: #81B953;
 }
 
 #footer .block {  
   color: #FFF;
-  background: #262626;
+  background: #3B5526;
 }
 
 #footer .block p {      
   margin: 0;  
-  padding: 10px;
+  padding: 5px;
 }
 
 /* pagination */
@@ -152,14 +167,20 @@ hr {
 
 /* tables */
 
+
 .table th {
-  background: #262626;
+  background: #253618;
   color: #FFF;
 }
+
+.table tr th { padding: 5px; }
 
 .table td {
   border-bottom:1px solid #F0F0EE;
 }
+.table tr.odd {background: #ebfadf;}
+.table tr.even {background: #d3e8c1;}
+
 
 /* forms */
 
@@ -229,22 +250,33 @@ ul.list li .item .avatar {
 }
 
 #box .block h2 {
-  background: #7A1818;  
-  color: #FFF;
+  color: #fff;
+  background: #3B5526;
+  border-bottom: 5px solid #81b953;
 }
 
+#box .block .content { border: 1px solid #81b953; border}
+
+/* login */
+
+#block-login {   }
+#block-login h2 { background: #3B5526;border-bottom: 5px solid #81b953;}
 
 /* rounded borders */
 
-#main, #main-navigation, #main-navigation li, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li, 
-#footer .block, .form input.button, #box .block, #box .block h2 {
+#main, #main-navigation, #main-navigation li, 
+.secondary-navigation, #main .block, #sidebar .block, 
+#sidebar h3, ul.list li, #footer .block, 
+.form input.button, #box .block, #box .block h2 {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
 }
 
-.secondary-navigation li.first a, .secondary-navigation ul li.first, .table th.first, .table th.first {
+.secondary-navigation li.first a, 
+.secondary-navigation ul li.first, 
+.table th.first, .table th.first {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
 }
@@ -259,7 +291,9 @@ ul.list li .item .avatar {
   -webkit-border-top-left-radius: 4px;
 }
 
-#sidebar, #sidebar .block, #main .block, #sidebar ul.navigation, ul.list li, #footer .block, .form input.button, #box .block {
+#sidebar, #sidebar .block, #main .block, 
+#sidebar ul.navigation, ul.list li, 
+#footer .block, .form input.button, #box .block {
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-radius-bottomright: 4px;

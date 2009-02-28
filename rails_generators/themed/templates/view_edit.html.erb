@@ -1,0 +1,29 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul>
+      <li class="first"><%%= link_to 'List', <%= controller_routing_path %>_path  %></li>
+      <li><%%= link_to 'New', new_<%= singular_controller_routing_path %>_path %></li>
+      <li class="active"><%%= link_to 'Edit', edit_<%= singular_controller_routing_path %>_path %></li>
+    </ul>
+    <div class="clear"></div>
+  </div>          
+  <div class="content">            
+    <h2 class="title">Edit <%= model_name %></h2>
+    <div class="inner">
+      <%% form_for @<%= model_name.downcase  %>, :url => <%= singular_controller_routing_path %>_path(@<%= resource_name %>), :html => { :class => :form } do |f| -%>
+        <% columns.each do |column| %>
+          <div class="group">
+            <%%= f.label :<%= column.name %>, "<%= column.name %>", :class => :label %>
+            <%%= f.<%= column.field_type %> :<%= column.name %>, :class => '<%= column.field_type %>' %>
+            <span class="description">Ex: a simple text</span>
+          </div>
+        <%- end -%>        
+        <div class="group navform">
+          <input type="submit" class="button" value="Save &rarr;" /> or <%%= link_to 'Cancel', <%= controller_routing_path %>_path %>
+        </div>
+      <%% end -%>
+    </div>
+  </div>
+</div>
+
+<%% content_for :sidebar, render(:partial => 'sidebar') -%>

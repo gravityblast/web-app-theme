@@ -1,0 +1,4 @@
+./script/generate theme
+./script/generate theme LayoutName
+./script/generate theme --theme=ThemeName
+./script/generate theme --no-layout
