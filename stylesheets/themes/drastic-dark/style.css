@@ -33,7 +33,13 @@ hr {
 }
 
 #header h1 {
-  padding: 20px 0;
+  padding: 15px 0;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -1px;
+  line-height: 1.2em;
 }
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
@@ -53,6 +59,12 @@ hr {
 
 #main .block .content h2 {
   margin-left: 15px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -1px;
+  line-height: 1.2em;
 }
 
 #sidebar .block {
