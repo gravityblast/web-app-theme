@@ -110,6 +110,18 @@ hr {
   background: #FFF;
 }
 
+#sidebar .block h4 {
+  font-weight: bold;
+}
+
+#sidebar .notice {
+  background: #E6EEFC;
+}
+
+#sidebar .notice h4 {
+  color: #0B43A8;
+}
+
 #sidebar h3 {
   background: #36393d;
   color: #FFF;
