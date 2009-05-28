@@ -156,8 +156,8 @@ hr {
 }
 
 #sidebar ul li a:hover, #sidebar ul li a:active {
-  background: #470E0E;
-  color: #FFF;
+  background: #666666;
+  color: #ffffff;;
 }
 
 #main-navigation {
@@ -181,7 +181,7 @@ hr {
 }
 
 .secondary-navigation li a:hover {
-  background: #470E0E;
+  background: #666666;
 }
 
 #main-navigation ul li.active a:link, #main-navigation ul li.active a:visited, #main-navigation ul li.active a:hover, #main-navigation ul li.active a:active {
