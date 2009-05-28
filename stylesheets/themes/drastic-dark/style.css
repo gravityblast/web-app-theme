@@ -7,12 +7,35 @@
     light grey:                 #cfcfcf
     medium grey:                #36393d
     dark grey:                  #1a1a1a
+    interactive action yellow   #ffff88
 
 */
 
-.small { font-size:11px; }
-.gray { color:#999999; }
-.hightlight { background-color:#FFFFCC; }
+.small {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.4em;
+}
+
+.gray {
+  color:#999999;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: normal;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.6em;
+}
+
+.hightlight {
+  background-color: #ffff88;
+  font-weight: bold;
+  color: #36393d;
+}
 
 a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #36393d; }
 a { -moz-outline: none; }
@@ -65,6 +88,15 @@ hr {
   text-transform: normal;
   letter-spacing: -1px;
   line-height: 1.2em;
+}
+
+#main .block .content p {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.45em;
 }
 
 #sidebar .block {
