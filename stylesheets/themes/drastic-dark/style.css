@@ -235,9 +235,13 @@ hr {
 
 /* forms */
 
+.form label.label {
+  color: #666666;
+}
+
 .form input.text_field, .form textarea.text_area {
   width: 100%;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #cfcfcf;
 }
 
 .form input.button {
@@ -259,6 +263,10 @@ hr {
   font-style: italic;
   color: #8C8C8C;
   font-size: .9em;
+}
+
+.form .navform a {
+  color: #cc0000;
 }
 
 /* flash-messages */
