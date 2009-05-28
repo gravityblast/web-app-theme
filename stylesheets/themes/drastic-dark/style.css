@@ -197,32 +197,40 @@ hr {
 
 /* pagination */
 
+.pagination a, .pagination span {
+  background: #cfcfcf;
+  -moz-border-radius: 3px;
+  border: 1px solid #c1c1c1;
+}
+
 .pagination span.current {
-  background: #1a1a1a;
+  background: #36393d;
   color: #FFF;
-  border-color: #1a1a1a;
+  border: 1px solid #36393d;
 }
 
 .pagination a {
   color: #1a1a1a;
-  border-color: #1a1a1a;
 }
 
 .pagination a:hover {
-    color: #FFF;
-    background: #1a1a1a;
+  border: 1px solid #666;
 }
 
 /* tables */
 
 .table th {
-  background: #100000;
+  background: #36393d;
   border-bottom: 3px solid #700000;
   color: #FFF;
 }
 
 .table td {
   border-bottom:1px solid #F0F0EE;
+}
+
+.table tr.even {
+  background: #ebebeb;
 }
 
 /* forms */
@@ -233,11 +241,18 @@ hr {
 }
 
 .form input.button {
-  background: #EEE;
-  color: #1a1a1a;
+  background: #cfcfcf;
+  -moz-border-radius: 5px;
+  border: 1px solid #c1c1c1;
   padding: 2px 5px;
-  border: 1px solid #1a1a1a;
   cursor: pointer;
+  color: #36393d;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.form input.button:hover {
+  border: 1px solid #666;
 }
 
 .form .description {
