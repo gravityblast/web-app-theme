@@ -8,6 +8,7 @@
     medium grey:                #36393d
     dark grey:                  #1a1a1a
     interactive action yellow   #ffff88
+    red                         #cc0000
 
 */
 
@@ -73,6 +74,12 @@ hr {
   top: auto;
   bottom: 5px;
   right: 25px;
+}
+
+#user-navigation a.logout {
+  background: #cc0000;
+  padding: 1px 4px;
+  -moz-border-radius: 4px;
 }
 
 #main .block .content {
