@@ -48,6 +48,7 @@ protected
     m.template('view_tables.html.erb',  File.join("app/views", @controller_file_path, "index.html.erb"))
     m.template('view_new.html.erb',     File.join("app/views", @controller_file_path, "new.html.erb"))
     m.template('view_edit.html.erb',    File.join("app/views", @controller_file_path, "edit.html.erb"))
+    m.template('view_form.html.erb',    File.join("app/views", @controller_file_path, "_form.html.erb"))
     m.template('view_show.html.erb',    File.join("app/views", @controller_file_path, "show.html.erb"))
     m.template('view_sidebar.html.erb', File.join("app/views", @controller_file_path, "_sidebar.html.erb"))
     
