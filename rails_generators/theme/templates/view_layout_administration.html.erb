@@ -23,6 +23,13 @@
       </div>
     </div>    
     <div id="wrapper">
+      <div class="flash">
+        <%% flash.each do |type, message| -%>
+          <div class="message <%%= type %>">
+            <p><%%= message %></p>
+          </div>
+        <%% end -%>
+      </div>
       <div id="main">
         <%%= yield %>
         <div id="footer">
