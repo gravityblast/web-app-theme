@@ -13,7 +13,7 @@
       <%% form_for @<%= model_name.downcase  %>, :url => <%= singular_controller_routing_path %>_path(@<%= resource_name %>), :html => { :class => :form } do |f| -%>
         <% columns.each do |column| %>
           <div class="group">
-            <%%= f.label :<%= column.name %>, "<%= column.name %>", :class => :label %>
+            <%%= f.label :<%= column.name %>, "<%= column.name.capitalize %>", :class => :label %>
             <%%= f.<%= column.field_type %> :<%= column.name %>, :class => '<%= column.field_type %>' %>
             <span class="description">Ex: a simple text</span>
           </div>

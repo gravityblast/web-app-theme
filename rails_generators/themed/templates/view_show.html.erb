@@ -11,7 +11,7 @@
     <div class="inner">
       <% columns.each do |column| %>
         <p>
-          <b><%= column.name %>:</b>
+          <b><%= column.name.capitalize %>:</b>
           <%%= @<%= resource_name %>.<%= column.name %> %>
         </p>
       <%- end -%>
