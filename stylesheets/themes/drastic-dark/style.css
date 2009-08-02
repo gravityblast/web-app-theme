@@ -82,6 +82,7 @@ hr {
   background: #cc0000;
   padding: 1px 4px;
   -moz-border-radius: 4px;
+	-webkit-border-radius: 3px;
 }
 
 #main .block .content {
