@@ -17,7 +17,7 @@
           <th class="last">&nbsp;</th>
         </tr>
         <%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
-        <tr>
+        <tr class="<%%= cycle("odd", "even") %>">
           <td>
             <%%= <%= resource_name %>.id %>
           </td>
