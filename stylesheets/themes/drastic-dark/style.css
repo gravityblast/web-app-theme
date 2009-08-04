@@ -235,8 +235,7 @@ hr {
 /* tables */
 
 .table th {
-  background: #36393d;
-  border-bottom: 3px solid #700000;
+  background: #36393d;  
   color: #FFF;
 }
 
