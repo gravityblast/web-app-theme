@@ -7,7 +7,7 @@ class ThemeGenerator < Rails::Generator::Base
     
   def initialize(runtime_args, runtime_options = {})
     super
-    @name = @args.first || 'application'
+    @name = @args.first || (options[:layout_type].to_s == "sign" ? "sign" : "application")
   end
   
   def manifest
@@ -16,6 +16,7 @@ class ThemeGenerator < Rails::Generator::Base
       m.directory("public/stylesheets/themes/#{options[:theme]}/")      
       m.template("view_layout_#{options[:layout_type]}.html.erb", File.join("app/views/layouts", "#{@name}.html.erb")) unless options[:no_layout]
       m.template("../../../stylesheets/base.css",  File.join("public/stylesheets", "web_app_theme.css"))
+      m.template("web_app_theme_override.css",  File.join("public/stylesheets", "web_app_theme_override.css"))
       m.template("../../../stylesheets/themes/#{options[:theme]}/style.css",  File.join("public/stylesheets/themes/#{options[:theme]}", "style.css"))      
     end
   end
