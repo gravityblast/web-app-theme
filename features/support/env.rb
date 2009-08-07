@@ -6,7 +6,7 @@ require "fileutils"
 require "theme/theme_generator"
 
 web_app_theme_root      = File.join(File.dirname(__FILE__), "/../../")
-tmp_rails_app_name  = "tmp_rails_project"
+tmp_rails_app_name  = "tmp_rails_app"
 tmp_rails_app_root  = File.join(web_app_theme_root, tmp_rails_app_name)
 
 Rails::Generator::Base.append_sources(Rails::Generator::PathSource.new(:builtin, "#{web_app_theme_root}/rails_generators/"))
