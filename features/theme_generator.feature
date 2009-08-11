@@ -43,7 +43,7 @@ Feature: Layout generation
     Then the layout "application.html.erb" should have "My New Application" as page title
   
   # script/generate theme --type=sign
-  Scenario: Given layout for signin and signup
+  Scenario: Generate layout for signin and signup
     Given I have a new rails app
     And I have no layouts
     And I generate a theme for signin and signup

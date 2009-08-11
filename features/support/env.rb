@@ -5,11 +5,11 @@ require 'rails_generator/scripts/generate'
 require "fileutils"
 require "theme/theme_generator"
 
-web_app_theme_root      = File.join(File.dirname(__FILE__), "/../../")
+web_app_theme_root  = File.join(File.dirname(__FILE__), "/../../")
 tmp_rails_app_name  = "tmp_rails_app"
 tmp_rails_app_root  = File.join(web_app_theme_root, tmp_rails_app_name)
 
-Rails::Generator::Base.append_sources(Rails::Generator::PathSource.new(:builtin, "#{web_app_theme_root}/rails_generators/"))
+Rails::Generator::Base.append_sources(Rails::Generator::PathSource.new(:plugin, "#{web_app_theme_root}/rails_generators/"))
 
 module GeneratorHelpers
   def generate_rails_app
@@ -47,7 +47,7 @@ module GeneratorHelpers
   end
   
   def layout_with_box?(layout)
-    File.open(File.join(@app_root, "app", "views", "layouts", layout), "r").read =~ /<div id=\"box\">/
+    File.open(File.join(@app_root, "app", "views", "layouts", layout), "r").read =~ %r|<div id="box">|
   end
 end
 
