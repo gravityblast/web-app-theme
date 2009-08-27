@@ -24,10 +24,26 @@ module GeneratorHelpers
     FileUtils.rm_rf(File.join(@app_root, "public", "stylesheets"))
   end
   
-  def generate_layout(*args)
+  def generate(*args)
     options = !args.empty? && args.last.is_a?(Hash) ? args.pop : {}
     options.merge!({:destination => @app_root, :quiet => true})    
     Rails::Generator::Scripts::Generate.new.run(args, options)
+  end
+  
+  def generate_layout(*args)
+    generate(:theme, *args)
+  end
+  
+  def generate_views(*args)
+    generate(:themed, *args)
+  end
+  
+  def generate_model(model_name)
+    Object.const_get(model_name)
+  rescue NameError
+    Object.const_set(model_name, Class.new)
+    klass = Object.const_get(model_name)
+    def klass.columns; []; end
   end
   
   def layouts_count
@@ -36,6 +52,10 @@ module GeneratorHelpers
   
   def layout_exists?(filename)
     File.exists?(File.join(@app_root, "app", "views", "layouts", filename))
+  end
+  
+  def view_exists?(view_path)
+    File.exists?(File.join(@app_root, "app", "views", view_path))
   end
   
   def stylesheet_exists?(relative_path)

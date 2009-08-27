@@ -12,7 +12,9 @@
       <table class="table">
         <tr>             
           <th class="first">ID</th>
-          <th><%= columns.first.name.capitalize %></th>
+					<% unless columns.empty? -%>
+					<th><%= columns.first.name.capitalize %></th>
+					<% end -%>
           <th>Created at</th>
           <th class="last">&nbsp;</th>
         </tr>
@@ -21,10 +23,12 @@
           <td>
             <%%= <%= resource_name %>.id %>
           </td>
-          <td>
-            <%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= singular_controller_routing_path %>_path(<%= resource_name %>) %>
-          </td>
-          <td>
+					<% unless columns.empty? -%>
+					<td>
+						<%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= singular_controller_routing_path %>_path(<%= resource_name %>) %>
+					</td>
+					<% end -%>
+					<td>
             <%%= <%= resource_name %>.created_at %>
           </td>
           <td class="last">
