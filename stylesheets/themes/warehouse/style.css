@@ -309,6 +309,14 @@ input.checkbox {
   width:99%;
 }
 
+.form input.text_field, .form textarea.text_area {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  width:99%;
+}
+
 .form .navform {
   padding:10px;
   background-color: #eee;
@@ -318,6 +326,7 @@ input.checkbox {
   border-top:1px solid #eee;
   border-left:1px solid #eee;
 }
+
 .form .navform input {
   font-size:14px;
 }
