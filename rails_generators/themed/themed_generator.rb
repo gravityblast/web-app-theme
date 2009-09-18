@@ -30,7 +30,7 @@ class ThemedGenerator < Rails::Generator::NamedBase
     # Posts
     @plural_model_name    = @model_name.pluralize
     # post 
-    @resource_name        = @model_name.downcase 
+    @resource_name        = @model_name.underscore 
     # posts
     @plural_resource_name = @resource_name.pluralize                
 
