@@ -2,7 +2,8 @@ Feature: Theme generation
 	In order to create a great application
 	I should be able to creare theme after creating a layout
 	
-	Scenario: Creating CRUD views with post path
+	# script/generate themed posts
+	Scenario: Creating CRUD views with controller path
 		Given I have a new rails app
 		And a model "Post"
 		When I generate views for controller "posts"
@@ -10,8 +11,9 @@ Feature: Theme generation
 		And I should have a view named "posts/new.html.erb"
 		And I should have a view named "posts/show.html.erb"
 		And I should have a view named "posts/edit.html.erb"
-		
-	Scenario: Creating CRUD views with post path and model path
+	
+	# script/generate themed items Post
+	Scenario: Creating CRUD views with controller path and model name
 		Given I have a new rails app
 		And a model "Post"
 		When I generate views for controller "items" and model "Post"
@@ -19,8 +21,9 @@ Feature: Theme generation
 		And I should have a view named "items/new.html.erb"
 		And I should have a view named "items/show.html.erb"
 		And I should have a view named "items/edit.html.erb"
-
-	Scenario: Creating CRUD views with post path "admin/items" and model path
+  
+  # script/generate themed admin/items Post
+	Scenario: Creating CRUD views with controller path "admin/items" and model name
 		Given I have a new rails app
 		And a model "Post"
 		When I generate views for controller "admin/items" and model "Post"
@@ -29,7 +32,8 @@ Feature: Theme generation
 		And I should have a view named "admin/items/show.html.erb"
 		And I should have a view named "admin/items/edit.html.erb"
 	
-	Scenario: Creating CRUD views with post path "admin/gallery_pictures" and model path
+	# script/generate themed admin/gallery_pictures
+	Scenario: Creating CRUD views with controller path "admin/gallery_pictures"
 		Given I have a new rails app
 		And a model "GalleryPicture"
 		When I generate views for controller "admin/gallery_pictures"
@@ -37,3 +41,12 @@ Feature: Theme generation
 		And I should have a view named "admin/gallery_pictures/new.html.erb"
 		And I should have a view named "admin/gallery_pictures/show.html.erb"
 		And I should have a view named "admin/gallery_pictures/edit.html.erb"
+	
+	# script/generate theme homes --type=text
+	Scenario: Creating text theme
+	  Given I have a new rails app
+	  When I generate text views for "homes"
+	  Then I should have a view named "homes/show.html.erb"
+	  And I should have a view named "homes/_sidebar.html.erb"
+	  
+	  

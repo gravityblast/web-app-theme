@@ -33,8 +33,8 @@ class ThemedGenerator < Rails::Generator::NamedBase
     @resource_name        = @model_name.underscore 
     # posts
     @plural_resource_name = @resource_name.pluralize                
-
-    manifest_method = "manifest_for_#{options[:themed_type]}"    
+    
+    manifest_method = "manifest_for_#{options[:themed_type]}"
     record do |m|
       send(manifest_method, m) if respond_to?(manifest_method)
     end
@@ -68,6 +68,12 @@ protected
     m.template('view_signin.html.erb',  File.join("app/views", signin_controller_path, "new.html.erb"))
   end
   
+  def manifest_for_text(m)
+    m.directory(File.join('app/views', @controller_file_path))    
+    m.template('view_text.html.erb', File.join("app/views", @controller_file_path, "show.html.erb"))
+    m.template('view_sidebar.html.erb', File.join("app/views", @controller_file_path, "_sidebar.html.erb"))
+  end
+  
   def get_columns
     excluded_column_names = %w[id created_at updated_at]
     Kernel.const_get(@model_name).columns.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| Rails::Generator::GeneratedAttribute.new(c.name, c.type)}
@@ -82,7 +88,7 @@ protected
     opt.separator 'Options:'
     opt.on("--app_name=app_name", String, "") { |v| options[:app_name] = v }
     opt.on("--type=themed_type", String, "") { |v| options[:themed_type] = v }    
-    opt.on("--layout=layout", String, "Add menu link") { |v| options[:layout] = v }    
+    opt.on("--layout=layout", String, "Add menu link") { |v| options[:layout] = v }
     opt.on("--with_will_paginate", "Add pagination using will_paginate") { |v| options[:will_paginate] = true }
   end
   

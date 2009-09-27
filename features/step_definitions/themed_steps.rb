@@ -10,6 +10,10 @@ When /^I generate views for controller "([^\"]*)" and model "([^\"]*)"$/ do |con
   generate_views(controller_path, model_name)
 end
 
+When /^I generate text views for "([^\"]*)"/ do |controller_path|
+  generate_views(controller_path, :themed_type => :text)
+end
+
 Then /^I should have a view named "([^\"]*)"$/ do |view_path|
   view_exists?(view_path).should be_true
 end
