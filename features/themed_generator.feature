@@ -42,7 +42,7 @@ Feature: Theme generation
 		And I should have a view named "admin/gallery_pictures/show.html.erb"
 		And I should have a view named "admin/gallery_pictures/edit.html.erb"
 	
-	# script/generate theme homes --type=text
+	# script/generate themed homes --type=text
 	Scenario: Creating text theme
 	  Given I have a new rails app
 	  When I generate text views for "homes"
