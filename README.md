@@ -5,6 +5,17 @@ A simple layout by [Andrea Franz](http://gravityblast.com) that you can use in y
 Inspired by cool themes like [Lighthouse](http://lighthouseapp.com/), [Basecamp](http://basecamphq.com/), [RadiantCMS](http://radiantcms.org/) and others,
 it wants to be an idea to start developing a complete web application layout.
 
+Installation
+---
+
+Install the gem with:
+
+  sudo gem install web-app-theme -s http://gemcutter.org
+  
+You can also install it as a rails plugin:
+
+  script/plugin install git://github.com/pilu/web-app-theme.git
+
 Contributing
 ---
 
