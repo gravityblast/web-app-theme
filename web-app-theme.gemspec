@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2009-10-17}
-  s.description = %q{Web app theme generator for rails applications}
+  s.date = %q{2009-10-18}
+  s.description = %q{Web app theme generator for rails projects}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -61,7 +61,8 @@ Gem::Specification.new do |s|
      "stylesheets/themes/reidb-greenish/style.css",
      "stylesheets/themes/warehouse/style.css",
      "test/spec_helper.rb",
-     "test/themed_generator_spec.rb"
+     "test/themed_generator_spec.rb",
+     "web-app-theme.gemspec"
   ]
   s.homepage = %q{http://github.com/pilu/web-app-theme}
   s.rdoc_options = ["--charset=UTF-8"]
