@@ -10,14 +10,61 @@ Installation
 
 Install the gem with:
 
-  sudo gem install web-app-theme -s http://gemcutter.org
+    sudo gem install web-app-theme -s http://gemcutter.org
   
 You can also install it as a rails plugin:
 
-  script/plugin install git://github.com/pilu/web-app-theme.git
+    script/plugin install git://github.com/pilu/web-app-theme.git
+
+Usage
+---
+
+Theme Generator
+--
+
+Used without parameters, it generates the layout inside the application.html.erb file using the default theme.
+  
+    script/generate theme
+
+You can specify the layout file name in the first parameter:
+
+    script/generate theme admin # it will generate a layout called `admin.html.erb`
+
+If you want to use another theme, instead of the default, you can use the `--theme` option:
+
+    script/generate theme --theme="drastic-dark"
+
+
+If you want to generate the stylesheets of a specific theme without changing the previously generated layout you can pass the `--no-layout` option:
+
+    script/generate theme --theme=bec --no_layout
+
+
+You can specify the text used in the header with the `--app-name` option:
+
+    script/generate theme --app_name="My New Application"
+  
+If you need a layout for login and signup pages, you can use the `--type` option with `sign` as value. Ìf not specified, the default value is `administration`
+
+    script/generate theme --type=sign
+
+Themed Generator
+--
+
+script/generate themed posts
+
+script/generate themed items Post
+
+script/generate themed admin/items Post
+
+script/generate themed admin/gallery_pictures
+
+script/generate themed homes --type=text
+
 
 Contributing
 ---
+
 
 * Fork this repository.
 * Duplicate the  'themes/default' folder and rename it.
