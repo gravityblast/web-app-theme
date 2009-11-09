@@ -57,6 +57,10 @@ If you have a controller named like the plural of the used model you can specify
     
     script/generate themed admin/gallery_pictures # you have a model named GalleryPicture and a controller named Admin::GalleryPicturesController
 
+Use the `--layout` option specifying the previously generated layout to add a link to the controller you are working on:
+
+    script/generate themed posts --layout=admin # you will see the `Posts` link in the navigation
+
 If the controller has a name different to the model used, specify the controller path in the first parameter and the model name in the second one:
 
     script/generate themed items post
