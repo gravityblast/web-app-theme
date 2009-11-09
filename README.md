@@ -49,17 +49,25 @@ If you need a layout for login and signup pages, you can use the `--type` option
 
 ### Themed Generator
 
-    script/generate themed posts
+Start creating your controllers manually or with a scaffold, and then use the `themed generator` to overwrite the previously generated views.
 
+If you have a controller named like the plural of the used model you can specify just the first parameter:
 
-    script/generate themed items Post
+    script/generate themed posts # you have a model named Post and a controller named PostsController
+    
+    script/generate themed admin/gallery_pictures # you have a model named GalleryPicture and a controller named Admin::GalleryPicturesController
 
+If the controller has a name different to the model used, specify the controller path in the first parameter and the model name in the second one:
 
-    script/generate themed admin/items Post
+    script/generate themed items post
+    
+    script/generate themed admin/items post
 
+If you use `will_paginate` for pagination use the `--with_will_paginate`:
 
-    script/generate themed admin/gallery_pictures
+    script/generate themed items post --with_will_paginate        
 
+If you have something like `map.resource :dashboard` in your `routes.rb` file, you can use the `--type=text` to generate a view with just text:
     
     script/generate themed homes --type=text
 
