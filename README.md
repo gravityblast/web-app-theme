@@ -90,12 +90,18 @@ If you want to show form error messages inside the generated forms, use the foll
 Contributing
 ---
 
-
 * Fork this repository.
 * Duplicate the  'themes/default' folder and rename it.
 * Modify the style.css file adding your favorite colors.
 * Add a link to your theme in the 'Switch Theme' block inside the index.html file.
 * Send a pull request.
+
+Links
+-----
+
+* Repository: git://github.com/pilu/web-app-theme.git
+* Issues: <http://github.com/pilu/web-app-theme/issues>
+* Gem: <http://gemcutter.org/gems/web-app-theme>
 
 Author
 ------
