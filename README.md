@@ -1,12 +1,12 @@
 Web App Theme
-===
+=============
 
-A simple layout by [Andrea Franz](http://gravityblast.com) that you can use in your web applications. 
+Web App Theme is a rails generator by [Andrea Franz](http://gravityblast.com) that you can use to generate admin panels quickly.
 Inspired by cool themes like [Lighthouse](http://lighthouseapp.com/), [Basecamp](http://basecamphq.com/), [RadiantCMS](http://radiantcms.org/) and others,
 it wants to be an idea to start developing a complete web application layout.
 
 Installation
----
+------------
 
 Install the gem with:
 
@@ -17,10 +17,9 @@ You can also install it as a rails plugin:
     script/plugin install git://github.com/pilu/web-app-theme.git
 
 Usage
----
+-----
 
-Theme Generator
---
+### Theme Generator
 
 Used without parameters, it generates the layout inside the application.html.erb file using the default theme.
   
@@ -48,19 +47,24 @@ If you need a layout for login and signup pages, you can use the `--type` option
 
     script/generate theme --type=sign
 
-Themed Generator
---
+### Themed Generator
 
-script/generate themed posts
+    script/generate themed posts
 
-script/generate themed items Post
 
-script/generate themed admin/items Post
+    script/generate themed items Post
 
-script/generate themed admin/gallery_pictures
 
-script/generate themed homes --type=text
+    script/generate themed admin/items Post
 
+
+    script/generate themed admin/gallery_pictures
+
+    
+    script/generate themed homes --type=text
+
+
+![Web App Theme screenshot](http://img.skitch.com/20091109-c2k618qerx1ysw5ytxsighuf3f.jpg)
 
 Contributing
 ---
@@ -72,9 +76,22 @@ Contributing
 * Add a link to your theme in the 'Switch Theme' block inside the index.html file.
 * Send a pull request.
 
-![Web App Theme screenshot](http://gravityblast.com/wp-content/uploads/2009/01/web-app-theme-current.jpg)
+Author
+------
+
+Andrea Franz - [http://gravityblast.com](http://gravityblast.com)
 
 Contributors
 ---
 
-Nelson Fernandez ('Bec' theme and refactoring)
+* Nelson Fernandez
+* Giovanni Intini
+* Jeremy Durham
+* Wouter de Vries
+* Marco Borromeo
+* rick mckay
+* Peter Sarnacki
+* Garret Alfert
+* Mikkel Hoegh
+* Juan Maria Martinez Arce
+* Stas SUSHKOV
