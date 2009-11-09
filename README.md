@@ -71,6 +71,15 @@ If you have something like `map.resource :dashboard` in your `routes.rb` file, y
     
     script/generate themed homes --type=text
 
+If you want to show form error messages inside the generated forms, use the following code inside your `environment.rb`
+
+    ActionView::Base.field_error_proc = Proc.new do |html_tag, instance| 
+      if html_tag =~ /<label/
+        %|<div class="fieldWithErrors">#{html_tag} <span class="error">#{[instance.error_message].join(', ')}</span></div>|
+      else
+        html_tag
+      end
+    end
 
 ![Web App Theme screenshot](http://img.skitch.com/20091109-c2k618qerx1ysw5ytxsighuf3f.jpg)
 
