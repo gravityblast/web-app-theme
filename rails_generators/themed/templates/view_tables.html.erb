@@ -43,7 +43,7 @@
         <div class="actions">
         </div>
         <% if options[:will_paginate] %>
-        <%%= will_paginate @<%= resource_name %>  %>
+        <%%= will_paginate @<%= plural_resource_name %>  %>
         <% end %>
         <div class="clear"></div>
       </div>
