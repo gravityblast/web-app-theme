@@ -102,6 +102,7 @@ Links
 * Repository: git://github.com/pilu/web-app-theme.git
 * Issues: <http://github.com/pilu/web-app-theme/issues>
 * Gem: <http://gemcutter.org/gems/web-app-theme>
+* Themes: <http://pilu.github.com/web-app-theme>
 
 Author
 ------
