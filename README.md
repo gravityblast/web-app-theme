@@ -110,7 +110,7 @@ Author
 Andrea Franz - [http://gravityblast.com](http://gravityblast.com)
 
 Contributors
----
+------------
 
 * Nelson Fernandez
 * Giovanni Intini
@@ -123,3 +123,9 @@ Contributors
 * Mikkel Hoegh
 * Juan Maria Martinez Arce
 * Stas SUSHKOV
+
+Credits
+-------
+
+* Icons: FAMFAMFAM Silk icons <http://www.famfamfam.com/lab/icons/silk/>
+* Buttons: Particletree - Rediscovering the Button Element <http://particletree.com/features/rediscovering-the-button-element/>
