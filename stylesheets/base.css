@@ -335,7 +335,7 @@ ul.list li .item .avatar {
 
 /*  Inspired by http://particletree.com/features/rediscovering-the-button-element */
 
-a.button:link, button.button {
+a.button:link, a.button:visited, a.button:hover, a.button:active, button.button {
   color: #222;
   display:block;
   float:left;

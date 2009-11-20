@@ -6,5 +6,9 @@
   </div>
 <%- end -%>        
 <div class="group navform">
-  <input type="submit" class="button" value="Save &rarr;" /> or <%%= link_to 'Cancel', <%= controller_routing_path %>_path %>
+  <button class="button" type="submit">
+    <%%= image_tag("web-app-theme/tick.png", :alt => "Save") %> Save
+  </button>  
+  <%%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "Cancel")} Cancel", <%= controller_routing_path %>_path, :class => "button" %> 
+  <div class="clear"></div>
 </div>
