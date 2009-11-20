@@ -12,6 +12,9 @@ Feature: Layout generation
     And I should have a stylesheet named "web_app_theme.css"
     And I should have a stylesheet named "web_app_theme_override.css"
     And I should have a stylesheet named "themes/default/style.css"
+    And I should have an image named "web-app-theme/cross.png"
+    And I should have an image named "web-app-theme/key.png"
+    And I should have an image named "web-app-theme/tick.png"
   
   # script/generate theme admin
   Scenario: Generate a layout with a name

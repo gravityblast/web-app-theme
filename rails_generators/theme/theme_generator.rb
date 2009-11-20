@@ -11,9 +11,13 @@ class ThemeGenerator < Rails::Generator::Base
   end
   
   def manifest
-    record do |m|            
+    record do |m|
       m.directory("app/views/layouts")
-      m.directory("public/stylesheets/themes/#{options[:theme]}/")      
+      m.directory("public/images/web-app-theme")      
+      %w(cross key tick).each do |icon|
+        m.file("../../../images/icons/#{icon}.png", "public/images/web-app-theme/#{icon}.png")
+      end            
+      m.directory("public/stylesheets/themes/#{options[:theme]}/")
       m.template("view_layout_#{options[:layout_type]}.html.erb", File.join("app/views/layouts", "#{@name}.html.erb")) unless options[:no_layout]
       m.template("../../../stylesheets/base.css",  File.join("public/stylesheets", "web_app_theme.css"))
       m.template("web_app_theme_override.css",  File.join("public/stylesheets", "web_app_theme_override.css"))

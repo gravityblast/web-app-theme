@@ -30,6 +30,10 @@ Then /^I should have a stylesheet named "([^\"]*)"$/ do |filename|
   stylesheet_exists?(filename).should be_true    
 end
 
+Then /^I should have an image named "([^\"]*)"$/ do |filename|
+  image_exists?(filename).should be_true    
+end
+
 Given /^I generate a theme without layout choosing the "([^\"]*)" theme$/ do |theme_name|
   generate_layout(:theme => theme_name, :no_layout => true )
 end

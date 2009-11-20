@@ -58,6 +58,10 @@ module GeneratorHelpers
     File.exists?(File.join(@app_root, "app", "views", view_path))
   end
   
+  def image_exists?(image_path)
+    File.exists?(File.join(@app_root, "public", "images", image_path))
+  end
+  
   def stylesheet_exists?(relative_path)
     File.exists?(File.join(@app_root, "public", "stylesheets", relative_path)).should be_true
   end
