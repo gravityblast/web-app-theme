@@ -1,0 +1,12 @@
+pt_br:
+  web-app-theme: 
+    save: Salvar
+    cancel: Cancelar
+    list: Listar
+    edit: Alterar
+    new: Novo
+    show: Exibir
+    delete: Excluir
+    confirm: Você tem certeza?
+    created_at: Criado em
+    all: Lista de

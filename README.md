@@ -85,6 +85,21 @@ If you want to show form error messages inside the generated forms, use the foll
       end
     end
 
+If you want to have translated pages, simple create in your locale.yml the keys just like config/locales/en_us.yml example.
+	en_us:
+	  web-app-theme: 
+	    save: Save
+	    cancel: Cancel
+	    list: List
+	    edit: Edit
+	    new: New
+	    show: Show
+	    delete: Delete
+	    confirm: Are you sure?
+	    created_at: Created at
+	    all: All
+
+
 ![Web App Theme screenshot](http://img.skitch.com/20091109-c2k618qerx1ysw5ytxsighuf3f.jpg)
 
 Contributing
