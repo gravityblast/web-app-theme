@@ -14,8 +14,8 @@
           <th class="first">ID</th>
 					<% unless columns.empty? -%>
 					<th>
-					<%%= t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= column.first.name %>", :default => t("activerecord.labels.<%= column.first.name %>", :default => "<%= column.first.name.capitalize %>")) %>
-					</th>
+					<%%= t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= columns.first.name %>", :default => t("activerecord.labels.<%= columns.first.name %>", :default => "<%= columns.first.name.capitalize %>")) %>
+</th>
 					<% end -%>
           <th><%%= t("web-app-theme.created_at", :default => "Created at")  %></th>
           <th class="last">&nbsp;</th>
