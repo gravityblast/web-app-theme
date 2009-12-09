@@ -11,7 +11,7 @@
     <div class="inner">
       <% columns.each do |column| %>
         <p>
-          <b><%%= t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= column.name %>", :default => "<%= column.name.capitalize %>") %>:</b>
+          <b><%%= t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= column.name %>", :default => t("activerecord.labels.<%= column.name %>", :default => "<%= column.name.capitalize %>")) %>:</b>
           <%%= @<%= resource_name %>.<%= column.name %> %>
         </p>
       <%- end -%>
