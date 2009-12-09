@@ -14,7 +14,7 @@ class ThemeGenerator < Rails::Generator::Base
     record do |m|
       m.directory("app/views/layouts")
       m.directory("public/images/web-app-theme")      
-      %w(cross key tick).each do |icon|
+      %w(cross key tick application_edit).each do |icon|
         m.file("../../../images/icons/#{icon}.png", "public/images/web-app-theme/#{icon}.png")
       end            
       m.directory("public/stylesheets/themes/#{options[:theme]}/")
