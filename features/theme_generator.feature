@@ -15,6 +15,7 @@ Feature: Layout generation
     And I should have an image named "web-app-theme/cross.png"
     And I should have an image named "web-app-theme/key.png"
     And I should have an image named "web-app-theme/tick.png"
+    And I should have an image named "web-app-theme/application_edit.png"
   
   # script/generate theme admin
   Scenario: Generate a layout with a name
