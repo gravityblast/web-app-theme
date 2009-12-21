@@ -138,6 +138,7 @@ Contributors
 * Mikkel Hoegh
 * Juan Maria Martinez Arce
 * Stas SUSHKOV
+* Daniel Cukier
 
 Credits
 -------
