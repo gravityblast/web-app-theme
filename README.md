@@ -139,6 +139,7 @@ Contributors
 * Juan Maria Martinez Arce
 * Stas SUSHKOV
 * Daniel Cukier
+* Roberto Klein
 
 Credits
 -------
