@@ -1,10 +1,9 @@
 <div class="block">
   <div class="secondary-navigation">
-    <ul>
+    <ul class="wat-cf">
       <li class="first"><%%= link_to "#{t("web-app-theme.list", :default => "List")}", <%= controller_routing_path %>_path  %></li>
       <li class="active"><%%= link_to "#{t("web-app-theme.new", :default => "New")}", new_<%= singular_controller_routing_path %>_path %></li>
     </ul>
-    <div class="clear"></div>
   </div>          
   <div class="content">            
     <h2 class="title"><%%= t("web-app-theme.new", :default => "New")%>  <%= model_name %></h2>

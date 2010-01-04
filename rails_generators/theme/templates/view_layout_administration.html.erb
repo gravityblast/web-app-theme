@@ -10,19 +10,17 @@
     <div id="header">
       <h1><a href="/"><%= options[:app_name] %></a></h1>
       <div id="user-navigation">
-        <ul>
+        <ul class="wat-cf">
           <li><a href="#"><%%= t("web-app-theme.profile", :default => "Profile") %></a></li>
           <li><a href="#"><%%= t("web-app-theme.settings", :default => "Settings") %></a></li>
           <li><a href="/logout" class="logout"><%%= t("web-app-theme.logout", :default => "Logout") %></a></li>
         </ul>
-        <div class="clear"></div>
       </div>      
       <div id="main-navigation">
-        <ul></ul>
-        <div class="clear"></div>
+        <ul class="wat-cf"></ul>
       </div>
     </div>    
-    <div id="wrapper">
+    <div id="wrapper" class="wat-cf">
       <div class="flash">
         <%% flash.each do |type, message| -%>
           <div class="message <%%= type %>">
@@ -41,7 +39,6 @@
       <div id="sidebar">
         <%%= yield :sidebar %>
       </div>
-      <div class="clear"></div>      
     </div>    
   </div>
 </body>
