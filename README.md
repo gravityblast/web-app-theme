@@ -115,7 +115,7 @@ Links
 -----
 
 * Repository: git://github.com/pilu/web-app-theme.git
-* List: http://groups.google.com/group/web-app-theme-generator
+* List: <http://groups.google.com/group/web-app-theme-generator>
 * Issues: <http://github.com/pilu/web-app-theme/issues>
 * Gem: <http://gemcutter.org/gems/web-app-theme>
 * Themes: <http://pilu.github.com/web-app-theme>
