@@ -7,7 +7,7 @@ a { -moz-outline: none; }
 
 body {
   color: #222;
-  background: #f0f0ee;
+  background: #e5e5e5;
   font-family: helvetica, arial, sans-serif;
 }
 
@@ -95,7 +95,7 @@ hr {
 }
 
 #main-navigation ul li.active {
-  background: #f0f0ee;
+  background: #e5e5e5;
 }
 
 #main-navigation ul li a:link, #main-navigation ul li a:visited, #main-navigation ul li a:hover, #main-navigation ul li a:active,
@@ -103,6 +103,13 @@ hr {
 #user-navigation ul li a:link, #user-navigation ul li a:visited, #user-navigation ul li a:hover, #user-navigation ul li a:active {
   text-decoration: none;
   color: #FFF;
+}
+
+#user-navigation a.logout {
+  background: #cc0000;
+  padding: 2px 6px;
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 3px;
 }
 
 .secondary-navigation li a:hover {
