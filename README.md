@@ -141,6 +141,7 @@ Contributors
 * Stas SUSHKOV
 * Daniel Cukier
 * Roberto Klein
+* Bryan Woods
 
 Credits
 -------

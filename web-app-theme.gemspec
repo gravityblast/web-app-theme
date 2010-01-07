@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{web-app-theme}
-  s.version = "0.4.0"
+  s.version = "0.5.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2009-11-10}
+  s.date = %q{2010-01-04}
   s.description = %q{Web app theme generator for rails projects}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
@@ -22,12 +22,18 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
+     "config/locales/de_de.yml",
+     "config/locales/pt_br.yml",
      "features/step_definitions/layout_steps.rb",
      "features/step_definitions/themed_steps.rb",
      "features/support/env.rb",
      "features/theme_generator.feature",
      "features/themed_generator.feature",
      "images/avatar.png",
+     "images/icons/application_edit.png",
+     "images/icons/cross.png",
+     "images/icons/key.png",
+     "images/icons/tick.png",
      "index.html",
      "javascripts/jquery-1.3.min.js",
      "javascripts/jquery.localscroll.js",
