@@ -142,6 +142,7 @@ Contributors
 * Daniel Cukier
 * Roberto Klein
 * Bryan Woods
+* Sandro Duarte
 
 Credits
 -------
