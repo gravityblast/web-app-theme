@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{web-app-theme}
-  s.version = "0.5.1"
+  s.version = "0.5.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2010-01-09}
+  s.date = %q{2010-01-11}
   s.description = %q{Web app theme generator for rails projects}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
