@@ -1,0 +1,18 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to t("web-app-theme.list", :default => "List"), <%= controller_routing_path %>_path
+      %li= link_to t("web-app-theme.new", :default => "New"), new_<%= singular_controller_routing_path %>_path
+      %li.active= link_to t("web-app-theme.show", :default => "Show"), <%= singular_controller_routing_path %>_path
+  .content
+    .inner
+      <% columns.each do |column| -%>
+%p
+        <b>#{ t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= column.name %>", :default => t("activerecord.labels.<%= column.name %>", :default => "<%= column.name.humanize %>")) }:</b>
+        = @<%= resource_name %>.<%= column.name %>
+      <% end -%>
+.wat-cf
+        #{ link_to "#{image_tag("web-app-theme/application_edit.png", :alt => t("web-app-theme.edit", :default=> "Edit"))} #{t("web-app-theme.edit", :default=> "Edit")}", edit_<%= singular_controller_routing_path %>_path(@<%= resource_name %>), :class => "button" } 
+        #{ link_to "#{image_tag("web-app-theme/cross.png", :alt => t("web-app-theme.delete", :default=> "Delete"))} #{t("web-app-theme.delete", :default => "Delete")}", <%= singular_controller_routing_path %>_path(@<%= resource_name %>), :method => "delete", :class => "button", :confirm => t("web-app-theme.confirm", :default => "Are you sure?") }
+
+- content_for :sidebar, render(:partial => 'sidebar')

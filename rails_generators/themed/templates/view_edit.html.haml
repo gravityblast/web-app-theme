@@ -1,0 +1,13 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to t("web-app-theme.list", :default => "List"), <%= controller_routing_path %>_path
+      %li= link_to t("web-app-theme.new", :default => "New"), new_<%= singular_controller_routing_path %>_path
+      %li.active= link_to t("web-app-theme.edit", :default => "Edit"), edit_<%= singular_controller_routing_path %>_path
+  .content
+    %h2.title #{ t("web-app-theme.edit", :default => "Edit") } <%= model_name %>
+    .inner
+      - form_for @<%= model_name.underscore  %>, :url => <%= singular_controller_routing_path %>_path(@<%= resource_name %>), :html => { :class => :form } do |f|
+        = render :partial => "form", :locals => {:f => f}
+
+- content_for :sidebar, render(:partial => 'sidebar')
