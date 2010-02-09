@@ -1,0 +1,29 @@
+!!! Strict
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %title <%= options[:app_name] %>
+    = stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/<%= options[:theme] %>/style", :cache => true
+  %body
+    #container
+      #header
+        %h1 <a href="/"><%= options[:app_name] %></a>
+        #user-navigation
+          %ul.wat-cf
+            <li><a href="#">#{ t("web-app-theme.profile", :default => "Profile") }</a></li>
+            <li><a href="#">#{ t("web-app-theme.settings", :default => "Settings") }</a></li>
+            <li><a href="/logout" class="logout">#{ t("web-app-theme.logout", :default => "Logout") }</a></li>
+        #main-navigation
+          <ul class="wat-cf"></ul>
+      #wrapper.wat-cf
+        .flash
+          - flash.each do |type, message|
+            .message{:class => type.to_s}
+              <p>={ message }</p>
+        #main
+          = yield
+          #footer
+            .block
+              <p>Copyright &copy; #{ Time.now.year } Your Site.</p>
+        #sidebar
+          = yield :sidebar

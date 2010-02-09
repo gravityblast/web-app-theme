@@ -33,6 +33,9 @@ If you want to use another theme, instead of the default, you can use the `--the
 
     script/generate theme --theme="drastic-dark"
 
+You can specify the template engine with `--engine=name` option, where name can be erb (default) or haml:
+
+    script/generate theme --engine=haml
 
 If you want to generate the stylesheets of a specific theme without changing the previously generated layout you can pass the `--no-layout` option:
 
