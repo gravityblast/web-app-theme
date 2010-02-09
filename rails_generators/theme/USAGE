@@ -2,3 +2,4 @@
 ./script/generate theme LayoutName
 ./script/generate theme --theme=ThemeName
 ./script/generate theme --no-layout
+./script/generate theme --engine=haml
