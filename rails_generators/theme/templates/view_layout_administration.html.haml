@@ -19,7 +19,7 @@
         .flash
           - flash.each do |type, message|
             .message{:class => type.to_s}
-              <p>={ message }</p>
+              <p>#{ message }</p>
         #main
           = yield
           #footer
