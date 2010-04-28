@@ -1,8 +1,8 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-	    <li class="first active"><%%= link_to "#{t("web-app-theme.list", :default => "List")}", <%= controller_routing_path %>_path  %></li>
-  		<li><%%= link_to "#{t("web-app-theme.new", :default => "New")}", new_<%= singular_controller_routing_path %>_path %></li>
+      <li class="first active"><%%= link_to "#{t("web-app-theme.list", :default => "List")}", <%= controller_routing_path %>_path  %></li>
+      <li><%%= link_to "#{t("web-app-theme.new", :default => "New")}", new_<%= singular_controller_routing_path %>_path %></li>
     </ul>
   </div>          
   <div class="content">          
@@ -11,11 +11,11 @@
       <table class="table">
         <tr>             
           <th class="first">ID</th>
-					<% unless columns.empty? -%>
-					<th>
-					<%%= t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= columns.first.name %>", :default => t("activerecord.labels.<%= columns.first.name %>", :default => "<%= columns.first.name.capitalize %>")) %>
-</th>
-					<% end -%>
+          <% unless columns.empty? -%>
+          <th>
+            <%%= t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= columns.first.name %>", :default => t("activerecord.labels.<%= columns.first.name %>", :default => "<%= columns.first.name.capitalize %>")) %>
+          </th>
+          <% end -%>
           <th><%%= t("web-app-theme.created_at", :default => "Created at")  %></th>
           <th class="last">&nbsp;</th>
         </tr>
@@ -24,12 +24,12 @@
           <td>
             <%%= <%= resource_name %>.id %>
           </td>
-					<% unless columns.empty? -%>
-					<td>
-						<%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= singular_controller_routing_path %>_path(<%= resource_name %>) %>
-					</td>
-					<% end -%>
-					<td>
+          <% unless columns.empty? -%>
+          <td>
+            <%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= singular_controller_routing_path %>_path(<%= resource_name %>) %>
+          </td>
+          <% end -%>
+          <td>
             <%%= <%= resource_name %>.created_at %>
           </td>
           <td class="last">
