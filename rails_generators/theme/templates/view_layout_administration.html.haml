@@ -25,6 +25,6 @@
           = yield
           #footer
             .block
-              <p>Copyright &copy; #{ Time.now.year } Your Site.</p>
+              <p>Copyright &copy; #{ Time.now.year } #{ options[:app_name] }.</p>
         #sidebar
           = yield :sidebar
