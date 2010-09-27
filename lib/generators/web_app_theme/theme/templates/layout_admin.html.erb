@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= options.app_name %></title>
+  <%%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/<%= options.theme %>/style", "web-app-theme/override", :cache => true %>
+  <%%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1><a href="/"><%= options.app_name %></a></h1>
+      <div id="user-navigation">
+        <ul class="wat-cf">
+          <li><a href="#"><%%= t("web-app-theme.profile", :default => "Profile") %></a></li>
+          <li><a href="#"><%%= t("web-app-theme.settings", :default => "Settings") %></a></li>
+          <li><a href="/logout" class="logout"><%%= t("web-app-theme.logout", :default => "Logout") %></a></li>
+        </ul>
+      </div>
+      <div id="main-navigation">
+        <ul class="wat-cf"></ul>
+      </div>
+    </div>    
+    <div id="wrapper" class="wat-cf">
+      <div class="flash">
+        <%% flash.each do |type, message| -%>
+          <div class="message <%%= type %>">
+            <p><%%= message %></p>
+          </div>
+        <%% end -%>
+      </div>
+      <div id="main">
+        <%%= yield %>
+        <div id="footer">
+          <div class="block">
+            <p>Copyright &copy; <%%= Time.now.year %> <%= options.app_name %>.</p>
+          </div>      
+        </div>
+      </div>
+      <div id="sidebar">
+        <%%= yield :sidebar %>
+      </div>
+    </div>    
+  </div>
+</body>
+</html>
