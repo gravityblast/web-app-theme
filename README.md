@@ -8,11 +8,11 @@ it wants to be an idea to start developing a complete web application layout.
 Installation
 ------------
 
-You can use web-app-theme >= 0.6.0 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3
+You can use web-app-theme >= 0.6.1 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3
 Specify the web-app-theme gem in your Gemfile, only for :development and :test
 
     group :development, :test do
-      gem 'web-app-theme', '>= 0.6.0'
+      gem 'web-app-theme', '>= 0.6.1'
     end
 
 Usage
