@@ -4,11 +4,13 @@ module WebAppTheme
     
     argument :layout_name, :type => :string, :default => 'application'
     
-    class_option :theme,    :type => :string, :default => :default,   :desc => 'Specify the layout theme'
-    class_option :app_name, :type => :string, :default => 'Web App',  :desc => 'Specify the application name'
-    class_option :engine,   :type => :string, :default => 'erb',      :desc => 'Specify the template engine'
+    class_option :theme,      :type => :string, :default => :default,   :desc => 'Specify the layout theme'
+    class_option :app_name,   :type => :string, :default => 'Web App',  :desc => 'Specify the application name'
+    class_option :engine,     :type => :string, :default => 'erb',      :desc => 'Specify the template engine'
+    class_option :no_layout,  :type => :boolean, :default => false,     :desc => 'Use this option if you want to generate only stylesheets'
     
     def copy_layout
+      return if options.no_layout
       admin_layout_name = "layout_admin.html.erb"
       case options.engine
       when 'erb'

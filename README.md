@@ -39,7 +39,7 @@ You can specify the template engine with `--engine=name` option, where name can 
 
 If you want to generate the stylesheets of a specific theme without changing the previously generated layout you can pass the `--no-layout` option:
 
-    script/generate theme --theme=bec --no_layout
+    rails g web_app_theme:theme --theme=bec --no-layout
 
 
 You can specify the text used in the header with the `--app-name` option:
