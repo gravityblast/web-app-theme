@@ -16,13 +16,8 @@ module WebAppTheme
       initialize_views_variables
     end
     
-    def copy_views      
-      template 'view_tables.html.erb',  File.join('app/views', @controller_file_path, 'index.html.erb')
-      template 'view_new.html.erb',     File.join('app/views', @controller_file_path, 'new.html.erb')
-      template 'view_edit.html.erb',    File.join('app/views', @controller_file_path, 'edit.html.erb')
-      template 'view_form.html.erb',    File.join('app/views', @controller_file_path, '_form.html.erb')
-      template 'view_show.html.erb',    File.join('app/views', @controller_file_path, 'show.html.erb')
-      template 'view_sidebar.html.erb', File.join('app/views', @controller_file_path, '_sidebar.html.erb')
+    def copy_views
+      generate_views      
       unless options.layout.blank?
         gsub_file(File.join('app/views/layouts', "#{options[:layout]}.html.#{options.engine}"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
           match.gsub!(/\<\/ul\>/, "")
@@ -37,7 +32,7 @@ module WebAppTheme
         end
       end
     end
-    
+
   protected
     
     def initialize_views_variables
@@ -83,6 +78,41 @@ module WebAppTheme
       file_path = (path + [name.underscore]).join('/')
       nesting = modules.map { |m| m.camelize }.join('::')
       [name, path, file_path, nesting, modules.size]
-    end 
+    end
+    
+    def generate_views
+      views = {
+        'view_tables.html.erb'  => File.join('app/views', @controller_file_path, "index.html.#{options.engine}"),
+        'view_new.html.erb'     => File.join('app/views', @controller_file_path, "new.html.#{options.engine}"),
+        'view_edit.html.erb'    => File.join('app/views', @controller_file_path, "edit.html.#{options.engine}"),
+        'view_form.html.erb'    => File.join('app/views', @controller_file_path, "_form.html.#{options.engine}"),
+        'view_show.html.erb'    => File.join('app/views', @controller_file_path, "show.html.#{options.engine}"),
+        'view_sidebar.html.erb' => File.join('app/views', @controller_file_path, "_sidebar.html.#{options.engine}")
+      }
+      options.engine == 'haml' ? generate_haml_views(views) : generate_erb_views(views)
+    end
+    
+    def generate_erb_views(views)
+      views.each do |template_name, output_path|
+        template template_name, output_path
+      end
+    end
+    
+    def generate_haml_views(views)
+      require 'haml'
+      Dir.mktmpdir('web-app-theme-haml') do |haml_root|
+        views.each do |template_name, output_path|
+          tmp_html_path = "#{haml_root}/#{template_name}"
+          tmp_haml_path = "#{haml_root}/#{template_name}.haml"
+          template template_name, tmp_html_path, :verbose => false
+          `html2haml -r #{tmp_html_path} #{tmp_haml_path}`
+          copy_file tmp_haml_path, output_path
+        end
+      end
+      
+    rescue LoadError
+      say "HAML is not installed, or it is not specified in your Gemfile."
+      exit
+    end
   end
 end

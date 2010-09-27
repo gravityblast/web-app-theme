@@ -76,7 +76,7 @@ If you use `will_paginate` for pagination use the `--with_will_paginate`:
 
 You can specify the template engine with `--engine=name` option, where name can be erb (default) or haml:
 
-    script/generate themed posts --engine=haml
+    rails g web_app_theme:themed posts --engine=haml
 
 If you have something like `map.resource :dashboard` in your `routes.rb` file, you can use the `--type=text` to generate a view with just text:
     
