@@ -232,7 +232,7 @@ hr {
   border: 1px solid #c3c4ba;
 }
 
-.pagination span.current {
+.pagination em {
   background: #261f1f;
   color: #fff;
   border: 1px solid #261f1f;

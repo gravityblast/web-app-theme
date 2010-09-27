@@ -43,7 +43,7 @@
       <div class="actions-bar wat-cf">
         <div class="actions">
         </div>
-        <% if options[:will_paginate] %>
+        <% if options.will_paginate %>
         <%%= will_paginate @<%= plural_resource_name %>  %>
         <% end %>
       </div>

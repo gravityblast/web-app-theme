@@ -59,8 +59,6 @@ If you have a controller named like the plural of the used model you can specify
     rails g web_app_theme:themed posts # you have a model named Post and a controller named PostsController
     
     rails g web_app_theme:themed admin/gallery_pictures # you have a model named GalleryPicture and a controller named Admin::GalleryPicturesController
-    
-    rails g web_app_theme:themed admin/pictures GalleryPicture # you have a model named GalleryPicture and a controller named Admin::PicturesController
 
 Use the `--layout` option specifying the previously generated layout to add a link to the controller you are working on:
 
@@ -68,13 +66,13 @@ Use the `--layout` option specifying the previously generated layout to add a li
 
 If the controller has a name different to the model used, specify the controller path in the first parameter and the model name in the second one:
 
-    script/generate themed items post
+    rails g web_app_theme:themed items post
     
-    script/generate themed admin/items post
+    rails g web_app_theme:themed admin/items post
 
 If you use `will_paginate` for pagination use the `--with_will_paginate`:
 
-    script/generate themed items post --with_will_paginate        
+    rails g web_app_theme:themed items post --will-paginate
 
 You can specify the template engine with `--engine=name` option, where name can be erb (default) or haml:
 

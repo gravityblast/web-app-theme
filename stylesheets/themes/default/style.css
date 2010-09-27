@@ -141,7 +141,7 @@ hr {
 
 /* pagination */
 
-.pagination span.current {
+.pagination em {
   background: #262626;
   color: #FFF;
   border-color: #262626;

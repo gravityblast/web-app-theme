@@ -178,7 +178,7 @@ input.checkbox {
 
 /* pagination */
 
-.pagination span.current {
+.pagination em {
   background: #008c8c;
   color: #FFF;
   border: 1px solid #008c8c;

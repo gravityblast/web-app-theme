@@ -7,8 +7,9 @@ module WebAppTheme
     argument :controller_path,  :type => :string
     argument :model_name,       :type => :string, :required => false    
     
-    class_option :layout, :type => :string, :desc => 'Specify the layout name'
-    class_option :engine, :type => :string, :default => 'erb', :desc => 'Specify the template engine'
+    class_option :layout,         :type => :string,   :desc => 'Specify the layout name'
+    class_option :engine,         :type => :string,   :default => 'erb', :desc => 'Specify the template engine'
+    class_option :will_paginate,  :type => :boolean,  :default => false, :desc => 'Specify if you use will_paginate'
     
     def initialize(args, *options)
       super(args, *options)

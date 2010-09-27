@@ -221,7 +221,7 @@ p {
   border-color: #bbb;
 }
 
-.pagination span.current {
+.pagination em {
   background: #008080;
   color: #FFF;
   border-color: #008080;

@@ -175,7 +175,7 @@ body {
 
 /* pagination */
 
-.pagination a, .pagination span {
+.pagination a, .pagination span, .pagination em {
   padding: 2px 5px;
   margin-right: 5px; 
   display: block;
@@ -184,7 +184,7 @@ body {
   border-width: 1px;
 }
 
-.pagination span.current {
+.pagination em {
   font-weight: bold;  
 }
 
