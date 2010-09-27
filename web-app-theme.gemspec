@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{web-app-theme}
-  s.version = "0.6.0"
+  s.version = "0.6.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
@@ -54,17 +54,22 @@ Gem::Specification.new do |s|
      "lib/web_app_theme.rb",
      "stylesheets/base.css",
      "stylesheets/override.css",
-     "stylesheets/themes/activo/style.css",
      "stylesheets/themes/amro/style.css",
      "stylesheets/themes/bec-green/style.css",
      "stylesheets/themes/bec/style.css",
      "stylesheets/themes/blue/style.css",
+     "stylesheets/themes/default/images/arrow.png",
+     "stylesheets/themes/default/images/boxbar-background.png",
+     "stylesheets/themes/default/images/button-background-active.png",
+     "stylesheets/themes/default/images/button-background.png",
+     "stylesheets/themes/default/images/menubar-background.png",
      "stylesheets/themes/default/style.css",
      "stylesheets/themes/djime-cerulean/style.css",
      "stylesheets/themes/drastic-dark/style.css",
      "stylesheets/themes/kathleene/style.css",
      "stylesheets/themes/olive/style.css",
      "stylesheets/themes/orange/style.css",
+     "stylesheets/themes/red/style.css",
      "stylesheets/themes/reidb-greenish/style.css",
      "stylesheets/themes/warehouse/style.css",
      "test/spec_helper.rb",
