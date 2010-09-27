@@ -1,0 +1,13 @@
+<% columns.each do |column| %>
+  <div class="group">
+    <%%= f.label :<%= column.name %>, t("activerecord.attributes.<%= model_name.underscore %>.<%= column.name %>", :default => "<%= column.name.humanize %>"), :class => :label %>
+    <%%= f.<%= column.field_type %> :<%= column.name %>, :class => '<%= column.field_type %>' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+<%- end -%>        
+<div class="group navform wat-cf">
+  <button class="button" type="submit">
+    <%%= image_tag("web-app-theme/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%%= t("web-app-theme.save", :default => "Save") %>
+  </button>  
+  <%%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.cancel", :default => "Cancel")}")} #{t("web-app-theme.cancel", :default => "Cancel")}", <%= controller_routing_path %>_path, :class => "button" %> 
+</div>

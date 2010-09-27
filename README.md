@@ -56,7 +56,7 @@ Start creating your controllers manually or with a scaffold, and then use the `t
 
 If you have a controller named like the plural of the used model you can specify just the first parameter:
 
-    script/generate themed posts # you have a model named Post and a controller named PostsController
+    rails g web_app_theme:themed posts # you have a model named Post and a controller named PostsController
     
     script/generate themed admin/gallery_pictures # you have a model named GalleryPicture and a controller named Admin::GalleryPicturesController
 
@@ -93,6 +93,7 @@ If you want to show form error messages inside the generated forms, use the foll
     end
 
 If you want to have translated pages, simple create in your locale.yml the keys just like config/locales/en_us.yml example.
+
 	en_us:
 	  web-app-theme: 
 	    save: Save

@@ -1,6 +1,6 @@
 module WebAppTheme
   class ThemeGenerator < Rails::Generators::Base
-    source_root File.expand_path('../../templates', __FILE__)
+    source_root File.expand_path('../templates', __FILE__)
     
     argument :layout_name, :type => :string, :default => 'application'
     
@@ -33,7 +33,7 @@ module WebAppTheme
   protected
   
     def stylesheets_path
-      "../../../../stylesheets"
+      "../../../../../stylesheets"
     end
     
     def generate_haml_layout(admin_layout_name)

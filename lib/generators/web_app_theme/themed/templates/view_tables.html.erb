@@ -1,0 +1,54 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first active"><%%= link_to "#{t("web-app-theme.list", :default => "List")}", <%= controller_routing_path %>_path  %></li>
+      <li><%%= link_to "#{t("web-app-theme.new", :default => "New")}", new_<%= singular_controller_routing_path %>_path %></li>
+    </ul>
+  </div>          
+  <div class="content">          
+    <h2 class="title"><%%= t("web-app-theme.all", :default => "All")  %> <%= plural_model_name %></h2>
+    <div class="inner">
+      <table class="table">
+        <tr>             
+          <th class="first">ID</th>
+          <% unless columns.empty? -%>
+          <th>
+            <%%= t("activerecord.attributes.<%= singular_controller_routing_path %>.<%= columns.first.name %>", :default => t("activerecord.labels.<%= columns.first.name %>", :default => "<%= columns.first.name.capitalize %>")) %>
+          </th>
+          <% end -%>
+          <th><%%= t("web-app-theme.created_at", :default => "Created at")  %></th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
+        <tr class="<%%= cycle("odd", "even") %>">
+          <td>
+            <%%= <%= resource_name %>.id %>
+          </td>
+          <% unless columns.empty? -%>
+          <td>
+            <%%= link_to <%= resource_name %>.<%= columns.first.name %>, <%= singular_controller_routing_path %>_path(<%= resource_name %>) %>
+          </td>
+          <% end -%>
+          <td>
+            <%%= <%= resource_name %>.created_at %>
+          </td>
+          <td class="last">
+            <%%= link_to "#{t("web-app-theme.show", :default => "Show")}", <%= singular_controller_routing_path %>_path(<%= resource_name %>) %> |
+            <%%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_<%= singular_controller_routing_path %>_path(<%= resource_name %>) %> |
+            <%%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", <%= singular_controller_routing_path %>_path(<%= resource_name %>), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+          </td>
+        </tr>          
+        <%% end -%>
+      </table>
+      <div class="actions-bar wat-cf">
+        <div class="actions">
+        </div>
+        <% if options[:will_paginate] %>
+        <%%= will_paginate @<%= plural_resource_name %>  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%% content_for :sidebar, render(:partial => 'sidebar') -%>

@@ -1,0 +1,52 @@
+<h1><%= options[:app_name] %></h1>
+<div class="block" id="block-signup">
+  <h2>Sign up</h2>        
+  <div class="content">
+    <div class="flash">
+      <%% flash.each do |type, message| -%>
+      <div class="message <%%= type %>">
+        <p><%%=  message %></p>
+      </div>
+      <%% end -%>
+    </div>
+    <%% form_for :<%= resource_name %>, :url => <%= controller_routing_path %>_path, :html => { :class => 'form' } do |f| -%>
+      <div class="group wat-cf">
+        <div class="left">
+          <label class="label">Login</label>
+        </div>
+        <div class="right">
+          <%%= f.text_field :login, :class => 'text_field' %>
+        </div>              
+      </div>
+      <div class="group wat-cf">
+        <div class="left">
+          <label class="label">Email</label>                
+        </div>
+        <div class="right">
+          <%%= f.text_field :email, :class => 'text_field' %>
+        </div>              
+      </div>
+      <div class="group wat-cf">
+        <div class="left">
+          <label class="label">Password</label>
+        </div>
+        <div class="right">
+          <%%= f.password_field :password, :class => 'text_field' %>
+        </div>              
+      </div>
+      
+      <div class="group">
+        <div class="left wat-cf">
+          <label class="label">Password</label>
+        </div>
+        <div class="right">
+          <%%= f.password_field :password_confirmation, :class => 'text_field' %>
+        </div>              
+      </div>
+      
+      <div class="group navform">
+        <input type="submit" class="button" value="Sign up" />
+      </div>
+    <%% end -%>
+  </div>
+</div>
