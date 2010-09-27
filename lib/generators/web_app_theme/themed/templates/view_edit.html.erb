@@ -9,7 +9,7 @@
   <div class="content">            
     <h2 class="title"><%%= t("web-app-theme.edit", :default => "Edit") %> <%= model_name %></h2>
     <div class="inner">
-      <%% form_for @<%= model_name.underscore  %>, :url => <%= singular_controller_routing_path %>_path(@<%= resource_name %>), :html => { :class => :form } do |f| -%>
+      <%%= form_for @<%= model_name.underscore  %>, :url => <%= singular_controller_routing_path %>_path(@<%= resource_name %>), :html => { :class => :form } do |f| -%>
         <%%= render :partial => "form", :locals => {:f => f} %>
       <%% end -%>
     </div>

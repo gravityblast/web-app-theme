@@ -30,10 +30,18 @@ module WebAppTheme
       directory "#{stylesheets_path}/themes/#{options.theme}", "public/stylesheets/web-app-theme/themes/#{options.theme}"
     end
     
+    def copy_images
+      directory "#{images_path}", "public/images/web-app-theme"
+    end
+    
   protected
   
     def stylesheets_path
       "../../../../../stylesheets"
+    end
+    
+    def images_path
+      "../../../../../images"
     end
     
     def generate_haml_layout(admin_layout_name)
