@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= options.app_name %></title>
-  <%%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/<%= options.theme %>/style", :cache => true %>
+  <%%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/override", "web-app-theme/themes/<%= options.theme %>/style", :cache => true %>
   <%%= csrf_meta_tag %>
 </head>
 <body>

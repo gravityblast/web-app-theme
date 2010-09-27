@@ -22,20 +22,20 @@ Usage
 ### Theme Generator
 
 Used without parameters, it generates the layout inside the application.html.erb file using the default theme.
-  
-    script/generate theme
+
+    rails g web_app_theme:theme
 
 You can specify the layout file name in the first parameter:
 
-    script/generate theme admin # it will generate a layout called `admin.html.erb`
+    rails g web_app_theme:theme admin # it will generate a layout called `admin.html.erb`
 
 If you want to use another theme, instead of the default, you can use the `--theme` option:
 
-    script/generate theme --theme="drastic-dark"
+    rails g web_app_theme:theme admin --theme="drastic-dark"
 
 You can specify the template engine with `--engine=name` option, where name can be erb (default) or haml:
 
-    script/generate theme --engine=haml
+    rails g web_app_theme:theme --engine=haml # you must specify haml in your Gemfile
 
 If you want to generate the stylesheets of a specific theme without changing the previously generated layout you can pass the `--no-layout` option:
 
