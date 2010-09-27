@@ -44,11 +44,11 @@ If you want to generate the stylesheets of a specific theme without changing the
 
 You can specify the text used in the header with the `--app-name` option:
 
-    script/generate theme --app_name="My New Application"
+    rails g web_app_theme:theme --app-name="My New Application"
   
 If you need a layout for login and signup pages, you can use the `--type` option with `sign` as value. Ìf not specified, the default value is `administration`
 
-    script/generate theme --type=sign
+    rails g web_app_theme:theme sign --layout-type=sign
 
 ### Themed Generator
 

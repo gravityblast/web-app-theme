@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= options.app_name %></title>
+  <%%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/<%= options.theme %>/style", "web-app-theme/override", :cache => true %>
+  <%%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="container">
+    <div id="box">
+      <%%= yield %>            
+    </div>
+  </div>
+</body>
+</html>
