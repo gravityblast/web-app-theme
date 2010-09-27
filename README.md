@@ -8,13 +8,12 @@ it wants to be an idea to start developing a complete web application layout.
 Installation
 ------------
 
-Install the gem with:
+You can use web-app-theme >= 0.6.0 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3
+Specify the web-app-theme gem in your Gemfile, only for :development and :test
 
-    sudo gem install web-app-theme -s http://gemcutter.org
-  
-You can also install it as a rails plugin:
-
-    script/plugin install git://github.com/pilu/web-app-theme.git
+    group :development, :test do
+      gem 'web-app-theme', '>= 0.6.0'
+    end
 
 Usage
 -----

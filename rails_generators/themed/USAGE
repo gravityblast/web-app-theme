@@ -1,5 +1,0 @@
-./script/generate themed ControllerPath
-./script/generate themed ControllerPath ModelName
-./script/generate themed ControllerPath ModelName --layout=application
-./script/generate themed ControllerPath ModelName --with_will_paginate
-./script/generate themed ControllerPath ModelName --engine=haml

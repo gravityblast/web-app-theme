@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{web-app-theme}
-  s.version = "0.5.3"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2010-07-30}
+  s.date = %q{2010-09-28}
   s.description = %q{Web app theme generator for rails projects}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
@@ -38,35 +38,23 @@ Gem::Specification.new do |s|
      "javascripts/jquery-1.3.min.js",
      "javascripts/jquery.localscroll.js",
      "javascripts/jquery.scrollTo.js",
+     "lib/generators/web_app_theme/theme/templates/layout_admin.html.erb",
+     "lib/generators/web_app_theme/theme/templates/layout_sign.html.erb",
+     "lib/generators/web_app_theme/theme/theme_generator.rb",
+     "lib/generators/web_app_theme/themed/templates/view_edit.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_form.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_new.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_show.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_sidebar.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_signin.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_signup.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_tables.html.erb",
+     "lib/generators/web_app_theme/themed/templates/view_text.html.erb",
+     "lib/generators/web_app_theme/themed/themed_generator.rb",
      "lib/web_app_theme.rb",
-     "rails_generators/theme/USAGE",
-     "rails_generators/theme/templates/view_layout_administration.html.erb",
-     "rails_generators/theme/templates/view_layout_administration.html.haml",
-     "rails_generators/theme/templates/view_layout_sign.html.erb",
-     "rails_generators/theme/templates/view_layout_sign.html.haml",
-     "rails_generators/theme/templates/web_app_theme_override.css",
-     "rails_generators/theme/theme_generator.rb",
-     "rails_generators/themed/USAGE",
-     "rails_generators/themed/templates/view_edit.html.erb",
-     "rails_generators/themed/templates/view_edit.html.haml",
-     "rails_generators/themed/templates/view_form.html.erb",
-     "rails_generators/themed/templates/view_form.html.haml",
-     "rails_generators/themed/templates/view_new.html.erb",
-     "rails_generators/themed/templates/view_new.html.haml",
-     "rails_generators/themed/templates/view_show.html.erb",
-     "rails_generators/themed/templates/view_show.html.haml",
-     "rails_generators/themed/templates/view_sidebar.html.erb",
-     "rails_generators/themed/templates/view_sidebar.html.haml",
-     "rails_generators/themed/templates/view_signin.html.erb",
-     "rails_generators/themed/templates/view_signin.html.haml",
-     "rails_generators/themed/templates/view_signup.html.erb",
-     "rails_generators/themed/templates/view_signup.html.haml",
-     "rails_generators/themed/templates/view_tables.html.erb",
-     "rails_generators/themed/templates/view_tables.html.haml",
-     "rails_generators/themed/templates/view_text.html.erb",
-     "rails_generators/themed/templates/view_text.html.haml",
-     "rails_generators/themed/themed_generator.rb",
      "stylesheets/base.css",
+     "stylesheets/override.css",
+     "stylesheets/themes/activo/style.css",
      "stylesheets/themes/amro/style.css",
      "stylesheets/themes/bec-green/style.css",
      "stylesheets/themes/bec/style.css",
