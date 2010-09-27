@@ -150,6 +150,7 @@ Contributors
 * Roberto Klein
 * Bryan Woods
 * Sandro Duarte
+* David Francisco
 
 Credits
 -------
