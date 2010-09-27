@@ -80,7 +80,7 @@ You can specify the template engine with `--engine=name` option, where name can 
 
 If you have something like `map.resource :dashboard` in your `routes.rb` file, you can use the `--type=text` to generate a view with just text:
     
-    script/generate themed homes --type=text
+    rails g web_app_theme:themed dashboards --themed-type=text
 
 If you want to show form error messages inside the generated forms, use the following code inside your `environment.rb`
 

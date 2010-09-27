@@ -10,6 +10,7 @@ module WebAppTheme
     class_option :layout,         :type => :string,   :desc => 'Specify the layout name'
     class_option :engine,         :type => :string,   :default => 'erb', :desc => 'Specify the template engine'
     class_option :will_paginate,  :type => :boolean,  :default => false, :desc => 'Specify if you use will_paginate'
+    class_option :themed_type,    :type => :string,   :default => 'crud', :desc => 'Specify the themed type, crud or text. Default is crud'
     
     def initialize(args, *options)
       super(args, *options)
@@ -82,14 +83,21 @@ module WebAppTheme
     
     def generate_views
       views = {
-        'view_tables.html.erb'  => File.join('app/views', @controller_file_path, "index.html.#{options.engine}"),
-        'view_new.html.erb'     => File.join('app/views', @controller_file_path, "new.html.#{options.engine}"),
-        'view_edit.html.erb'    => File.join('app/views', @controller_file_path, "edit.html.#{options.engine}"),
-        'view_form.html.erb'    => File.join('app/views', @controller_file_path, "_form.html.#{options.engine}"),
-        'view_show.html.erb'    => File.join('app/views', @controller_file_path, "show.html.#{options.engine}"),
-        'view_sidebar.html.erb' => File.join('app/views', @controller_file_path, "_sidebar.html.#{options.engine}")
+        'crud' => {
+          'view_tables.html.erb'  => File.join('app/views', @controller_file_path, "index.html.#{options.engine}"),
+          'view_new.html.erb'     => File.join('app/views', @controller_file_path, "new.html.#{options.engine}"),
+          'view_edit.html.erb'    => File.join('app/views', @controller_file_path, "edit.html.#{options.engine}"),
+          'view_form.html.erb'    => File.join('app/views', @controller_file_path, "_form.html.#{options.engine}"),
+          'view_show.html.erb'    => File.join('app/views', @controller_file_path, "show.html.#{options.engine}"),
+          'view_sidebar.html.erb' => File.join('app/views', @controller_file_path, "_sidebar.html.#{options.engine}")
+        },
+        'text' => {
+          'view_text.html.erb'    => File.join('app/views', @controller_file_path, "show.html.#{options.engine}"),
+          'view_sidebar.html.erb' => File.join('app/views', @controller_file_path, "_sidebar.html.#{options.engine}")
+        }
       }
-      options.engine == 'haml' ? generate_haml_views(views) : generate_erb_views(views)
+      selected_views = views[options.themed_type]
+      options.engine == 'haml' ? generate_haml_views(selected_views) : generate_erb_views(selected_views)
     end
     
     def generate_erb_views(views)
