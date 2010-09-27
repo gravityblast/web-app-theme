@@ -3,27 +3,44 @@ require 'rails/generators/generated_attribute'
 module WebAppTheme
   class ThemedGenerator < Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
+        
+    argument :controller_path,  :type => :string
+    argument :model_name,       :type => :string, :required => false    
+    
+    class_option :layout, :type => :string, :desc => 'Specify the layout name'
+    class_option :engine, :type => :string, :default => 'erb', :desc => 'Specify the template engine'
     
     def initialize(args, *options)
       super(args, *options)
-      initialize_views_variables(args)
+      initialize_views_variables
     end
     
-    def copy_views
+    def copy_views      
       template 'view_tables.html.erb',  File.join('app/views', @controller_file_path, 'index.html.erb')
       template 'view_new.html.erb',     File.join('app/views', @controller_file_path, 'new.html.erb')
       template 'view_edit.html.erb',    File.join('app/views', @controller_file_path, 'edit.html.erb')
       template 'view_form.html.erb',    File.join('app/views', @controller_file_path, '_form.html.erb')
       template 'view_show.html.erb',    File.join('app/views', @controller_file_path, 'show.html.erb')
       template 'view_sidebar.html.erb', File.join('app/views', @controller_file_path, '_sidebar.html.erb')
+      unless options.layout.blank?
+        gsub_file(File.join('app/views/layouts', "#{options[:layout]}.html.#{options.engine}"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
+          match.gsub!(/\<\/ul\>/, "")
+          if @engine.to_s =~ /haml/
+            %|#{match}
+          %li{:class => controller.controller_path == '#{@controller_file_path}' ? 'active' : '' }
+            %a{:href => #{controller_routing_path}_path} #{plural_model_name}
+          </ul>|
+          else
+            %|#{match} <li class="<%= controller.controller_path == '#{@controller_file_path}' ? 'active' : '' %>"><a href="<%= #{controller_routing_path}_path %>">#{plural_model_name}</a></li></ul>|
+          end
+        end
+      end
     end
     
   protected
     
-    def initialize_views_variables(args)
-      @controller_path  = args.shift
-      @model_name       = args.shift
-      @base_name, @controller_class_path, @controller_file_path, @controller_class_nesting, @controller_class_nesting_depth = extract_modules(@controller_path)
+    def initialize_views_variables
+      @base_name, @controller_class_path, @controller_file_path, @controller_class_nesting, @controller_class_nesting_depth = extract_modules(controller_path)
       @controller_routing_path = @controller_file_path.gsub(/\//, '_')
       @model_name = @base_name.singularize unless @model_name
       @model_name = @model_name.camelize
