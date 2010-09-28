@@ -50,7 +50,7 @@ module WebAppTheme
         tmp_html_path = "#{haml_root}/#{admin_layout_name}"
         tmp_haml_path = "#{haml_root}/#{admin_layout_name}.haml"
         template admin_layout_name, tmp_html_path, :verbose => false
-        `html2haml -r #{tmp_html_path} #{tmp_haml_path}`
+        `html2haml --erb --xhtml #{tmp_html_path} #{tmp_haml_path}`
         copy_file tmp_haml_path, "app/views/layouts/#{layout_name.underscore}.html.haml"
       end
     rescue LoadError
