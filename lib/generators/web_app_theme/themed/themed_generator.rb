@@ -113,7 +113,7 @@ module WebAppTheme
           tmp_html_path = "#{haml_root}/#{template_name}"
           tmp_haml_path = "#{haml_root}/#{template_name}.haml"
           template template_name, tmp_html_path, :verbose => false
-          `html2haml -r #{tmp_html_path} #{tmp_haml_path}`
+          `html2haml --erb --xhtml #{tmp_html_path} #{tmp_haml_path}`
           copy_file tmp_haml_path, output_path
         end
       end
