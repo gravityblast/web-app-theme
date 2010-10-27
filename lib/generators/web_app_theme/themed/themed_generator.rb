@@ -67,9 +67,13 @@ module WebAppTheme
       resource_name.pluralize
     end
     
+    #If the ORM is mongoid then use the fields on the class to generate the columns
     def columns
       excluded_column_names = %w[id created_at updated_at]
-      Kernel.const_get(@model_name).columns.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| Rails::Generators::GeneratedAttribute.new(c.name, c.type)}
+       Kernel.const_get(@model_name).columns.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| Rails::Generators::GeneratedAttribute.new(c.name, c.type)}
+       
+     rescue NoMethodError
+       Kernel.const_get(@model_name).fields.collect{|c| c[1]}.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| Rails::Generators::GeneratedAttribute.new(c.name, c.type.to_s)}
     end
     
     def extract_modules(name)
