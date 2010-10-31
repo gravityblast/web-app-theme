@@ -395,3 +395,16 @@ button.button:hover, a.button:hover {
 button.button:active, a.button:active {
   background-color:#e5e5e5;
 }
+.text_button_padding{
+  color: #222222;
+  display: block;
+  float: left;
+  font-size: 1em;
+  line-height: 2em;
+  margin: 0 7px 0 0;
+  padding: 5px 0 6px 7px;
+  text-decoration: none;
+}
+.link_button{
+  cursor: pointer;
+}
