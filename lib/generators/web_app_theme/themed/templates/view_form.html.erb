@@ -9,6 +9,6 @@
   <button class="button" type="submit">
     <%%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%%= t("web-app-theme.save", :default => "Save") %>
   </button>
-  <span class="text_button_padding"><%= t("web-app-theme.or", :default => "or") %></span>
+  <span class="text_button_padding"><%%= t("web-app-theme.or", :default => "or") %></span>
 	<%%= link_to t("web-app-theme.cancel", :default => "Cancel"), <%= controller_routing_path %>_path, :class => "text_button_padding link_button" %>
 </div>
