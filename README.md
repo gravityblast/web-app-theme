@@ -69,7 +69,7 @@ If the controller has a name different to the model used, specify the controller
     
     rails g web_app_theme:themed admin/items post
 
-If you use `will_paginate` for pagination use the `--with_will_paginate`:
+If you use `will_paginate` for pagination use the `--will-paginate`:
 
     rails g web_app_theme:themed items post --will-paginate
 
