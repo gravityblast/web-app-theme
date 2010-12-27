@@ -20,15 +20,18 @@ module WebAppTheme
     def copy_views
       generate_views      
       unless options.layout.blank?
-        gsub_file(File.join('app/views/layouts', "#{options[:layout]}.html.#{options.engine}"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
-          match.gsub!(/\<\/ul\>/, "")
-          if @engine.to_s =~ /haml/
-            %|#{match}
-          %li{:class => controller.controller_path == '#{@controller_file_path}' ? 'active' : '' }
-            %a{:href => #{controller_routing_path}_path} #{plural_model_name}
-          </ul>|
-          else
+        if options.engine =~ /erb/
+          gsub_file(File.join('app/views/layouts', "#{options[:layout]}.html.#{options.engine}"), /\<div\s+id=\"main-navigation\">.*\<\/ul\>/mi) do |match|
+            match.gsub!(/\<\/ul\>/, "")
             %|#{match} <li class="<%= controller.controller_path == '#{@controller_file_path}' ? 'active' : '' %>"><a href="<%= #{controller_routing_path}_path %>">#{plural_model_name}</a></li></ul>|
+          end
+        elsif options.engine =~ /haml/
+          gsub_file(File.join('app/views/layouts', "#{options[:layout]}.html.#{options.engine}"), /#main-navigation.*#wrapper.wat-cf/mi) do |match|
+            match.gsub!(/      #wrapper.wat-cf/, "")
+            %|#{match}| +
+            "  "*6 + %|%li{:class => controller.controller_path == '#{@controller_file_path}' ? 'active' : '' }\n| +
+            "  "*7 + %|%a{:href => #{controller_routing_path}_path} #{plural_model_name}\n| +
+            "  "*3 + %|#wrapper.wat-cf|
           end
         end
       end
