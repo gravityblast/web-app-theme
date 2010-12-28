@@ -1,14 +1,14 @@
 require "rubygems"
-require "cucumber/rake/task"
-require "spec/rake/spectask"
+# require "cucumber/rake/task"
+# require "spec/rake/spectask"
+# 
+# Cucumber::Rake::Task.new
 
-Cucumber::Rake::Task.new
+# Spec::Rake::SpecTask.new do |t|
+#   t.spec_files = FileList['test/**/*_spec.rb']
+# end
 
-Spec::Rake::SpecTask.new do |t|
-  t.spec_files = FileList['test/**/*_spec.rb']
-end
-
-task :default => [:spec, :cucumber]
+# task :default => [:spec, :cucumber]
 
 begin
   require 'jeweler'
