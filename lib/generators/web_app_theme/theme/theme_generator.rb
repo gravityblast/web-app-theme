@@ -18,6 +18,8 @@ module WebAppTheme
         template  admin_layout_name, "app/views/layouts/#{layout_name.underscore}.html.erb"
       when 'haml'
         generate_haml_layout(admin_layout_name)        
+      when 'slim'
+        generate_slim_layout(admin_layout_name)
       end                  
     end
 
@@ -55,6 +57,22 @@ module WebAppTheme
       end
     rescue LoadError
       say "HAML is not installed, or it is not specified in your Gemfile."
+      exit
+    end
+
+    def generate_slim_layout(admin_layout_name)
+      require 'haml2slim'
+      Dir.mktmpdir('web-app-theme-slim') do |slim_root|
+        tmp_html_path = "#{slim_root}/#{admin_layout_name}"
+        tmp_haml_path = "#{slim_root}/#{admin_layout_name}.haml"
+        tmp_slim_path = "#{slim_root}/#{admin_layout_name}.slim"
+        template admin_layout_name, tmp_html_path, :verbose => false
+        `html2haml --erb --xhtml #{tmp_html_path} #{tmp_haml_path}`
+        `haml2slim #{tmp_haml_path} #{tmp_slim_path}`
+        copy_file tmp_slim_path, "app/views/layouts/#{layout_name.underscore}.html.slim"
+      end
+    rescue LoadError
+      say "haml2slim not installed, or it is not specified in your Gemfile."
       exit
     end
   end
