@@ -152,7 +152,7 @@ describe WebAppTheme::ThemedGenerator, "width 'script/generate themed admin/gall
   end
   
   it "should set the right plural_model_name" do
-    @generator.send(:plural_model_name).should == "Gallery"
+    @generator.send(:plural_model_name).should == "Galleries"
   end
 
   it "should set the right resource_name" do
@@ -160,7 +160,7 @@ describe WebAppTheme::ThemedGenerator, "width 'script/generate themed admin/gall
   end
   
   it "should set the right plural_resource_name" do
-    @generator.send(:plural_resource_name).should == "admin/gallery"
+    @generator.send(:plural_resource_name).should == "admin/galleries"
   end
   
   it "should get the right model class" do
