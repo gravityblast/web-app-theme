@@ -69,6 +69,10 @@ If the controller has a name different to the model used, specify the controller
     
     rails g web_app_theme:themed admin/items post
 
+If the model is insite a module use the second parameter to specifie the module:
+
+    rails g wet_app_theme:themed admin/items admin::items
+
 If you use `will_paginate` for pagination use the `--will-paginate`:
 
     rails g web_app_theme:themed items post --will-paginate
@@ -151,6 +155,7 @@ Contributors
 * Bryan Woods
 * Sandro Duarte
 * David Francisco
+* Lucas Rosa Galego
 
 Credits
 -------
