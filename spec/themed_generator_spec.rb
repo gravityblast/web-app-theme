@@ -132,7 +132,7 @@ describe WebAppTheme::ThemedGenerator, "width 'script/generate themed admin/gall
     Admin::Gallery = Class.new
     Admin::Gallery.stub!(:columns).and_return([])
     options = {:destination => File.dirname(__FILE__), :quiet => true, :source => File.dirname(__FILE__)}
-    @generator = WebAppTheme::ThemedGenerator.new(["admin/gallery", "Admin::Gallery"], options)
+    @generator = WebAppTheme::ThemedGenerator.new(["admin/gallery", "admin::gallery"], options)
   end
   
   after do

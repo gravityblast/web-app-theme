@@ -43,7 +43,7 @@ module WebAppTheme
       @base_name, @controller_class_path, @controller_file_path, @controller_class_nesting, @controller_class_nesting_depth = extract_modules(controller_path)
       @controller_routing_path = @controller_file_path.gsub(/\//, '_')
       @model_name = @base_name.singularize unless @model_name
-      @model_name = @model_name.camelize
+      @model_name = @model_name.split(/(::)/).map{|x| x.camelize}.join
     end
     
     def controller_routing_path
@@ -84,7 +84,7 @@ module WebAppTheme
     end
     
     def model_class
-        @model_name.split('::').inject(Kernel){|model_class, namespace| model_class.const_get(namespace)}
+        @model_name.split('::').inject(Kernel){|model_class, namespace| model_class.const_get(namespace.camelize)}
     end
     
     def extract_modules(name)
