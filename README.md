@@ -69,9 +69,10 @@ If the controller has a name different to the model used, specify the controller
     
     rails g web_app_theme:themed admin/items post
 
-If you use `will_paginate` for pagination use the `--will-paginate`:
+If you use `will_paginate` or `kaminari` for pagination use the `--will-paginate` or `--kaminari`:
 
     rails g web_app_theme:themed items post --will-paginate
+    rails g web_app_theme:themed items post --kaminari
 
 You can specify the template engine with `--engine=name` option, where name can be erb (default) or haml:
 
