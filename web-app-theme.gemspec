@@ -71,8 +71,8 @@ Gem::Specification.new do |s|
     "stylesheets/themes/red/style.css",
     "stylesheets/themes/reidb-greenish/style.css",
     "stylesheets/themes/warehouse/style.css",
-    "test/spec_helper.rb",
-    "test/themed_generator_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/themed_generator_spec.rb",
     "web-app-theme.gemspec"
   ]
   s.homepage = %q{http://github.com/pilu/web-app-theme}
