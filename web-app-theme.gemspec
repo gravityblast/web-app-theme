@@ -80,8 +80,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Web app theme generator}
   s.test_files = [
-    "test/spec_helper.rb",
-    "test/themed_generator_spec.rb"
+    "spec/spec_helper.rb",
+    "spec/themed_generator_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
