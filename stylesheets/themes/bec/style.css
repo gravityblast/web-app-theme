@@ -261,7 +261,7 @@ input.checkbox {
 .flash .message p {
   margin:8px;
 }
-.flash .error {
+.flash .error, .flash .alert  {
   border: 1px solid #fbb;
   background-color: #fdd;
 }

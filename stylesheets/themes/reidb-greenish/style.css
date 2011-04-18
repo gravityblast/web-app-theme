@@ -219,7 +219,7 @@ padding: 8px 12px;
   border: 1px solid #fbb;
   background-color: #fdd;
 }
-.flash .warning {
+.flash .warning, .flash .alert  {
   border: 1px solid #fffaaa;
   background-color: #ffffcc;
 }
