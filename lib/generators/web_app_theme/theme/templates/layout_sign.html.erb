@@ -3,6 +3,7 @@
 <head>
   <title><%= options.app_name %></title>
   <%%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/<%= options.theme %>/style", "web-app-theme/override", :cache => true %>
+  <%%= javascript_include_tag :application %>
   <%%= csrf_meta_tag %>
 </head>
 <body>
