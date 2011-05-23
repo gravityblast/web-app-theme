@@ -15,18 +15,14 @@
 }
 
 .gray {
-  color:#999999;
-  font-family: Georgia, serif;
-  font-size: 13px;
-  font-style: italic;
-  font-weight: normal;
+  color: #999;
+  font: italic normal 13px/1.6em Georgia, serif;
   text-transform: none;
   letter-spacing: normal;
-  line-height: 1.6em;
 }
 
 .hightlight {
-  background-color: #ffff88;
+  background-color: #ff8;
   font-weight: bold;
   color: #36393d;
 }
@@ -83,7 +79,6 @@ hr {
 #main .block {
   padding-top: 0px;
   background: #fff;
-
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -269,7 +264,7 @@ hr {
 /* forms */
 
 .form label.label {
-  color: #666666;
+  color: #666;
 }
 
 .form input.text_field, .form textarea.text_area {
@@ -351,12 +346,12 @@ a.button:active, button.button:active {
   margin:8px;
 }
 .flash .error {
-  border: 1px solid #ffbbbb;
-  background-color: #ffdddd;
+  border: 1px solid #fbb;
+  background-color: #fdd;
 }
 .flash .warning {
-  border: 1px solid #ffff88;
-  background-color: #ffffcc;
+  border: 1px solid #ff8;
+  background-color: #ffc;
 }
 .flash .notice {
   border: 1px solid #1fdf00;
@@ -382,7 +377,6 @@ ul.list li .item .avatar {
 
 #box .block {
   background: #fff;
-
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
