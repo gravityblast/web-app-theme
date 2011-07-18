@@ -1,0 +1,18 @@
+development: &common
+  current_user_method: current_user
+  current_user_class:  Author
+
+  # delegate extent handling to owner application
+  application_context: current_context
+  application_extent_id_from_object : get_context_id_from_context_object
+  application_context_from_nested_resources: find_context_by_context_id
+
+
+test:
+  <<: *common   # merges key:value pairs defined in development anchor
+
+cucumber:
+  <<: *common   # merges key:value pairs defined in development anchor
+
+production:
+  <<: *common   # merges key:value pairs defined in development anchor
