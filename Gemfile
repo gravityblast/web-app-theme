@@ -8,5 +8,7 @@ group :development, :test do
   gem "jeweler"
   gem "rspec-rails", ">= 2.4.0"
 
+  gem "generator_spec"
+
   gem "sqlite3"
 end

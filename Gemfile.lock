@@ -39,6 +39,9 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    generator_spec (0.8.3)
+      rails (~> 3.0)
+      rspec-rails
     gherkin (2.4.5)
       json (>= 1.4.6)
     git (1.2.5)
@@ -99,6 +102,7 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber
+  generator_spec
   jeweler
   rails
   rspec
