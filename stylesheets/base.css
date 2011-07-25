@@ -24,6 +24,9 @@ hr {height: 1px; border: 0; }
 p { margin: 15px 0;}
 a img { border: none; }
 
+/* Inspired by http://html5boilerplate.com/docs/#The-style - Always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+
 body {
   font-size: 12px;
   font-family: sans-serif;  
