@@ -1,6 +1,7 @@
-require '../spec_helper'
-require "generators/web_app_theme/theme/theme_generator"
+require 'spec_helper'
+require 'action_controller'
 require 'generator_spec/test_case'
+require "generators/web_app_theme/theme/theme_generator"
 
 describe WebAppTheme::ThemeGenerator do
   include GeneratorSpec::TestCase

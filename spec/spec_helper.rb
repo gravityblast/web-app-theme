@@ -2,13 +2,12 @@
 ENV["RAILS_ENV"] = "test"
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+require "rails/test_help"
 require "rspec/rails"
-#require 'rspec/core'
+#require 'simplecov'
 
-require "rails/generators"
-require "rails/generators/base"
-
-
+require 'rails/generators'
+require 'rails/generators/base'
 
 RSpec.configure do |config|
   # == Mock Framework
