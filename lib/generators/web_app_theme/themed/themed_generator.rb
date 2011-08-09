@@ -1,7 +1,8 @@
+require 'rails/generators'
 require 'rails/generators/generated_attribute'
 
 module WebAppTheme
-  class ThemedGenerator < Rails::Generators::Base
+  class ThemedGenerator < ::Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
         
     argument :controller_path,  :type => :string

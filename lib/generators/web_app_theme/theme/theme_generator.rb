@@ -1,5 +1,5 @@
 module WebAppTheme
-  class ThemeGenerator < Rails::Generators::Base
+  class ThemeGenerator < ::Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
     
     argument :layout_name, :type => :string, :default => 'application'
@@ -35,7 +35,7 @@ module WebAppTheme
     end
     
   protected
-  
+
     def stylesheets_path
       "../../../../../stylesheets"
     end
