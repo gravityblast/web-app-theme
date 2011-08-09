@@ -21,17 +21,18 @@ module WebAppTheme
       end                  
     end
 
+
     def copy_base_stylesheets
-      copy_file "#{stylesheets_path}/base.css",     "public/stylesheets/web-app-theme/base.css"
-      copy_file "#{stylesheets_path}/override.css", "public/stylesheets/web-app-theme/override.css"
+      copy_file "#{stylesheets_path}/base.css",     File.join(rails_assets_root, "stylesheets/web-app-theme/base.css")
+      copy_file "#{stylesheets_path}/override.css", File.join(rails_assets_root, "stylesheets/web-app-theme/override.css")
     end
     
     def copy_theme_stylesheets
-      directory "#{stylesheets_path}/themes/#{options.theme}", "public/stylesheets/web-app-theme/themes/#{options.theme}"
+      directory "#{stylesheets_path}/themes/#{options.theme}",  File.join(rails_assets_root, "stylesheets/web-app-theme/themes/#{options.theme}")
     end
     
     def copy_images
-      directory "#{images_path}", "public/images/web-app-theme"
+      directory "#{images_path}",  File.join(rails_assets_root,"images/web-app-theme")
     end
     
   protected
@@ -43,7 +44,16 @@ module WebAppTheme
     def images_path
       "../../../../../images"
     end
-    
+
+    def rails_assets_root
+      @rails_assets_root ||= if ::Rails.version[0..2].to_f >= 3.1
+                              'app/assets'
+                            else
+                              'public'
+                            end
+    end
+
+
     def generate_haml_layout(admin_layout_name)
       require 'haml'
       Dir.mktmpdir('web-app-theme-haml') do |haml_root|

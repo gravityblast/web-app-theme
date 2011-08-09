@@ -8,8 +8,82 @@ describe WebAppTheme::ThemeGenerator do
 
   destination File.expand_path("../../tmp", __FILE__)
 
-  context "with no arguments" do
+  context "in rails 3.0" do
+
+    context "with no arguments" do
+      before(:all) do
+        #Rails.stub(:version) { '3.0.8' }
+        prepare_destination
+        run_generator
+      end
+
+      it "stubs the version correctly" do
+        Rails.version[0..2].should == "3.0"
+      end
+
+      it "stubs the version correctly" do
+        test_version = (Rails.version[0..2].to_f >= 3.1)
+        test_version.should be_false
+      end
+
+      it "creates the default admin layout" do
+        assert_file "app/views/layouts/application.html.erb", /web-app-theme/
+      end
+
+=begin
+      specify do
+        destination_root.should have_structure {
+          no_file "test.rb"
+          directory "app" do
+            directory "views" do
+              directory "layouts" do
+                file "application.html.erb" do
+                  contains "web-app-theme"
+                end
+              end
+            end
+          end
+          directory "public" do
+            directory "images" do
+              directory "web-app-theme" do
+                file "avatar.png"
+                directory "icons" do
+                  file "application_edit.png"
+                  file "cross.png"
+                  file "key.png"
+                  file "tick.png"
+                end
+              end
+            end
+            directory "stylesheets" do
+              directory "web-app-theme" do
+                file "base.css"
+                file "override.css"
+                directory "themes" do
+                  directory "default" do
+                    file "style.css"
+                    directory "images" do
+                      file "arrow.png"
+                      file "boxbar-background.png"
+                      file "boxbar-background-active.png"
+                      file "button-background.png"
+                      file "menubar-background.png"
+                    end
+                  end
+                end
+              end
+            end
+          end
+        }
+      end
+=end
+
+    end
+  end
+
+  context "in rails 3.1" do
     before(:all) do
+      ::Rails.stub(:version) { '3.1.0' }
       prepare_destination
       run_generator
     end
@@ -18,6 +92,7 @@ describe WebAppTheme::ThemeGenerator do
       assert_file "app/views/layouts/application.html.erb", /web-app-theme/
     end
 
+=begin
     specify do
       destination_root.should have_structure {
         no_file "test.rb"
@@ -30,31 +105,33 @@ describe WebAppTheme::ThemeGenerator do
             end
           end
         end
-        directory "public" do
-          directory "images" do
-            directory "web-app-theme" do
-              file "avatar.png"
-              directory "icons" do
-                file "application_edit.png"
-                file "cross.png"
-                file "key.png"
-                file "tick.png"
+        directory "app" do
+          directory "assets" do
+            directory "images" do
+              directory "web-app-theme" do
+                file "avatar.png"
+                directory "icons" do
+                  file "application_edit.png"
+                  file "cross.png"
+                  file "key.png"
+                  file "tick.png"
+                end
               end
             end
-          end
-          directory "stylesheets" do
-            directory "web-app-theme" do
-              file "base.css"
-              file "override.css"
-              directory "themes" do
-                directory "default" do
-                  file "style.css"
-                  directory "images" do
-                    file "arrow.png"
-                    file "boxbar-background.png"
-                    file "boxbar-background-active.png"
-                    file "button-background.png"
-                    file "menubar-background.png"
+            directory "stylesheets" do
+              directory "web-app-theme" do
+                file "base.css"
+                file "override.css"
+                directory "themes" do
+                  directory "default" do
+                    file "style.css"
+                    directory "images" do
+                      file "arrow.png"
+                      file "boxbar-background.png"
+                      file "boxbar-background-active.png"
+                      file "button-background.png"
+                      file "menubar-background.png"
+                    end
                   end
                 end
               end
@@ -63,9 +140,8 @@ describe WebAppTheme::ThemeGenerator do
         end
       }
     end
-
+=end
 
   end
-
 
 end
