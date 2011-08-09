@@ -26,11 +26,16 @@ describe WebAppTheme::ThemeGenerator do
         test_version.should be_false
       end
 
-      it "creates the default admin layout" do
-        assert_file "app/views/layouts/application.html.erb", /web-app-theme/
+      context "creates the default admin layout" do
+        it "with correct stylesheet" do
+          assert_file "app/views/layouts/application.html.erb", /stylesheet_link_tag "web-app-theme\/base",/
+        end
+
+        it "and correct javascript" do
+          assert_file "app/views/layouts/application.html.erb", /javascript_include_tag :defaults, :cache => true/
+        end
       end
 
-=begin
       specify do
         destination_root.should have_structure {
           no_file "test.rb"
@@ -39,6 +44,7 @@ describe WebAppTheme::ThemeGenerator do
               directory "layouts" do
                 file "application.html.erb" do
                   contains "web-app-theme"
+                  contains 'stylesheet_link_tag "web-app-theme/base"'
                 end
               end
             end
@@ -65,7 +71,7 @@ describe WebAppTheme::ThemeGenerator do
                     directory "images" do
                       file "arrow.png"
                       file "boxbar-background.png"
-                      file "boxbar-background-active.png"
+                      #file "boxbar-background-active.png"
                       file "button-background.png"
                       file "menubar-background.png"
                     end
@@ -76,7 +82,6 @@ describe WebAppTheme::ThemeGenerator do
           end
         }
       end
-=end
 
     end
   end
@@ -88,11 +93,16 @@ describe WebAppTheme::ThemeGenerator do
       run_generator
     end
 
-    it "creates the default admin layout" do
-      assert_file "app/views/layouts/application.html.erb", /web-app-theme/
+    context "creates the default admin layout" do
+      it "with correct stylesheet" do
+        assert_file "app/views/layouts/application.html.erb", /stylesheet_link_tag :application/
+      end
+
+      it "and correct javascript" do
+        assert_file "app/views/layouts/application.html.erb", /javascript_include_tag :application/
+      end
     end
 
-=begin
     specify do
       destination_root.should have_structure {
         no_file "test.rb"
@@ -128,7 +138,7 @@ describe WebAppTheme::ThemeGenerator do
                     directory "images" do
                       file "arrow.png"
                       file "boxbar-background.png"
-                      file "boxbar-background-active.png"
+                      #file "boxbar-background-active.png"
                       file "button-background.png"
                       file "menubar-background.png"
                     end
@@ -140,7 +150,6 @@ describe WebAppTheme::ThemeGenerator do
         end
       }
     end
-=end
 
   end
 

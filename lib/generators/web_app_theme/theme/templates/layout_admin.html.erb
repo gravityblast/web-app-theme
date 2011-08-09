@@ -2,8 +2,13 @@
 <html>
 <head>
   <title><%= options.app_name %></title>
-  <%%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/<%= options.theme %>/style", "web-app-theme/override", :cache => true %>
-  <%%= javascript_include_tag :defaults, :cache => true %>
+  <% if ::Rails.version[0..2].to_f >= 3.1 %>
+    <%%= stylesheet_link_tag :application %>
+    <%%= javascript_include_tag :application %>
+  <% else %>
+    <%%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/<%= options.theme %>/style", "web-app-theme/override", :cache => true %>
+    <%%= javascript_include_tag :defaults, :cache => true %>
+  <% end %>
   <%%= csrf_meta_tag %>
 </head>
 <body>
