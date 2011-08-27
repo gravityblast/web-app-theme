@@ -9,36 +9,30 @@ require "web_app_theme/version"
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{web-app-theme}
+  s.name        = %q{web-app-theme}
   s.version     = WebAppTheme::VERSION
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Andrea Franz"]
-  s.date = %q{2011-07-25}
-  s.description = %q{Web app theme generator for rails projects}
-  s.email = %q{andrea@gravityblast.com}
+  s.required_rubygems_version = ">= 1.3.6"
+
+  s.add_dependency "rails"  , "~> 3.1.0.rc6"
+  s.add_dependency "thor"   , "~> 0.14"
+  s.add_development_dependency "bundler"  , "~> 1.0.0"
+  s.add_development_dependency "rails"    , "~> 3.0"
+
+  s.authors                   = ["Andrea Franz"]
+  s.date                      = %q{2011-07-25}
+  s.description               = %q{Web app theme generator for rails projects}
+  s.email                     = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
     "MIT-LICENSE",
     "README.md"
   ]
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
+  s.homepage          = %q{http://github.com/pilu/web-app-theme}
+  s.require_path      = "lib"
+  s.rubygems_version  = %q{1.5.0}
+  s.summary           = %q{Web app theme generator}
+  s.test_files        = Dir["spec/**/*", "features/**/*"]
+  s.files             = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 3.1.0.rc6"
-
-  s.homepage = %q{http://github.com/pilu/web-app-theme}
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.0}
-  s.summary = %q{Web app theme generator}
-  s.test_files = Dir["spec/**/*"]
-
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-    else
-    end
-  else
-  end
 end
-
