@@ -18,11 +18,11 @@ Gem::Specification.new do |s|
   s.description = %q{Web app theme generator for rails projects}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
-    "LICENSE",
+    "MIT-LICENSE",
     "README.md"
   ]
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.1.0.rc6"
 
