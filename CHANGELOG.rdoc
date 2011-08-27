@@ -1,0 +1,12 @@
+
+== 3.1.0
+
+  * Created this changelog.
+  * Changed the gem structure to the rails plugin / enginex one
+  * Moved all assets to app/assets
+  * Updated the theme generator to no longer copy the stylesheets to
+  application. Now it creates a web_app_theme.css that will include the
+  necessary stylesheets.
+  * Created the new assets generator, that will copy the stylesheets to your
+  application, in case you want to customize them.
+  * Full rewrite of cucumber steps

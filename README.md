@@ -8,6 +8,12 @@ it wants to be an idea to start developing a complete web application layout.
 Installation
 ------------
 
+####Rails >= 3.1.0
+For this version, all the stylesheets are stored inside the gems assets path. They don't need to be copied to the to the application, unless you want to customize them (using the web_app_theme:assets generator). There only css file generated when you run the theme generator is the web_app_theme.css that includes the theme of your choice.
+Add to your gemfile:
+  gem 'web-app-theme', '~> 3.1.0'
+
+####Other versions
 You can use web-app-theme >= 0.6.2 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3
 Specify the web-app-theme gem in your Gemfile, only for :development and :test
 
@@ -15,7 +21,7 @@ Specify the web-app-theme gem in your Gemfile, only for :development and :test
       gem 'web-app-theme', '>= 0.6.2'
     end
 
-Usage
+Usage (Rails >= 3.1.0)
 -----
 
 ### Theme Generator
@@ -48,6 +54,15 @@ You can specify the text used in the header with the `--app-name` option:
 If you need a layout for login and signup pages, you can use the `--type` option with `sign` as value. Ìf not specified, the default value is `administration`
 
     rails g web_app_theme:theme sign --layout-type=sign
+
+### Assets Generator
+
+Used to copy a theme of your choice from the gem to your application, without parameters it will copy the 'default' theme
+  
+  rails g web_app_theme:assets --theme=red
+
+This will copy the theme files on your app/assets/stylesheets/web-app-theme path.
+Also this will copy theme's images to app/assets/images/web-app-theme path
 
 ### Themed Generator
 
