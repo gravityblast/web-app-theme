@@ -5,7 +5,6 @@ module WebAppTheme
       class_option :theme,        :type => :string,   :default => :default,   :desc => 'Specify the layout theme to be copied'
 
       def copy_stylesheets
-        copy_file "stylesheets/web-app-theme/override.css"            , "app/assets/stylesheets/web-app-theme/override.css"
         copy_file "stylesheets/web-app-theme/base.css"                , "app/assets/stylesheets/web-app-theme/base.css"
         directory "stylesheets/web-app-theme/themes/#{options.theme}" , "app/assets/stylesheets/web-app-theme/themes/#{options.theme}"
       end
