@@ -25,10 +25,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 3.1.0.rc6"
-  s.add_dependency('rspec')
-  s.add_dependency('rspec-rails')
-  s.add_dependency('cucumber')
-  s.add_dependency('cucumber-rails')
 
   s.homepage = %q{http://github.com/pilu/web-app-theme}
   s.require_paths = ["lib"]

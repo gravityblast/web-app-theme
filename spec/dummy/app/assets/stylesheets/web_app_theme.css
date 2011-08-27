@@ -1,8 +1,8 @@
 /* 
  * This css will include all web-app-theme css you need
  *
- *= require web-app-theme/override
- *= require web-app-theme/base
- *= require web-app-theme/themes/default/style.css
+ *= require ./web-app-theme/override
+ *= require ./web-app-theme/base
+ *= require ./web-app-theme/themes/default/style.css
  *
  */
