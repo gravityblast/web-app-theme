@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{web-app-theme}
-  s.version = "0.7.0"
+  s.version = "0.8.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
@@ -16,94 +16,20 @@ Gem::Specification.new do |s|
     "LICENSE",
     "README.md"
   ]
-  s.files = [
-    "LICENSE",
-    "README.md",
-    "Rakefile",
-    "VERSION",
-    "config/locales/de_de.yml",
-    "config/locales/pt_br.yml",
-    "features/step_definitions/layout_steps.rb",
-    "features/step_definitions/themed_steps.rb",
-    "features/support/env.rb",
-    "features/theme_generator.feature",
-    "features/themed_generator.feature",
-    "images/avatar.png",
-    "images/icons/application_edit.png",
-    "images/icons/cross.png",
-    "images/icons/key.png",
-    "images/icons/tick.png",
-    "index.html",
-    "javascripts/jquery-1.3.min.js",
-    "javascripts/jquery.localscroll.js",
-    "javascripts/jquery.scrollTo.js",
-    "lib/generators/web_app_theme/theme/templates/layout_admin.html.erb",
-    "lib/generators/web_app_theme/theme/templates/layout_sign.html.erb",
-    "lib/generators/web_app_theme/theme/theme_generator.rb",
-    "lib/generators/web_app_theme/themed/templates/view_edit.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_form.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_new.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_show.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_sidebar.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_signin.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_signup.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_tables.html.erb",
-    "lib/generators/web_app_theme/themed/templates/view_text.html.erb",
-    "lib/generators/web_app_theme/themed/themed_generator.rb",
-    "lib/web_app_theme.rb",
-    "stylesheets/base.css",
-    "stylesheets/override.css",
-    "stylesheets/themes/activo/images/arrow.png",
-    "stylesheets/themes/activo/images/boxbar-background.png",
-    "stylesheets/themes/activo/images/button-background-active.png",
-    "stylesheets/themes/activo/images/button-background.png",
-    "stylesheets/themes/activo/images/menubar-background.png",
-    "stylesheets/themes/activo/style.css",
-    "stylesheets/themes/amro/style.css",
-    "stylesheets/themes/bec-green/style.css",
-    "stylesheets/themes/bec/style.css",
-    "stylesheets/themes/blue/style.css",
-    "stylesheets/themes/default/fonts/museo700-regular-webfont.eot",
-    "stylesheets/themes/default/fonts/museo700-regular-webfont.svg",
-    "stylesheets/themes/default/fonts/museo700-regular-webfont.ttf",
-    "stylesheets/themes/default/fonts/museo700-regular-webfont.woff",
-    "stylesheets/themes/default/fonts/museosans_500-webfont.eot",
-    "stylesheets/themes/default/fonts/museosans_500-webfont.svg",
-    "stylesheets/themes/default/fonts/museosans_500-webfont.ttf",
-    "stylesheets/themes/default/fonts/museosans_500-webfont.woff",
-    "stylesheets/themes/default/fonts/museosans_500_italic-webfont.eot",
-    "stylesheets/themes/default/fonts/museosans_500_italic-webfont.svg",
-    "stylesheets/themes/default/fonts/museosans_500_italic-webfont.ttf",
-    "stylesheets/themes/default/fonts/museosans_500_italic-webfont.woff",
-    "stylesheets/themes/default/images/arrow.png",
-    "stylesheets/themes/default/images/bgd.jpg",
-    "stylesheets/themes/default/images/boxbar-background.png",
-    "stylesheets/themes/default/images/button-background-active.png",
-    "stylesheets/themes/default/images/button-background.png",
-    "stylesheets/themes/default/images/messages/error.png",
-    "stylesheets/themes/default/images/messages/notice.png",
-    "stylesheets/themes/default/images/messages/warning.png",
-    "stylesheets/themes/default/style.css",
-    "stylesheets/themes/djime-cerulean/style.css",
-    "stylesheets/themes/drastic-dark/style.css",
-    "stylesheets/themes/kathleene/style.css",
-    "stylesheets/themes/olive/style.css",
-    "stylesheets/themes/orange/style.css",
-    "stylesheets/themes/red/style.css",
-    "stylesheets/themes/reidb-greenish/style.css",
-    "stylesheets/themes/warehouse/style.css",
-    "test/spec_helper.rb",
-    "test/themed_generator_spec.rb",
-    "web-app-theme.gemspec"
-  ]
+
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+
+  s.add_dependency "rails", "~> 3.1.0.rc6"
+  s.add_dependency('rspec')
+  s.add_dependency('rspec-rails')
+  s.add_dependency('cucumber')
+  s.add_dependency('cucumber-rails')
+
   s.homepage = %q{http://github.com/pilu/web-app-theme}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.5.0}
   s.summary = %q{Web app theme generator}
-  s.test_files = [
-    "test/spec_helper.rb",
-    "test/themed_generator_spec.rb"
-  ]
+  s.test_files = Dir["spec/**/*"]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
