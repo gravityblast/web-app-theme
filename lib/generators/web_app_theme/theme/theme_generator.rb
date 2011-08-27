@@ -20,30 +20,13 @@ module WebAppTheme
         generate_haml_layout(admin_layout_name)        
       end                  
     end
-
-    def copy_base_stylesheets
-      copy_file "#{stylesheets_path}/base.css",     "public/stylesheets/web-app-theme/base.css"
-      copy_file "#{stylesheets_path}/override.css", "public/stylesheets/web-app-theme/override.css"
-    end
     
-    def copy_theme_stylesheets
-      directory "#{stylesheets_path}/themes/#{options.theme}", "public/stylesheets/web-app-theme/themes/#{options.theme}"
-    end
-    
-    def copy_images
-      directory "#{images_path}", "public/images/web-app-theme"
+    def copy_theme_stylesheet 
+      template "web_app_theme.css.erb", "app/assets/stylesheets/web_app_theme.css"
     end
     
   protected
   
-    def stylesheets_path
-      "../../../../../stylesheets"
-    end
-    
-    def images_path
-      "../../../../../images"
-    end
-    
     def generate_haml_layout(admin_layout_name)
       require 'haml'
       Dir.mktmpdir('web-app-theme-haml') do |haml_root|
