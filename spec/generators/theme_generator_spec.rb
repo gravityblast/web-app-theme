@@ -70,10 +70,15 @@ describe WebAppTheme::ThemeGenerator do
                     file "style.css"
                     directory "images" do
                       file "arrow.png"
+                      file "bgd.jpg"
                       file "boxbar-background.png"
-                      #file "boxbar-background-active.png"
+                      file "button-background-active.png"
                       file "button-background.png"
-                      file "menubar-background.png"
+                    end
+                    directory "fonts" do
+                      file 'museo700-regular-webfont.eot'
+                      file 'museo700-regular-webfont.svg'
+                      file 'museosans_500-webfont.svg'
                     end
                   end
                 end
@@ -118,6 +123,19 @@ describe WebAppTheme::ThemeGenerator do
         directory "app" do
           directory "assets" do
             directory "images" do
+              directory "images" do
+                file "arrow.png"
+                file "bgd.jpg"
+                file "boxbar-background.png"
+                file "button-background-active.png"
+                file "button-background.png"
+              end
+              directory "fonts" do
+                file 'museo700-regular-webfont.eot'
+                file 'museo700-regular-webfont.svg'
+                file 'museosans_500-webfont.svg'
+              end
+
               directory "web-app-theme" do
                 file "avatar.png"
                 directory "icons" do
@@ -135,13 +153,6 @@ describe WebAppTheme::ThemeGenerator do
                 directory "themes" do
                   directory "default" do
                     file "style.css"
-                    directory "images" do
-                      file "arrow.png"
-                      file "boxbar-background.png"
-                      #file "boxbar-background-active.png"
-                      file "button-background.png"
-                      file "menubar-background.png"
-                    end
                   end
                 end
               end

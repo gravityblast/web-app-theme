@@ -28,7 +28,19 @@ module WebAppTheme
     end
     
     def copy_theme_stylesheets
-      directory "#{stylesheets_path}/themes/#{options.theme}",  File.join(rails_assets_root, "stylesheets/web-app-theme/themes/#{options.theme}")
+      if rails31?
+        copy_file "#{stylesheets_path}/themes/#{options.theme}/style.css",  File.join(rails_assets_root, "stylesheets/web-app-theme/themes/#{options.theme}/style.css")
+
+        # for rails 3.1 fonts are served from /app/assets/images/fonts
+        directory "#{stylesheets_path}/themes/#{options.theme}/fonts",  File.join(rails_assets_root, "images", "fonts") rescue nil
+
+        # for rails 3.1, images are served from /app/assets/images
+        # but in the style sheets is constantly referred to `images/something.jpg`, so we must double-nest
+        # This is the easies way for now to keep the stylesheets rails 3.0 and rails 3.1 compatible
+        directory "#{stylesheets_path}/themes/#{options.theme}/images",  File.join(rails_assets_root, "images", "images") rescue nil
+      else
+        directory "#{stylesheets_path}/themes/#{options.theme}",  File.join(rails_assets_root, "stylesheets/web-app-theme/themes/#{options.theme}")
+      end
     end
     
     def copy_images
@@ -46,11 +58,15 @@ module WebAppTheme
     end
 
     def rails_assets_root
-      @rails_assets_root ||= if ::Rails.version[0..2].to_f >= 3.1
+      @rails_assets_root ||= if rails31?
                               'app/assets'
                             else
                               'public'
                             end
+    end
+
+    def rails31?
+      ::Rails.version[0..2].to_f >= 3.1
     end
 
 
