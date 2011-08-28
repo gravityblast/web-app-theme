@@ -3,6 +3,7 @@ PATH
   specs:
     web-app-theme (3.1.0)
       rails (~> 3.1.0.rc6)
+      thor (~> 0.14)
 
 GEM
   remote: http://rubygems.org/
@@ -149,6 +150,7 @@ PLATFORMS
 
 DEPENDENCIES
   aruba
+  bundler (~> 1.0.0)
   cucumber
   cucumber-rails
   rspec

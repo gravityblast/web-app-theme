@@ -1,6 +1,7 @@
 .DS_Store
 *.swp
 *.swo
+tmp/*
 spec/dummy/tmp/*
 spec/dummy/log/*
 pkg

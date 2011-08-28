@@ -1,3 +1,0 @@
-  source 'http://rubygems.org'
-  gem 'rails', '3.1.0.rc6'
-  gem 'web-app-theme', :path => '../../../'

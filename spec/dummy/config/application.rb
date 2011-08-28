@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require
-require "web_app_theme"
+require "web-app-theme"
 
 module Dummy
   class Application < Rails::Application
