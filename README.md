@@ -8,12 +8,16 @@ it wants to be an idea to start developing a complete web application layout.
 Installation
 ------------
 
-You can use web-app-theme >= 0.6.2 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3
+You can use web-app-theme >= 0.6.2 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3.
 Specify the web-app-theme gem in your Gemfile, only for :development and :test
 
     group :development, :test do
       gem 'web-app-theme', '>= 0.6.2'
     end
+
+If you want to use with Rails 3.1, add the following line in your `Gemfile`:
+
+    gem 'web-app-theme', :git => 'git://github.com/jweslley/web-app-theme.git'
 
 Usage
 -----
@@ -40,6 +44,9 @@ If you want to generate the stylesheets of a specific theme without changing the
 
     rails g web_app_theme:theme --theme=bec --no-layout
 
+But, if you are using web-app-theme with Rails 3.1 and want to change your theme, you dont need to run the generator again, just edit the `app/assets/stylesheets/application.css` file specifying your new theme:
+
+    *= require 'web-app-theme/warehouse'
 
 You can specify the text used in the header with the `--app-name` option:
 
