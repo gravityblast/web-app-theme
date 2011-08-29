@@ -1,31 +1,31 @@
 /* Activo 2 by David Francisco (activo.dmfranc.com) - tiny version for web-app-theme */
 @font-face {
   font-family: "MuseoSans500";
-  src: url("fonts/museosans_500-webfont.eot");
-  src: local("☺"), url("fonts/museosans_500-webfont.woff") format("woff"), url("fonts/museosans_500-webfont.ttf") format("truetype"), url("fonts/museosans_500-webfont.svg#webfontxgyHgdAL") format("svg");
+  src: url("/web-app-theme/themes/default/fonts/museosans_500-webfont.eot");
+  src: local("☺"), url("/web-app-theme/themes/default/fonts/museosans_500-webfont.woff") format("woff"), url("/web-app-theme/themes/default/fonts/museosans_500-webfont.ttf") format("truetype"), url("/web-app-theme/themes/default/fonts/museosans_500-webfont.svg#webfontxgyHgdAL") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MuseoSans500Italic";
-  src: url("fonts/museosans_500_italic-webfont.eot");
-  src: local("☺"), url("fonts/museosans_500_italic-webfont.woff") format("woff"), url("fonts/museosans_500_italic-webfont.ttf") format("truetype"), url("fonts/museosans_500_italic-webfont.svg#webfonteCRZCYEf") format("svg");
+  src: url("/web-app-theme/themes/default/fonts/museosans_500_italic-webfont.eot");
+  src: local("☺"), url("/web-app-theme/themes/default/fonts/museosans_500_italic-webfont.woff") format("woff"), url("/web-app-theme/themes/default/fonts/museosans_500_italic-webfont.ttf") format("truetype"), url("/web-app-theme/themes/default/fonts/museosans_500_italic-webfont.svg#webfonteCRZCYEf") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Museo700";
-  src: url("fonts/museo700-regular-webfont.eot");
-  src: local("☺"), url("fonts/museo700-regular-webfont.woff") format("woff"), url("fonts/museo700-regular-webfont.ttf") format("truetype"), url("fonts/museo700-regular-webfont.svg#webfontOC5Ke5xr") format("svg");
+  src: url("/web-app-theme/themes/default/fonts/museo700-regular-webfont.eot");
+  src: local("☺"), url("/web-app-theme/themes/default/fonts/museo700-regular-webfont.woff") format("woff"), url("/web-app-theme/themes/default/fonts/museo700-regular-webfont.ttf") format("truetype"), url("/web-app-theme/themes/default/fonts/museo700-regular-webfont.svg#webfontOC5Ke5xr") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   color: #111111;
-  background: #c4c4c4 url("images/bgd.jpg");
+  background: #c4c4c4 url("/web-app-theme/themes/default/images/bgd.jpg");
   font-family: "MuseoSans500", helvetica, arial, sans-serif;
 }
 
@@ -125,7 +125,7 @@ hr {
 }
 
 .secondary-navigation {
-  background: #e0e0e0 url("images/boxbar-background.png") top;
+  background: #e0e0e0 url("/web-app-theme/themes/default/images/boxbar-background.png") top;
   border-bottom-width: 0px;
   -moz-border-radius-topleft: 6px;
   -webkit-border-top-left-radius: 6px;
@@ -239,7 +239,7 @@ hr {
 #sidebar ul li {
   background-position: 0 11px;
   background-repeat: no-repeat;
-  background-image: url("images/arrow.png");
+  background-image: url("/web-app-theme/themes/default/images/arrow.png");
   border-bottom: 1px dashed #777777;
   list-style-type: none;
 }
@@ -268,7 +268,7 @@ hr {
   min-width: 15px;
   text-align: center;
   background: #dddddd;
-  background-image: url("images/button-background.png");
+  background-image: url("/web-app-theme/themes/default/images/button-background.png");
   color: #111111;
 }
 .pagination a:hover {
@@ -284,7 +284,7 @@ hr {
 }
 
 .pagination a:active {
-  background-image: url("images/button-background-active.png");
+  background-image: url("/web-app-theme/themes/default/images/button-background-active.png");
   outline: none;
 }
 
@@ -357,17 +357,17 @@ hr {
 }
 .flash .error, .flash .error-list {
   border: 1px solid #993624;
-  background: #cc4831 url("images/messages/error.png") no-repeat 10px center;
+  background: #cc4831 url("/web-app-theme/themes/default/images/messages/error.png") no-repeat 10px center;
 }
 .flash .warning {
   border: 1px solid #bb9004;
-  background: #f9c006 url("images/messages/warning.png") no-repeat 10px center;
+  background: #f9c006 url("/web-app-theme/themes/default/images/messages/warning.png") no-repeat 10px center;
 }
 .flash .notice {
   color: #28485e;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
   border: 1px solid #8a9daa;
-  background: #b8d1e2 url("images/messages/notice.png") no-repeat 10px center;
+  background: #b8d1e2 url("/web-app-theme/themes/default/images/messages/notice.png") no-repeat 10px center;
 }
 .flash .error-list {
   text-align: left;
@@ -421,7 +421,7 @@ ul.list li .item .avatar {
 }
 
 a.button, button.button {
-  background: #edeeed url("images/button-background.png") top;
+  background: #edeeed url("/web-app-theme/themes/default/images/button-background.png") top;
   border: 1px solid #c3c4ba;
   font-family: "MuseoSans500", helvetica, arial, sans-serif;
   font-weight: normal;
@@ -434,11 +434,11 @@ a.button, button.button {
 }
 a.button:link, a.button:visited, a.button:hover, a.button:active, button.button:link, button.button:visited, button.button:hover, button.button:active {
   font-weight: normal;
-  background: #edeeed url("images/button-background.png") top;
+  background: #edeeed url("/web-app-theme/themes/default/images/button-background.png") top;
 }
 
 a.button:active, button.button:active {
-  background: #eaeaea url("images/button-background-active.png") top;
+  background: #eaeaea url("/web-app-theme/themes/default/images/button-background-active.png") top;
   outline: none;
   margin-top: 1px;
   margin-bottom: -1px;
