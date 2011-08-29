@@ -10,6 +10,8 @@ module WebAppTheme
       end
 
       def copy_images
+        directory "images/web-app-theme/icons"                        , "app/assets/images/web-app-theme/icons"
+        copy_file "images/web-app-theme/avatar.png"                   , "app/assets/images/web-app-theme/avatar.png"
         directory "images/web-app-theme/themes/#{options.theme}"      , "app/assets/images/web-app-theme/themes/#{options.theme}"
       end
 
