@@ -210,7 +210,7 @@ input.checkbox {
   display: block;
   width: 12px;
   height: 12px;
-  background: transparent url('images/tick.png') center no-repeat;
+  background: transparent url('/web-app-theme/themes/bec/images/tick.png') center no-repeat;
   text-indent: -9999px;
   -moz-outline: none;
 }
