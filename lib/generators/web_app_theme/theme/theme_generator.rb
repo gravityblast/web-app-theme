@@ -26,7 +26,7 @@ module WebAppTheme
       if Rails.version >= "3.1.0"
         template "web_app_theme.css.erb", "app/assets/stylesheets/web_app_theme.css"
       else
-        generator "web_app_theme:assets"
+        generate "web_app_theme:assets"
       end
     end
 

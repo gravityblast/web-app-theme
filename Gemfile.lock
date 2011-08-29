@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     web-app-theme (3.1.0)
-      rails (~> 3.1.0.rc6)
       thor (~> 0.14)
 
 GEM
@@ -153,6 +152,7 @@ DEPENDENCIES
   bundler (~> 1.0.0)
   cucumber
   cucumber-rails
+  rails (~> 3.1.0.rc6)
   rspec
   rspec-rails
   sqlite3

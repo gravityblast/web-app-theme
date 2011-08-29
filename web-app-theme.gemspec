@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.files             = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.required_rubygems_version = ">= 1.3.6"
-  s.add_dependency "rails"  , "~> 3.1.0.rc6"
+  #s.add_dependency "rails"  , "~> 3.1.0.rc6"
   s.add_dependency "thor"   , "~> 0.14"
   s.add_development_dependency "bundler"  , "~> 1.0.0"
 
