@@ -18,9 +18,11 @@ module WebAppTheme
 
       def copy_images
         assets_base = ("app/assets/images" if Rails.version >= "3.1.0") || "public/stylesheets"
+        directory "images/web-app-theme/themes/#{options.theme}"      , "#{assets_base}/web-app-theme/themes/#{options.theme}"
+
+        assets_base = ("app/assets/images" if Rails.version >= "3.1.0") || "public/images"
         directory "images/web-app-theme/icons"                        , "#{assets_base}/web-app-theme/icons"
         copy_file "images/web-app-theme/avatar.png"                   , "#{assets_base}/web-app-theme/avatar.png"
-        directory "images/web-app-theme/themes/#{options.theme}"      , "#{assets_base}/web-app-theme/themes/#{options.theme}"
       end
 
       private
