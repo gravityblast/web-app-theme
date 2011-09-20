@@ -12,7 +12,7 @@ Installation
 For this version, all the stylesheets are stored inside the gems assets path. They don't need to be copied to the to the application, unless you want to customize them (using the web_app_theme:assets generator). There only css file generated when you run the theme generator is the web_app_theme.css that includes the theme of your choice.
 Add to your gemfile:
 
-    gem 'web-app-theme', :git => "git://github.com/tscolari/web-app-theme.git", :branch => "v3.1.0"
+    gem 'web-app-theme', "~> 3.1.0"
 
 ####Other versions
 You can use web-app-theme >= 0.6.2 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3
