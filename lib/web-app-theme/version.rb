@@ -1,3 +1,3 @@
 module WebAppTheme
-  VERSION = "3.1.0"
+  VERSION = "0.8.0"
 end
