@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    web-app-theme (3.1.0)
+    web-app-theme (0.8.0)
+      rails (~> 3.1.0.rc6)
       thor (~> 0.14)
 
 GEM
