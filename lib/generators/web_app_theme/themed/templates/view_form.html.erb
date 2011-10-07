@@ -1,10 +1,21 @@
+<% if options.formtastic %>
+<% unless columns.blank? -%>
+  <%%= f.inputs do %>
+    <% columns.each do |column| %>
+    <%%= f.input :<%= column.name %>, :wrapper_html => { :class => 'group' }, :label_html => { :class => 'label' }, :input_html => { :class => '<%= column.field_type %>' } %>
+    <%- end -%>
+    
+  <%% end -%>
+<%- end -%>
+<%- else -%>
 <% columns.each do |column| %>
   <div class="group">
     <%%= f.label :<%= column.name %>, t("activerecord.attributes.<%= model_name.underscore %>.<%= column.name %>", :default => "<%= column.name.humanize %>"), :class => :label %>
     <%%= f.<%= column.field_type %> :<%= column.name %>, :class => '<%= column.field_type %>' %>
     <span class="description">Ex: a simple text</span>
   </div>
-<%- end -%>        
+<%- end -%>
+<%- end -%>
 <div class="group navform wat-cf">
   <button class="button" type="submit">
     <%%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%%= t("web-app-theme.save", :default => "Save") %>

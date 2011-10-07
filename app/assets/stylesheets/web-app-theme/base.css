@@ -22,7 +22,8 @@ h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
 h4 { font-size: 16px; margin: 10px 0; font-weight: normal;}
 hr {height: 1px; border: 0; }
 p { margin: 15px 0;}
-a img { border: none; }
+a img, fieldset { border: none; }
+ol { list-style-type: none; }
 
 body {
   font-size: 12px;
