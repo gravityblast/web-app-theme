@@ -1,0 +1,15 @@
+es:
+  web-app-theme:
+    save: Guardar
+    cancel: Cancelar
+    list: Lista
+    edit: Editar
+    new: Nuevo
+    show: Mostrar
+    delete: Borrar
+    confirm: "¿Estás seguro?"
+    created_at: Creado el
+    all: Todos
+    profile: Perfil
+    settings: "Configuración"
+    logout: Salir
