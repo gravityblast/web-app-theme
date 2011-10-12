@@ -8,5 +8,6 @@ pkg/*
 tmp/*
 spec/dummy/tmp/*
 spec/dummy/log/*
+spec/dummy/app/assets/*
 pkg
 web-app-theme-*.gem
