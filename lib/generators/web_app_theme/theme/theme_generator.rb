@@ -29,13 +29,7 @@ module WebAppTheme
     end
 
   protected
-
-    def copy_theme_stylesheet 
-      template "web_app_theme.css.erb", "app/assets/stylesheets/web_app_theme.css"
-    end
     
-  protected
-  
     def generate_haml_layout(admin_layout_name)
       require 'haml'
       Dir.mktmpdir('web-app-theme-haml') do |haml_root|
