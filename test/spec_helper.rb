@@ -1,5 +1,0 @@
-require "rubygems"
-require "spec"
-require "rails_generator"
-require "rails_generator/scripts/generate"
-require File.dirname(__FILE__) + "/../rails_generators/themed/themed_generator"

@@ -1,28 +1,38 @@
+# coding: utf-8
+$:.push File.expand_path('../lib', __FILE__)
+require 'web-app-theme/version'
+
 Gem::Specification.new do |s|
-  s.name = %q{web-app-theme}
-  s.version = "0.8.0"
+  s.name        = 'web-app-theme'
+  s.version     = WebAppTheme::VERSION
+  s.authors     = ['Andrea Franz']
+  s.date        = %q{2012-01-19}
+  s.email       = ['andrea@gravityblast.com']
+  s.homepage    = 'http://github.com/pilu/web-app-theme'
+  s.summary     = %q{Web app theme generator}
+  s.description = %q{Web app theme generator for rails projects}
+  s.rubygems_version = %q{1.5.0}
+
+  s.rubyforge_project = 'web-app-theme'
+
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ['lib']
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Andrea Franz"]
-  s.date = %q{2011-07-25}
-  s.description = %q{Web app theme generator for rails projects}
-  s.email = %q{andrea@gravityblast.com}
+  s.required_rubygems_version = '>= 1.3.6'
 
-  s.test_files = Dir['test/*', 'features/**/*']
-  s.files      = Dir['{app,config,lib}/**/*'] + ['LICENSE', 'Rakefile', 'README.md']
+  s.add_runtime_dependency 'rails', '~> 3.1'
+  s.add_runtime_dependency 'thor',  '~> 0.14'
 
-  s.homepage = %q{http://github.com/pilu/web-app-theme}
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.0}
-  s.summary = %q{Web app theme generator}
+  s.add_development_dependency 'bundler', '~> 1.0.0'
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'cucumber'
+  s.add_development_dependency 'cucumber-rails'
+  s.add_development_dependency 'aruba'
+  s.add_development_dependency 'sqlite3'
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-    else
-    end
-  else
-  end
+  s.extra_rdoc_files = %w[MIT-LICENSE README.md]
 end
-
