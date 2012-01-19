@@ -1,19 +1,17 @@
-Given /^a model "([^\"]*)"$/ do |model_name|
-  generate_model(model_name)  
+Given /^I run the themed generator for the "([^\"]*)" controller$/ do |controller_name|
+  steps %Q{
+    And I run `rails g web_app_theme:themed #{controller_name}`
+  }
 end
 
-Given /^I generate views for controller "([^\"]*)"$/ do |controller_path|
-  generate_views(controller_path)
+When /I run the themed generator for the "([^\"]*)" controller with the model "([^\"]*)"/ do |controller_name, model_name|
+  steps %Q{
+    And I run `rails g web_app_theme:themed #{controller_name} #{model_name}`
+  }
 end
 
-When /^I generate views for controller "([^\"]*)" and model "([^\"]*)"$/ do |controller_path, model_name|
-  generate_views(controller_path, model_name)
-end
-
-When /^I generate text views for "([^\"]*)"/ do |controller_path|
-  generate_views(controller_path, :themed_type => :text)
-end
-
-Then /^I should have a view named "([^\"]*)"$/ do |view_path|
-  view_exists?(view_path).should be_true
+Given /^I run the themed generator for the "([^\"]*)" controller with the option --"([^\"]*)"="([^\"]*)"$/ do |controller_name, option, value|
+  steps %Q{
+    And I run `rails g web_app_theme:themed #{controller_name} --#{option}=#{value}`
+  }
 end

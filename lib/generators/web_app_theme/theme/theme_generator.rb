@@ -1,5 +1,6 @@
 module WebAppTheme
   class ThemeGenerator < Rails::Generators::Base
+    desc "Installs the application layout and creates the web_app_theme.css"
     source_root File.expand_path('../templates', __FILE__)
 
     argument :layout_name, :type => :string, :default => 'application'
@@ -29,6 +30,12 @@ module WebAppTheme
 
   protected
 
+    def copy_theme_stylesheet 
+      template "web_app_theme.css.erb", "app/assets/stylesheets/web_app_theme.css"
+    end
+    
+  protected
+  
     def generate_haml_layout(admin_layout_name)
       require 'haml'
       Dir.mktmpdir('web-app-theme-haml') do |haml_root|

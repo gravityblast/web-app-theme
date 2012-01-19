@@ -1,14 +1,27 @@
-Web App Theme
-=============
+# Web App Theme
 
 Web App Theme is a rails generator by [Andrea Franz](http://gravityblast.com) that you can use to generate admin panels quickly.
 Inspired by cool themes like [Lighthouse](http://lighthouseapp.com/), [Basecamp](http://basecamphq.com/), [RadiantCMS](http://radiantcms.org/) and others,
 it wants to be an idea to start developing a complete web application layout.
 
-Installation
-------------
+![Web App Theme screenshot](http://img.skitch.com/20091109-c2k618qerx1ysw5ytxsighuf3f.jpg)
 
-You can use web-app-theme >= 0.6.2 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3.
+
+
+
+## Installation
+
+
+#### Rails >= 3.1.0
+For this version, all the stylesheets are stored inside the gems assets path. They don't need to be copied to the to the application, unless you want to customize them (using the web_app_theme:assets generator). There only css file generated when you run the theme generator is the web_app_theme.css that includes the theme of your choice.
+Add to your gemfile:
+
+    gem 'web-app-theme', '~> 0.8.0'
+
+
+#### Other versions
+You can use web-app-theme >= 0.6.2 with Rails 3. If you want to use it with rails 2, use web-app-theme 0.5.3
+
 Specify the web-app-theme gem in your Gemfile, only for :development and :test
 
     group :development, :test do
@@ -19,8 +32,8 @@ If you want to use with Rails 3.1, add the following line in your `Gemfile`:
 
     gem 'web-app-theme', :git => 'git://github.com/jweslley/web-app-theme.git'
 
-Usage
------
+
+## Usage
 
 ### Theme Generator
 
@@ -55,6 +68,19 @@ You can specify the text used in the header with the `--app-name` option:
 If you need a layout for login and signup pages, you can use the `--type` option with `sign` as value. Ìf not specified, the default value is `administration`
 
     rails g web_app_theme:theme sign --layout-type=sign
+
+
+
+### Assets Generator
+
+Used to copy a theme of your choice from the gem to your application, without parameters it will copy the 'default' theme
+  
+  rails g web_app_theme:assets --theme=red
+
+This will copy the theme files on your app/assets/stylesheets/web-app-theme path.
+Also this will copy theme's images to app/assets/images/web-app-theme path
+
+
 
 ### Themed Generator
 
@@ -114,10 +140,9 @@ If you want to have translated pages, simple create in your locale.yml the keys 
 	    all: All
 
 
-![Web App Theme screenshot](http://img.skitch.com/20091109-c2k618qerx1ysw5ytxsighuf3f.jpg)
 
-Contributing
----
+
+## Contributing
 
 * Fork this repository.
 * Duplicate the  'themes/default' folder and rename it.
@@ -125,8 +150,10 @@ Contributing
 * Add a link to your theme in the 'Switch Theme' block inside the index.html file.
 * Send a pull request.
 
-Links
------
+
+
+
+## Links
 
 * Repository: git://github.com/pilu/web-app-theme.git
 * List: <http://groups.google.com/group/web-app-theme-generator>
@@ -134,13 +161,17 @@ Links
 * Gem: <http://gemcutter.org/gems/web-app-theme>
 * Themes: <http://pilu.github.com/web-app-theme>
 
-Author
-------
+
+
+
+## Author
 
 Andrea Franz - [http://gravityblast.com](http://gravityblast.com)
 
-Contributors
-------------
+
+
+
+## Contributors
 
 * Nelson Fernandez
 * Giovanni Intini
@@ -159,8 +190,10 @@ Contributors
 * Sandro Duarte
 * David Francisco
 
-Credits
--------
+
+
+
+## Credits
 
 * Icons: FAMFAMFAM Silk icons <http://www.famfamfam.com/lab/icons/silk/>
 * Buttons: Particletree - Rediscovering the Button Element <http://particletree.com/features/rediscovering-the-button-element/>
