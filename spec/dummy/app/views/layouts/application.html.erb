@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag 'web_app_theme' %>
   <%= javascript_include_tag :defaults, :cache => true %>
   <%= csrf_meta_tag %>
+  <%= yield :head %>
 </head>
 <body>
   <div id="container">

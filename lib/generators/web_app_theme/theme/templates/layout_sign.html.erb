@@ -4,6 +4,7 @@
   <title><%= options.app_name %></title>
   <%%= stylesheet_link_tag "web_app_theme" %>
   <%%= csrf_meta_tag %>
+  <%%= yield :head %>
 </head>
 <body>
   <div id="container">
