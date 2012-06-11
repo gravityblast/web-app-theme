@@ -48,7 +48,7 @@ If you want to use another theme, instead of the default, you can use the `--the
 
     rails g web_app_theme:theme admin --theme="drastic-dark"
 
-You can specify the template engine with `--engine=name` option, where name can be erb (default) or haml:
+You can specify the template engine with `--engine=name` option, where name can be erb (default), haml or slim (requires haml2slim and hpricot):
 
     rails g web_app_theme:theme --engine=haml # you must specify haml in your Gemfile
 
@@ -98,7 +98,7 @@ If the controller has a name different to the model used, specify the controller
     
     rails g web_app_theme:themed admin/items post
 
-If you use `will_paginate` for pagination use the `--will-paginate`:
+If you use a pagination gem like `will_paginate` or `kaminari`, use the `--will-paginate` or `--kaminari`:
 
     rails g web_app_theme:themed items post --will-paginate
 

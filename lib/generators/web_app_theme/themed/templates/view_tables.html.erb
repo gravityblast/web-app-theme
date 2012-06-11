@@ -46,6 +46,9 @@
         <% if options.will_paginate %>
         <%%= will_paginate @<%= plural_resource_name %>  %>
         <% end %>
+        <% if options.kaminari %>
+        <%%= paginate @<%= plural_resource_name %> %>
+        <% end %>
       </div>
     </div>
   </div>
