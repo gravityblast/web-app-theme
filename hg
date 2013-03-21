@@ -1,0 +1,1 @@
+rails g web_app_theme:theme --app-name="My New Application"
