@@ -20,10 +20,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = '>= 1.3.6'
 
-  s.add_runtime_dependency 'rails', '~> 3.2.0'
+  s.add_runtime_dependency 'rails', '~> 4.0.0.rc1'
   s.add_runtime_dependency 'thor',  '~> 0.14'
 
-  s.add_development_dependency 'bundler', '~> 1.0.0'
+  s.add_development_dependency 'bundler', '~> 1.3.0'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'cucumber'
