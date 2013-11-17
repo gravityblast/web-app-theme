@@ -1,12 +1,89 @@
-*.gem
+#####################################################################################
+# Rails
 .bundle
-Gemfile.lock
-pkg/*
+db/*.sqlite3
+db/*.sqlite3-journal
+log/
+tmp/
+*.log
+tmp/**/*
+.tmp*
+
+# Documentation
+doc/api
+doc/app
+.yardoc
+.yardopts
+rdoc/
+
+# Public Uploads
+public/system/*
+public/themes/*
+
+# Public Cache
+public/javascripts/cache
+public/stylesheets/cache
+
+# Vendor Cache
+vendor/cache
+
+# Acts as Indexed
+index/**/*
+
+# Refinery Specific
+*.tmproj
+*.autobackupbyrefinery.*
+/refinerycms-*.gem
+.autotest
+
+# Mac
 .DS_Store
+
+# Windows
+Thumbs.db
+
+# NetBeans
+nbproject
+
+# Eclipse
+.project
+
+# Redcar
+.redcar
+
+# Rubinius
+*.rbc
+
+# Vim
 *.swp
 *.swo
-tmp/*
-spec/dummy/tmp/*
-spec/dummy/log/*
-pkg
-web-app-theme-*.gem
+*~
+
+# RubyMine
+.idea
+
+# Backup
+*~
+
+# Capybara Bug
+capybara-*html
+
+# sass
+.sass-cache
+.sass-cache/*
+
+#rvm
+.rvmrc
+.rvmrc.*
+
+#gem
+pkg/
+
+# other
+.loadpath
+all.js
+all.css
+temp*.txt
+config/database.yml
+*.dump
+.bashrc
