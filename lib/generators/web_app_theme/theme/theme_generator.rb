@@ -24,17 +24,17 @@ module WebAppTheme
 
 # v 0.7.0 was (it worked) vvvvvvvvvvvvvvvvvvv
     def copy_base_stylesheets
-      copy_file File.expand_path('../../../../app/assets/stylesheets/web-app-theme/base.css', __FILE__),     
+      copy_file File.expand_path('../../../../../app/assets/stylesheets/web-app-theme/base.css', __FILE__),     
                 "app/assets/stylesheets/web-app-theme/base.css"
     end
     
     def copy_theme_stylesheets
-      directory File.expand_path("../../../../app/assets/stylesheets/web-app-theme/themes/#{options.theme}", __FILE__),
+      directory File.expand_path("../../../../../app/assets/stylesheets/web-app-theme/themes/#{options.theme}", __FILE__),
                 "app/assets/stylesheets/web-app-theme/themes/#{options.theme}"
     end
     
     def copy_images
-      directory File.expand_path('../../../../app/assets/images/web-app-theme', __FILE__), 
+      directory File.expand_path('../../../../../app/assets/images/web-app-theme', __FILE__), 
             "app/assets/images/web-app-theme"
     end
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
