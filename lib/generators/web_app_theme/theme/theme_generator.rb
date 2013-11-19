@@ -24,16 +24,18 @@ module WebAppTheme
 
 # v 0.7.0 was (it worked) vvvvvvvvvvvvvvvvvvv
     def copy_base_stylesheets
-      copy_file "#{stylesheets_path}/base.css",     "app/assets/stylesheets/web-app-theme/base.css"
-      copy_file "#{stylesheets_path}/override.css", "app/assets/stylesheets/web-app-theme/override.css"
+      copy_file File.expand_path('../../../../app/assets/stylesheets/web-app-theme/base.css', __FILE__),     
+                "app/assets/stylesheets/web-app-theme/base.css"
     end
     
     def copy_theme_stylesheets
-      directory "#{stylesheets_path}/themes/#{options.theme}", "app/assets/stylesheets/web-app-theme/themes/#{options.theme}"
+      directory File.expand_path("../../../../app/assets/stylesheets/web-app-theme/themes/#{options.theme}", __FILE__),
+                "app/assets/stylesheets/web-app-theme/themes/#{options.theme}"
     end
     
     def copy_images
-      directory "#{images_path}", "app/assets/images/web-app-theme"
+      directory File.expand_path('../../../../app/assets/images/web-app-theme', __FILE__), 
+            "app/assets/images/web-app-theme"
     end
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     
@@ -45,16 +47,6 @@ module WebAppTheme
      
   protected
   
-# v 0.7.0 was (it worked) vvvvvvvvvvvvvvvvvvv
-    def stylesheets_path
-      "../../../../../stylesheets"
-    end
-    
-    def images_path
-      "../../../../../images"
-    end
-# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   
     def generate_haml_layout(admin_layout_name)
       require 'haml'
       Dir.mktmpdir('web-app-theme-haml') do |haml_root|
