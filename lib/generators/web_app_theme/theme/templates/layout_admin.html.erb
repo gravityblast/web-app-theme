@@ -19,13 +19,13 @@
             <li>
               <%%= link_to( t("web-app-theme.signup", :default => "Sign up"), new_user_registration_path ) %>
             </li>
-          <% end %>
+          <%% end %>
 
           <%% if user_signed_in? %>
               <%%= link_to( t("web-app-theme.logout", :default => "Sign out"), destroy_user_session_path, :method => :delete ) %>
-          <% else %>
+          <%% else %>
               <%%= link_to( t("web-app-theme.login", :default => "Sign in"), new_user_session_path ) %>
-          <% end %>
+          <%% end %>
 
         </ul>
       </div>
