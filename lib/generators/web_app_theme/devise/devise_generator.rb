@@ -6,7 +6,7 @@ module WebAppTheme
     class_option :engine,       :type => :string,   :default => 'erb',      :desc => 'Specify the template engine'
    
     def copy_theme_stylesheets
-      directory "devise", "app/views/"
+      directory "devise", "app/views/devise"
     end
      
   protected
