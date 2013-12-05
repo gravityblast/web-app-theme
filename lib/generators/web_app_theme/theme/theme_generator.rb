@@ -26,6 +26,8 @@ module WebAppTheme
     def copy_base_stylesheets
       copy_file File.expand_path('../../../../../app/assets/stylesheets/web-app-theme/base.css', __FILE__),     
                 "app/assets/stylesheets/web-app-theme/base.css"
+      copy_file File.expand_path('../../../../../app/assets/stylesheets/web-app-theme/error_styles.sass', __FILE__),     
+                "app/assets/stylesheets/web-app-theme/error_styles.sass"
     end
     
     def copy_theme_stylesheets
