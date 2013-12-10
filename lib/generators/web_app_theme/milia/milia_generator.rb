@@ -49,7 +49,20 @@ module WebAppTheme
        snippet_app_ctlr_prep_org_name
       end
 
+      inject_into_file "app/controllers/home_controller.rb",
+       after: "def index\n" do 
+       snippet_replace_index
+      end
+
+      inject_into_file "app/controllers/home_controller.rb",
+       after: "skip_before_action\n" do 
+       snippet_add_welcome
+      end
+
+      route 'get "home/welcome", :as => :welcome'
+
       gsub_file 'app/views/layouts/application.html.haml', "#{project_name}", '@org_name'
+      gsub_file 'app/views/layouts/application.html.haml', '"@org_name"', '@org_name'
       gsub_file 'app/views/layouts/application.html.haml', "%title", '%title='
 
       uncomment_lines 'app/controllers/members_controller.rb', 'layout  "sign"'
@@ -72,7 +85,7 @@ module WebAppTheme
     end
 
     def snippet_app_ctlr_prep_org_name
-    <<-'RUBY31'
+    <<'RUBY31'
   before_action  :prep_org_name
 
   private
@@ -88,13 +101,31 @@ module WebAppTheme
     RUBY31
     end
 
-    def snippet_spare1
+    def snippet_replace_index
     <<-'RUBY33'
+    if user_signed_in?
+
+        # was there a previous error msg carry over? make sure it shows in flasher
+      flash[:notice] = flash[:error] unless flash[:error].blank?
+      redirect_to(  welcome_path()  )
+
+    else
+
+      if flash[:notice].blank?
+        flash[:notice] = "sign in if your organization has an account"
+      end
+
+    end   # if logged in .. else first time
+
     RUBY33
     end
 
-    def snippet_spare2
+    def snippet_add_welcome
     <<-'RUBY34'
+
+    def welcome
+    end
+
     RUBY34
     end
   
