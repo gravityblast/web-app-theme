@@ -19,9 +19,9 @@ module WebAppTheme
 
     def milia_hooks
 
-      generate 'web_app_theme:theme' "--engine=haml --theme='red' --app-name='#{project_name}'"
-      generate 'web_app_theme:themed' 'home --themed-type=text --theme="red" --engine=haml'
-      generate 'web_app_theme:theme' "sign --layout-type=sign --theme='red' --engine=haml --app-name='#{project_name}'"
+      generate 'web_app_theme:theme', "--engine=haml --theme='red' --app-name='#{project_name}'"
+      generate 'web_app_theme:themed', 'home --themed-type=text --theme="red" --engine=haml'
+      generate 'web_app_theme:theme', "sign --layout-type=sign --theme='red' --engine=haml --app-name='#{project_name}'"
 
       inside('app/views/layouts') do
         run('rm application.html.erb')
@@ -31,24 +31,26 @@ module WebAppTheme
         run('mv show.html.haml index.html.haml')
       end
 
-      uncomment_lines "config/initializers/devise.rb", /pepper|confirmation_keys|email_regexp/
+      uncomment_lines "config/initializers/devise.rb", /config\.(pepper|confirmation_keys|email_regexp)/
 
       uncomment_lines "config/application.rb", 'config.time_zone'
       gsub_file 'config/application.rb', /Central Time \(US & Canada\)/, "#{options.timezone}"
+
+      uncomment_lines  "config/application.rb", 'Devise'
 
       environment  do
         snippet_config_precompile
       end  # do config/app.rb
 
-      prepend_to_file 'app/views/members/new.html.haml', "%h1 #{project_name}"
+      prepend_to_file 'app/views/members/new.html.haml', "%h1 #{project_name}\n"
 
       inject_into_file "app/controllers/application_controller.rb",
        after: ":invalid_tenant\n" do 
        snippet_app_ctlr_prep_org_name
       end
 
-      gsub_file 'app/views/layouts/application.rb', "#{project_name}", '@org_name'
-      gsub_file 'app/views/layouts/application.rb', "%title", '%title='
+      gsub_file 'app/views/layouts/application.html.haml', "#{project_name}", '@org_name'
+      gsub_file 'app/views/layouts/application.html.haml', "%title", '%title='
 
       uncomment_lines 'app/controllers/members_controller.rb', 'layout  "sign"'
 
