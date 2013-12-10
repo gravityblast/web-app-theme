@@ -85,7 +85,7 @@ module WebAppTheme
     end
 
     def snippet_app_ctlr_prep_org_name
-    <<'RUBY31'
+    <<RUBY31
   before_action  :prep_org_name
 
   private
