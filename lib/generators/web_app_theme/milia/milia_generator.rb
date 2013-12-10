@@ -90,15 +90,15 @@ module WebAppTheme
 
   private
 
-  # org_name will be passed to layout & view
+  #   org_name will be passed to layout & view
   def prep_org_name()
     @org_name = ( user_signed_in?  ?
       Tenant.current_tenant.name  :
-      "#{project_name}"
+      \"#{project_name}\"
     )
 
   end
-    RUBY31
+RUBY31
     end
 
     def snippet_replace_index
