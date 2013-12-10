@@ -9,17 +9,21 @@
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="/"><%= options.app_name %></a></h1>
+      <h1>
+        <%%= link_to "<%= options.app_name %>", "/" %>
+      </h1>
       <div id="user-navigation">
         <ul class="wat-cf">
           <li><a href="#"><%%= t("web-app-theme.profile", :default => "Profile") %></a></li>
           <li><a href="#"><%%= t("web-app-theme.settings", :default => "Settings") %></a></li>
 
-          <%% unless user_signed_in? %>
-            <li>
-              <%%= link_to( t("web-app-theme.signup", :default => "Sign up"), new_user_registration_path ) %>
-            </li>
-          <%% end %>
+          <li>
+            <%% unless user_signed_in? %>
+                <%%= link_to( t("web-app-theme.invite", :default => "Invite member"), new_member_path ) %>
+            <%% else %>
+                <%%= link_to( t("web-app-theme.signup", :default => "Sign up"), new_user_registration_path ) %>
+            <%% end %>
+         </li>
 
           <%% if user_signed_in? %>
               <%%= link_to( t("web-app-theme.logout", :default => "Sign out"), destroy_user_session_path, :method => :delete ) %>

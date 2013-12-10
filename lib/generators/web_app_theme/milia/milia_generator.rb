@@ -2,8 +2,12 @@ module WebAppTheme
   class MiliaGenerator < Rails::Generators::Base
 # *************************************************************
     desc "Installs milia-specific hooks"
+    
     source_root File.expand_path('../templates', __FILE__)
+
     argument :project_name, :type => :string, :default => 'Simple Milia App'
+
+    class_option :timezone, :type => :string, :default => 'Pacific Time (US & Canada)', :desc => 'Specify the app timezone in standard Rails format'
      
 # *************************************************************
 
@@ -28,39 +32,25 @@ module WebAppTheme
       end
 
       uncomment_lines "config/initializers/devise.rb", /pepper|confirmation_keys|email_regexp/
+
       uncomment_lines "config/application.rb", 'config.time_zone'
+      gsub_file 'config/application.rb', /Central Time \(US & Canada\)/, "#{options.timezone}"
 
       environment  do
         snippet_config_precompile
       end  # do config/app.rb
 
-  
-# uncomment the config.time_zone line and set it to your timezone
-    config.time_zone = 'Pacific Time (US & Canada)'
+      prepend_to_file 'app/views/members/new.html.haml', "%h1 #{project_name}"
 
-    prepend_to_file 'app/views/members/new.html.haml', "%h1 <projectname>"
+      inject_into_file "app/controllers/application_controller.rb",
+       after: ":invalid_tenant\n" do 
+       snippet_app_ctlr_prep_org_name
+      end
 
-# EDIT app/controllers/application_controller.rb
-# ADD:
-  snippet_app_ctlr_prep_org_name
-# EDIT app/views/layouts/application.rb >>>>>>>>>>>>>>>>>>>>
-# "= @org_name", make the results look like the two lines below
+      gsub_file 'app/views/layouts/application.rb', "#{project_name}", '@org_name'
+      gsub_file 'app/views/layouts/application.rb', "%title", '%title='
 
-  %title= @org_name
-
-  = link_to @org_name, "/"
-
-# make changes to layout for invite member; change the portion 
-# with the "sign_up" link to look like the following:
-  snippet_layout_invite_member
-
-# UNCOMMENT after the class line: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  layout  "sign", :only => [:new, :edit, :create]
-
-
-
-
-
+      uncomment_lines 'app/controllers/members_controller.rb', 'layout  "sign"'
 
     end
 # *************************************************************
@@ -95,17 +85,6 @@ module WebAppTheme
   end
     RUBY31
     end
-
-  def snippet_layout_invite_member
-  <<-'RUBY32'
-            %li
-              - if user_signed_in?
-                = link_to t("web-app-theme.invite", :default => "Invite member"), new_member_path
-              - else
-                = link_to( t("web-app-theme.signup", :default => "Sign up"), new_user_registration_path )
-
-  RUBY32
-  end
 
     def snippet_spare1
     <<-'RUBY33'
