@@ -31,6 +31,10 @@ module WebAppTheme
         run('mv show.html.haml index.html.haml')
       end
 
+      inside('app/assets/stylesheets') do
+        run('mv web-app-theme/error_styles.sass .')
+      end
+
       uncomment_lines "config/initializers/devise.rb", /config\.(pepper|confirmation_keys|email_regexp)/
 
       uncomment_lines "config/application.rb", 'config.time_zone'
@@ -42,7 +46,7 @@ module WebAppTheme
         snippet_config_precompile
       end  # do config/app.rb
 
-      prepend_to_file 'app/views/members/new.html.haml', "%h1 #{project_name}\n"
+      prepend_to_file 'app/views/members/new.html.haml', "%h1= @org_name\n"
 
       inject_into_file "app/controllers/application_controller.rb",
        after: ":invalid_tenant\n" do 
@@ -58,6 +62,12 @@ module WebAppTheme
        after: "skip_before_action\n" do 
        snippet_add_welcome
       end
+
+      inside('app/views/home') do
+        run('cp index.html.haml welcome.html.haml')
+      end
+
+      gsub_file 'app/views/home/welcome.html.haml',' Home', '= @org_name'
 
       route 'get "home/welcome", :as => :welcome'
 
