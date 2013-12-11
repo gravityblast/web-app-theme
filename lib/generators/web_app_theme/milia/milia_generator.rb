@@ -73,6 +73,7 @@ module WebAppTheme
       route 'get "home/welcome", :as => :welcome'
 
       gsub_file 'app/views/layouts/application.html.haml', "#{project_name}", '@org_name'
+      gsub_file 'app/views/layouts/application.html.haml', '%@org_name%', "#{project_name}"
       gsub_file 'app/views/layouts/application.html.haml', '"@org_name"', '@org_name'
       gsub_file 'app/views/layouts/application.html.haml', "%title", '%title='
 
