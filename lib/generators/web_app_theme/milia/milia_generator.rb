@@ -19,9 +19,10 @@ module WebAppTheme
 
     def milia_hooks
 
-      generate 'web_app_theme:theme', "--engine=haml --theme='red' --app-name='#{project_name}'"
+      generate 'web_app_theme:theme',  "--engine=haml --theme='red' --app-name='#{project_name}'"
       generate 'web_app_theme:themed', 'home --themed-type=text --theme="red" --engine=haml'
-      generate 'web_app_theme:theme', "sign --layout-type=sign --theme='red' --engine=haml --app-name='#{project_name}'"
+      generate 'web_app_theme:theme',  "sign --layout-type=sign --theme='red' --engine=haml --app-name='#{project_name}'"
+      generate 'web_app_theme:devise'
 
       inside('app/views/layouts') do
         run('rm application.html.erb')

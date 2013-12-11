@@ -18,7 +18,7 @@
           <li><a href="#"><%%= t("web-app-theme.settings", :default => "Settings") %></a></li>
 
           <li>
-            <%% unless user_signed_in? %>
+            <%% if user_signed_in? %>
                 <%%= link_to( t("web-app-theme.invite", :default => "Invite member"), new_member_path ) %>
             <%% else %>
                 <%%= link_to( t("web-app-theme.signup", :default => "Sign up"), new_user_registration_path ) %>
