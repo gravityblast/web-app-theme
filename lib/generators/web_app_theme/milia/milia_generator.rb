@@ -59,7 +59,7 @@ module WebAppTheme
       end
 
       inject_into_file "app/controllers/home_controller.rb",
-       after: "skip_before_action\n" do 
+       after: ":only => [ :index ]\n" do 
        snippet_add_welcome
       end
 
