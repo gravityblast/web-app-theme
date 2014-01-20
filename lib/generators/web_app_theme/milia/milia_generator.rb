@@ -16,14 +16,7 @@ module WebAppTheme
       file_find_or_fail( "app/models/member.rb" )
       file_find_or_fail( "app/controllers/members_controller.rb" )
              
-      gem_find_or_fail(
-        [
-          %w(Milia, milia),
-          %w(Devise, devise),
-          %w(Haml, haml),
-          %w(Html2haml, html2haml),
-        ]
-      )
+      gem_find_or_fail( %w(milia, devise, haml, html2haml) )
 
     end
 
@@ -172,10 +165,11 @@ RUBY31
   def gem_find_or_fail( list )
     need_fail = false
     alert_color = :red
-    list.each do |const, gem_name|
-      unless WebAppTheme.const_defined?( const )
+    list.each do |gem_name|
+      gem_msg = `bundle list #{gem_name}`
+      if /Could not find gem/i =~ gem_msg
         say_status("error", 
-            "class: '#{const}' not found; gemfile: #{gem_name} is required", 
+            "gemfile not found: #{gem_name} is required", 
             alert_color)
         need_fail = true
       end # unless missing
