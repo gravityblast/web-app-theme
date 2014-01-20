@@ -12,9 +12,19 @@ module WebAppTheme
 # *************************************************************
 
     def check_prerequisites
-      find_or_fail( "app/models/tenant.rb" )
-      find_or_fail( "app/models/member.rb" )
-      find_or_fail( "app/controllers/members_controller.rb" )
+      file_find_or_fail( "app/models/tenant.rb" )
+      file_find_or_fail( "app/models/member.rb" )
+      file_find_or_fail( "app/controllers/members_controller.rb" )
+             
+      gem_find_or_fail(
+        [
+          %w(Milia, milia),
+          %w(Devise, devise),
+          %w(Haml, haml),
+          %w(Html2haml, html2haml),
+        ]
+      )
+
     end
 
     def milia_hooks
@@ -159,7 +169,32 @@ RUBY31
 
 # -------------------------------------------------------------
 # -------------------------------------------------------------
-  def find_or_fail( filename )
+  def gem_find_or_fail( list )
+    need_fail = false
+    alert_color = :red
+    list.each do |const, gem_name|
+      unless WebAppTheme.const_defined?( const )
+        say_status("error", 
+            "class: '#{const}' not found; gemfile: #{gem_name} is required", 
+            alert_color)
+        need_fail = true
+      end # unless missing
+    end # each constant to be checked
+
+    if need_fail
+      say("-------------------------------------------------------------------------", alert_color)
+      say("-   add required gems to Gemfile; then run bundle install", alert_color)
+      say("-   then retry rails g milia:install", alert_color)
+      say("-------------------------------------------------------------------------", alert_color)
+      raise Thor::Error, "************  terminating generator due to missing requirements!  *************" 
+    end  # need to fail
+    
+  end
+ 
+
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+  def file_find_or_fail( filename )
     user_file = Dir.glob(filename).first
     if user_file.blank? 
       alert_color = :red
