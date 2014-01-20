@@ -21,6 +21,10 @@ module WebAppTheme
     end
 
     def milia_hooks
+        # make sure that turbolinks isn't ref'd
+      gsub_file 'app/assets/javascripts/application.js',
+                '//= require turbolinks',
+                '//  require turbolinks'
 
       generate 'web_app_theme:theme',  "--engine=haml --theme='red' --app-name='#{project_name}'"
       generate 'web_app_theme:themed', 'home --themed-type=text --theme="red" --engine=haml'
