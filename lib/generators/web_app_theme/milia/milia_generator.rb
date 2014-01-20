@@ -16,7 +16,7 @@ module WebAppTheme
       file_find_or_fail( "app/models/member.rb" )
       file_find_or_fail( "app/controllers/members_controller.rb" )
              
-      gem_find_or_fail( %w(milia, devise, haml, html2haml) )
+      gem_find_or_fail( %w(milia devise haml html2haml) )
 
     end
 
