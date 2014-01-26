@@ -111,9 +111,9 @@ module WebAppTheme
 
   #   org_name will be passed to layout & view
   def prep_org_name()
-    @org_name = ( user_signed_in?  ?
-      Tenant.current_tenant.name  :
-      \"#{project_name}\"
+    @org_name = ( Tenant.current_tenant.nil?  ?
+      \"#{project_name}\"   :
+      Tenant.current_tenant.name 
     )
 
   end
