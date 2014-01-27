@@ -109,6 +109,11 @@ module WebAppTheme
 
   private
 
+  # optional callback for post-authenticate_tenant! processing
+  def callback_authenticate_tenant
+    # set_environment or whatever else you need for each valid session
+  end
+
   #   org_name will be passed to layout & view
   def prep_org_name()
     @org_name = ( Tenant.current_tenant.nil?  ?
