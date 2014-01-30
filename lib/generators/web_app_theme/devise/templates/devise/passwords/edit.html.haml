@@ -8,7 +8,8 @@
           %p= message
     - flash.clear  # clear contents so we won't see it again
 
-    = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :class => "form login" }) do |f|
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => 'put', :class => "form login" }) do |f|
+      = f.hidden_field :reset_password_token
       = devise_error_messages!
       .group
         = f.label :password, :class => "label"
