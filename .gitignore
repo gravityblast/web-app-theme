@@ -78,6 +78,7 @@ capybara-*html
 
 #gem
 pkg/
+*.gem
 
 # other
 .loadpath

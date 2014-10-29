@@ -6,7 +6,9 @@ it wants to be an idea to start developing a complete web application layout.
 
 ![Web App Theme screenshot](http://img.skitch.com/20091109-c2k618qerx1ysw5ytxsighuf3f.jpg)
 
-
+## dsaronin fork
+This has been forked to add improved handling for Rails 4.x applications, devise forms,
+and automatic generation for milia multi-tenanting.
 
 
 ## Installation
