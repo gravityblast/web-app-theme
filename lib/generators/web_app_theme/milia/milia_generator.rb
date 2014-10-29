@@ -54,6 +54,11 @@ module WebAppTheme
         snippet_config_precompile
       end  # do config/app.rb
 
+         # now required by Rails 4.1
+      append_to_file 'config/initializers/assets.rb' do
+        'Rails.application.config.assets.precompile += %w( web_app_theme.css )'
+      end  # append
+
       prepend_to_file 'app/views/members/new.html.haml', "%h1= @org_name\n"
 
       inject_into_file "app/controllers/application_controller.rb",
