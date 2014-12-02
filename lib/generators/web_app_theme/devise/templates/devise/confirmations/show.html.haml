@@ -1,0 +1,30 @@
+%h1 Simple Milia App
+.block#block-login
+  %h2 Create password
+  .content
+    %span.description
+      %i
+        Welcome! Please create a password before continuing.
+        %br
+    .flash
+      - flash.each do |type, message|
+        %div{ :class => "message #{type}" }
+          %p= message
+    - flash.clear  # clear contents so we won't see it again
+
+    = form_for(resource, :as => resource_name, :url => update_user_confirmation_path, :html => { :method => 'put',  :class => "form login" }) do |f|
+      = hidden_field_tag :confirmation_token, @confirmation_token
+      = devise_error_messages!
+      .group
+        = f.label :password, :class => "label"
+        = f.password_field :password, :class => "text_field"
+        %span.description must be at least 8 characters
+      .group
+        = f.label :password_confirmation, "Re-enter Password", :class => "label"
+        = f.password_field :password_confirmation, :class => "text_field"
+        %span.description to confirm your password
+      .group.navform.wat-cf
+        %button.button{ :type => "submit" }
+          = image_tag "web-app-theme/icons/key.png"
+          Create
+    = render :partial => "devise/shared/links"

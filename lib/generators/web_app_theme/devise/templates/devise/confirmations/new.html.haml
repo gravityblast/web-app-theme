@@ -1,0 +1,20 @@
+%h1 Simple Milia App
+.block#block-login
+  %h2 Resend confirmation instructions
+  .content.login
+    .flash
+      - flash.each do |type, message|
+        %div{ :class => "message #{type}" }
+          %p= message
+    - flash.clear  # clear contents so we won't see it again
+
+    = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :class => "form login" }) do |f|
+      .group.wat-cf
+        .left= f.label :email, :class => "label right"
+        .right= f.text_field :email, :class => "text_field"
+      .group.wat-cf
+        .right
+          %button.button{ :type => "submit" }
+            = image_tag "web-app-theme/icons/key.png"
+            Resend
+    = render :partial => "devise/shared/links"

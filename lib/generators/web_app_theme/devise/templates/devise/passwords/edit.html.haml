@@ -1,0 +1,26 @@
+%h1 Simple Milia App
+.block#block-login
+  %h2 Reset password
+  .content.login
+    .flash
+      - flash.each do |type, message|
+        %div{ :class => "message #{type}" }
+          %p= message
+    - flash.clear  # clear contents so we won't see it again
+
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => 'put', :class => "form login" }) do |f|
+      = f.hidden_field :reset_password_token
+      = devise_error_messages!
+      .group
+        = f.label :password, :class => "label"
+        = f.password_field :password, :class => "text_field"
+        %span.description must be at least 8 characters
+      .group
+        = f.label :password_confirmation, "Re-enter Password", :class => "label"
+        = f.password_field :password_confirmation, :class => "text_field"
+        %span.description to confirm your password
+      .group.navform.wat-cf
+        %button.button{ :type => "submit" }
+          = image_tag "web-app-theme/icons/key.png"
+          Reset
+    = render :partial => "devise/shared/links"

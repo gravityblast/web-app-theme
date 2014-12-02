@@ -1,0 +1,32 @@
+$FG_ERROR: #c6130a
+
+#errorExplanation, #error_explanation
+  border: unquote("2px solid #{$FG_ERROR}")
+  padding: 0.5em
+  margin: 1em 0
+  color: black
+  background: #cccccc
+  h2,h3
+    text-align: left
+    font-weight: bold
+    font-size: 1em
+    padding: 0.5em
+    padding-bottom: 1em
+    margin: -7px
+  p
+    // display: none  // auto-gen message seems redundant
+    float: none
+    text-decoration: none  // underline
+    font-weight: bold
+    margin-bottom: 0
+    padding: 5px 0
+  ul 
+    padding: 0.5em 0
+
+    & li
+      font-size: small
+      font-style: italic
+      list-style: disc
+      list-style-position: outside
+      margin-left: 1.5em
+

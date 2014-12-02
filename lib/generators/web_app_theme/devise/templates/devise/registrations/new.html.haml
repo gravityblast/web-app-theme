@@ -1,0 +1,53 @@
+%h1 Simple Milia App
+.block#block-signup
+  %h2 New Organizational Sign up
+  .content
+    %span.description
+      %i
+        If you're a member of an existing group in our system, 
+        click the activate link in the invitation email from your organization's admin.
+        You should not sign up for a new organizational account.
+        %br
+    .flash
+      - flash.each do |type, message|
+        %div{ :class => "message #{type}" }
+          %p= message
+    - flash.clear  # clear contents so we won't see it again
+
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => "form" }) do |f|
+      = devise_error_messages!
+      .group
+        = f.label :email, :class => "label"
+        = f.text_field :email, :class => "text_field"
+        %span.description Ex. test@example.com
+      .group
+        = f.label :password, :class => "label"
+        = f.password_field :password, :class => "text_field"
+        %span.description must be at least 8 characters
+      .group
+        = f.label :password_confirmation, "Re-enter Password", :class => "label"
+        = f.password_field :password_confirmation, :class => "text_field"
+        %span.description to confirm your password
+
+      .group
+        = fields_for( :tenant ) do |w|
+          = w.label( :name, 'Organization', :class => "label" ) 
+          = w.text_field( :name, :class => "text_field")
+          %span.description unique name for your group or organization for the new account
+
+        - if ::Milia.use_coupon
+          - @coupon ||= {}
+          .group
+            = label_tag( 'coupon', 'Coupon code', :class => "label" )
+            = text_field_tag( "coupon[coupon]", @coupon['coupon'].to_s, :size => 8, :class => "text_field" )
+            %span.description optional promotional code, if any
+
+        - if ::Milia.use_recaptcha
+          = recaptcha_tags( :display => { :theme => 'clean', :tabindex => 0 } )
+
+      .group.navform.wat-cf
+        %button.button{ :type => "submit" }
+          = image_tag "web-app-theme/icons/tick.png"
+          Sign up 
+    = render :partial => "devise/shared/links"
+

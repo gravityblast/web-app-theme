@@ -1,0 +1,28 @@
+%h1 Simple Milia App
+.block#block-login
+  %h2 Sign in
+  .content.login
+    .flash
+      - flash.each do |type, message|
+        %div{ :class => "message #{type}" }
+          %p= message
+    - flash.clear  # clear contents so we won't see it again
+
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form login" }) do |f|
+      .group.wat-cf
+        .left= f.label :email, :class => "label right"
+        .right= f.text_field :email, :class => "text_field"
+      .group.wat-cf
+        .left= f.label :password, :class => "label right"
+        .right= f.password_field :password, :class => "text_field"
+      - if devise_mapping.rememberable?
+        .group.wat-cf
+          .right
+            = f.check_box :remember_me, :class => "checkbox"
+            = f.label :remember_me, :class => "checkbox"
+      .group.wat-cf
+        .right
+          %button.button{ :type => "submit" }
+            = image_tag "web-app-theme/icons/key.png"
+            Login
+    = render :partial => "devise/shared/links"
